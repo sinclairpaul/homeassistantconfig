@@ -1,0 +1,7 @@
+mqtt:
+    broker: core-mosquitto
+    username: !secret mqtt_user
+    password: !secret mqtt_pass
+    client_id: ha
+    discovery: true
+    discovery_prefix: homeassistant

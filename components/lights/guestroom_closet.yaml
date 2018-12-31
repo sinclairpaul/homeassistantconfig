@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: "Guest Room Closet"
+  state_topic: "smartthings/Guest Room Closet/switch/state"
+  command_topic: "smartthings/Guest Room Closet/switch/cmd"
+  payload_on: "on"
+  payload_off: "off"
+  retain: false

@@ -1,0 +1,28 @@
+- platform: mqtt
+  name: "Basement Back"
+  state_topic: "smartthings/Basement Back/switch/state"
+  command_topic: "smartthings/Basement Back/switch/cmd"
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+- platform: mqtt
+  name: "Basement Front"
+  state_topic: "smartthings/Basement Front/switch/state"
+  command_topic: "smartthings/Basement Front/switch/cmd"
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+- platform: mqtt
+  name: "Basement Furnace"
+  state_topic: "smartthings/Basement Furnace/switch/state"
+  command_topic: "smartthings/Basement Furnace/switch/cmd"
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+- platform: mqtt
+  name: "Basement Main"
+  state_topic: "smartthings/Basement Main/switch/state"
+  command_topic: "smartthings/Basement Main/switch/cmd"
+  payload_on: "on"
+  payload_off: "off"
+  retain: false

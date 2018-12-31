@@ -1,0 +1,149 @@
+########CUSTOMIZE SENSORS########
+ sensor.temperatureandhumidity_0_0:
+   friendly_name: Guest Room Humidity
+ sensor.temperatureandhumidity_0_1:
+   friendly_name: Guest Room Temperature
+ binary_sensor.nest_thermostat_fan:
+   hidden: true
+ binary_sensor.nest_thermostat_has_leaf:
+   hidden: true
+ binary_sensor.nest_thermostat_is_locked:
+   hidden: true
+ binary_sensor.nest_thermostat_is_using_emergency_heat:
+   hidden: true
+ sensor.nest_thermostat_hvac_state:
+   hidden: true
+ sensor.nest_thermostat_operation_mode:
+   hidden: true
+ sensor.nest_thermostat_target:
+   hidden: true
+ sensor.nest_thermostat_temperature:
+   hidden: true
+############LIGHTS#########
+ light.front_door_1:
+   hidden: true
+ light.living_room_1:
+   hidden: true
+ light.living_room_2:
+   hidden: true
+ light.dining_room_1:
+   hidden: true
+ light.dining_room_2:
+   hidden: true
+ light.kitchen_1:
+   hidden: true
+ light.back_door_1:
+   hidden: true
+ light.bedroom_1:
+   hidden: true
+ light.bedroom_2:
+   hidden: true
+ light.landing_1:
+   hidden: true
+ light.stairs_1:
+   hidden: true
+ light.stairs_top_1:
+   hidden: true
+ light.dimmer_2:
+   hidden: true
+ light.hgrp0000000014:
+   hidden: true
+ media_player.living_room_amp_zone_2:
+   hidden: true
+ light.dimmable_light_1:
+   hidden: true
+ light.dimmable_light_1_2:
+   hidden:  true
+ light.spare_room_1:
+   hidden:  true 
+ light.spare_room_2:
+   hidden:  true
+ sensor.anet_print_progress:
+   icon: mdi:printer-3d
+ sensor.anet_printer_status:
+   icon: mdi:printer-3d
+ sensor.hc_print_progress:
+   icon: mdi:printer-3d
+ sensor.hc_printer_status:
+   icon: mdi:printer-3d
+ sensor.front_door_lock_battery:
+   icon: mdi:battery-50
+ sensor.bin_collection_date:
+   icon: mdi:calendar
+ sensor.garden:
+   entity_picture: !secret yardpic
+   #icon: mdi:flower
+ sensor.organics:
+   entity_picture: !secret orgpic
+   #icon: mdi:food
+ sensor.recycling:
+   entity_picture: !secret recpic
+   #icon: mdi:recycle
+ sensor.rubbish:
+   entity_picture: !secret garpic
+   #icon: mdi:delete
+ group.all_automations:
+   hidden: false
+ group.all_remotes:
+   hidden: false
+ group.all_devices:
+   hidden: false
+ group.all_switches:
+   hidden: false
+ group.all_locks:
+   hidden: false
+ group.all_lights:
+   hidden: false
+ sensor.blink_front_battery:
+   friendly_name: Front Blink Battery
+ sensor.blink_front_notifications:
+   friendly_name: Front Blink Notifications
+ sensor.blink_front_temperature:
+   friendly_name: Front Blink Temperature
+   icon: mdi:thermometer
+ sensor.blink_back_battery:
+   friendly_name: Back Blink Battery
+ sensor.blink_back_notifications:
+   friendly_name: Back Blink Notifications
+ sensor.blink_back_temperature:
+   friendly_name: Back Blink Temperature
+   icon: mdi:thermometer
+ sensor.blink_side_battery:
+   friendly_name: Side Blink Battery
+ sensor.blink_side_notifications:
+   friendly_name: Side Blink Notifications
+ sensor.blink_side_temperature:
+   friendly_name: Side Blink Temperature
+   icon: mdi:thermometer
+ binary_sensor.blink_back_camera_armed:
+   friendly_name: Blink Back Armed Status
+ binary_sensor.blink_front_camera_armed:
+   friendly_name: Blink Front Armed Status
+ binary_sensor.blink_side_camera_armed:
+   friendly_name: Blink Side Armed Status
+ binary_sensor.blink_back_motion_enabled:
+   friendly_name: Back Blink Motion Switch
+ binary_sensor.blink_front_motion_enabled:
+   friendly_name: Front Blink Motion Switch
+ binary_sensor.blink_side_motion_enabled:
+   friendly_name: Side Blink Motion Switch
+ script.blink_snap_front:
+   friendly_name: Update Front Camera
+ script.blink_snap_back:
+   friendly_name: Update Back Camera 
+ script.blink_snap_side:
+   friendly_name: Update Side Camera
+ alarm_control_panel.blink_sync:
+   friendly_name: Blink Armed?
+ binary_sensor.blink_front_motion_detected:
+   friendly_name: Blink Front Motion
+ binary_sensor.blink_side_motion_detected:
+   friendly_name: Blink Side Motion
+ binary_sensor.blink_back_motion_detected:
+   friendly_name: Blink Back Motion
+ switch.ensuitefan:
+   friendly_name: Ensuite Fan
+ light.ensuitelight:
+   friendly_name: Ensuite Light
+ cover.garage_door:
+   device_class: garage

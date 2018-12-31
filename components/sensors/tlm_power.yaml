@@ -1,0 +1,62 @@
+- platform: mqtt
+  name: "TLM Voltage"
+  state_topic: "tele/sonofftlm/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Voltage }}"
+  unit_of_measurement: "V"
+  availability_topic: "tele/sonofftlm/LWT"
+  qos: 1
+  payload_available: "Online"
+  payload_not_available: "Offline"
+- platform: mqtt
+  name: "TLM Current"
+  state_topic: "tele/sonofftlm/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Current | round(2) }}"
+  unit_of_measurement: "A"
+  availability_topic: "tele/sonofftlm/LWT"
+  qos: 1
+  payload_available: "Online"
+  payload_not_available: "Offline"
+- platform: mqtt
+  name: "TLM Power"
+  state_topic: "tele/sonofftlm/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Power }}"
+  unit_of_measurement: "W"
+  availability_topic: "tele/sonofftlm/LWT"
+  qos: 1
+  payload_available: "Online"
+  payload_not_available: "Offline"
+- platform: mqtt
+  name: "TLM Power Factor"
+  state_topic: "tele/sonofftlm/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Factor }}"
+  availability_topic: "tele/sonofftlm/LWT"
+  qos: 1
+  payload_available: "Online"
+  payload_not_available: "Offline"
+- platform: mqtt
+  name: "TLM Energy Today"
+  state_topic: "tele/sonofftlm/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Today }}"
+  unit_of_measurement: "kWh"
+  availability_topic: "tele/sonofftlm/LWT"
+  qos: 1
+  payload_available: "Online"
+  payload_not_available: "Offline"
+- platform: mqtt
+  name: "TLM Energy Yesterday"
+  state_topic: "tele/sonofftlm/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Yesterday }}"
+  unit_of_measurement: "kWh"
+  availability_topic: "tele/sonofftlm/LWT"
+  qos: 1
+  payload_available: "Online"
+  payload_not_available: "Offline"
+- platform: mqtt
+  name: "TLM Energy Total"
+  state_topic: "tele/sonofftlm/SENSOR"
+  value_template: "{{ value_json['ENERGY'].Total }}"
+  unit_of_measurement: "kWh"
+  availability_topic: "tele/sonofftlm/LWT"
+  qos: 1
+  payload_available: "Online"
+  payload_not_available: "Offline"

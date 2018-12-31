@@ -1,0 +1,11 @@
+- platform: mqtt
+  schema: json
+  brightness: true
+  rgb: true
+  flash: true
+  effect: true
+  effect_list: ["None","Random"]
+  name: "Spare Room LED"
+  state_topic: "spareroom/light/spare_room_led/state"
+  command_topic: "spareroom/light/spare_room_led/command"
+  availability_topic: "spareroom/status"

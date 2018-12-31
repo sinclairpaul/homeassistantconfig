@@ -1,0 +1,6 @@
+platform: mqtt
+device_class: motion
+name: "Ensuite Motion"
+state_topic: "smartthings/Xiaomi Aqara Motion Sensor/motion/state"
+payload_on: "active"
+payload_off: "inactive"

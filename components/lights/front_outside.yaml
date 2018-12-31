@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: "Front Outside Light"
+  state_topic: "smartthings/Front Outside Light/switch/state"
+  command_topic: "smartthings/Front Outside Light/switch/cmd"
+  payload_on: "on"
+  payload_off: "off"
+  retain: false

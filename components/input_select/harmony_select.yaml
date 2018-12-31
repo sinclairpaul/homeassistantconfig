@@ -1,0 +1,10 @@
+harmony:
+  name: Harmony Control
+  options:
+    - Select Input
+    - Watch TV
+    - Play XBOX
+    - Watch Kodi
+    - Play PS4
+    - Power Off
+  icon: mdi:monitor

@@ -1,0 +1,7 @@
+platform: mqtt
+name: "Front Door Lock"
+state_topic: "smartthings/Front Door Lock/lock/state"
+command_topic: "smartthings/Front Door Lock/lock/cmd"
+payload_lock: "locked"
+payload_unlock: "unlocked"
+retain: false

@@ -1,0 +1,24 @@
+- platform: tplink
+  host: !secret hcswitch_ip
+  name: Hypercube Power  
+- platform: tplink
+  host: !secret hc300switch_ip
+  name: TLM Power
+- platform: tplink
+  host: !secret aneta8switch_ip
+  name: ANET A8 Power
+- platform: tplink
+  host: !secret hcnewswitch_ip
+  name: New Hypercube Power
+- platform: mqtt
+  name: "Sonoff TLM"
+  state_topic: "stat/sonofftlm/RESULT"
+  value_template: "{{ value_json.POWER }}"
+  command_topic: "cmnd/sonofftlm/POWER"
+  availability_topic: "tele/sonofftlm/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false

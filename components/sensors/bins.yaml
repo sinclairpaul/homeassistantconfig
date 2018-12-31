@@ -1,0 +1,20 @@
+- platform: mqtt
+  state_topic: "/bins/date"
+  name: 'Bin Collection Date'
+  value_template: '{{ value_json[0].date }}'
+- platform: mqtt
+  state_topic: "/bins/type"
+  name: 'Rubbish'
+  value_template: '{{ value_json[0].garbage }}'
+- platform: mqtt
+  state_topic: "/bins/type"
+  name: 'Organics'
+  value_template: '{{ value_json[0].organics }}'
+- platform: mqtt
+  state_topic: "/bins/type"
+  name: 'Recycling'
+  value_template: '{{ value_json[0].recycle }}'
+- platform: mqtt
+  state_topic: "/bins/type"
+  name: 'Garden'
+  value_template: '{{ value_json[0].yard }}'

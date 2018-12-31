@@ -1,0 +1,77 @@
+arm_blink:
+  sequence:
+    - service: alarm_control_panel.alarm_arm_away
+      data:
+        entity_id: "alarm_control_panel.blink_sync"
+    - delay: '00:00:10'
+    - service: blink.blink_update
+disarm_blink:
+  sequence:
+    - service: alarm_control_panel.alarm_disarm
+      data:
+        entity_id: "alarm_control_panel.blink_sync"
+    - delay: '00:00:10'
+    - service: blink.blink_update
+blink_motion_on_front:
+  sequence:
+    - service: camera.enable_motion_detection
+      data:
+        entity_id: "camera.blink_front"
+    - delay: '00:00:10'
+    - service: blink.blink_update
+blink_motion_off_front:
+  sequence:
+    - service: camera.disable_motion_detection
+      data:
+        entity_id: "camera.blink_front"
+    - delay: '00:00:10'
+    - service: blink.blink_update
+blink_motion_on_back:
+  sequence:
+    - service: camera.enable_motion_detection
+      data:
+        entity_id: "camera.blink_back"
+    - delay: '00:00:10'
+    - service: blink.blink_update
+blink_motion_off_back:
+  sequence:
+    - service: camera.disable_motion_detection
+      data:
+        entity_id: "camera.blink_back"
+    - delay: '00:00:10'
+    - service: blink.blink_update
+blink_motion_on_side:
+  sequence:
+    - service: camera.enable_motion_detection
+      data:
+        entity_id: "camera.blink_side"
+    - delay: '00:00:10'
+    - service: blink.blink_update
+blink_motion_off_side:
+  sequence:
+    - service: camera.disable_motion_detection
+      data:
+        entity_id: "camera.blink_side"
+    - delay: '00:00:10'
+    - service: blink.blink_update
+blink_snap_front:
+  sequence:
+    - service: blink.trigger_camera
+      data:
+        name: "front"
+    - delay: '00:00:10'
+    - service: blink.blink_update
+blink_snap_back:
+  sequence:
+    - service: blink.trigger_camera
+      data:
+        name: "back"
+    - delay: '00:00:10'
+    - service: blink.blink_update
+blink_snap_side:
+  sequence:
+    - service: blink.trigger_camera
+      data:
+        name: "side"
+    - delay: '00:00:10'
+    - service: blink.blink_update

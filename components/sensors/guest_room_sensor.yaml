@@ -1,0 +1,20 @@
+- platform: mqtt
+  state_topic: "guestroom/sensor/guest_room_humidity/state"
+  name: 'Guest Room Humidity'
+  unit_of_measurement: "%"
+  availability_topic: "guestroom/status"
+  expire_after: 675
+  icon: "mdi:water-percent"
+- platform: mqtt
+  state_topic: "guestroom/sensor/guest_room_brightness/state"
+  name: 'Guest Room Brightness'
+  unit_of_measurement: "lux"
+  availability_topic: "guestroom/status"
+  expire_after: 45
+  icon: "mdi:flash"
+- platform: mqtt
+  state_topic: "guestroom/sensor/guest_room_temperature/state"
+  name: 'Guest Room Temperature'
+  unit_of_measurement: "°C"
+  availability_topic: "guestroom/status"
+  expire_after: 675

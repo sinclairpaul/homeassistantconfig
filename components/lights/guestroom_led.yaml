@@ -1,0 +1,11 @@
+- platform: mqtt
+  schema: json
+  brightness: true
+  rgb: true
+  flash: true
+  effect: true
+  effect_list: ["None","Random"]
+  name: "Guest Room LED"
+  state_topic: "guestroom/light/guest_room_led/state"
+  command_topic: "guestroom/light/guest_room_led/command"
+  availability_topic: "guestroom/status"

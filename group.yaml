@@ -1,0 +1,243 @@
+living_room:
+ name: Living Room
+ control: hidden
+ entities:
+   - light.living_room
+   - light.front_door_1
+   - light.living_room_1
+   - light.living_room_2
+   - remote.harmony
+   - sensor.harmony
+   - input_select.harmony
+   - switch.hyperion
+   - input_select.hyperion_effect
+   - climate.nest
+   - sensor.nest_thermostat_target
+   - sensor.nest_thermostat_temperature
+   - sensor.nest_thermostat_humidity
+   - sensor.nest_thermostat_hvac_state
+   - sensor.nest_thermostat_operation_mode
+   - media_player.kodi
+   - binary_sensor.living_room_motion
+   - media_player.living_room_tv
+   - media_player.living_room_amp
+   - lock.front_door_lock
+   - sensor.front_door_lock_battery
+   - binary_sensor.front_door
+   - light.front_outside_light
+nest_hello:
+ name: Nest Hello
+ control: hidden
+ entities:
+   - binary_sensor.front_door_camera_motion_detected
+   - binary_sensor.front_door_camera_person_detected
+   - binary_sensor.front_door_camera_sound_detected
+   - binary_sensor.front_door_camera_online
+   - binary_sensor.front_door_camera__zone_1_activity
+   - camera.front_door
+dining_room:
+ name: Dining Room
+ entities:
+   - light.dining
+   - light.dining_room_1
+   - light.dining_room_2
+#   - switch.tree_power
+#   - light.tree_led
+#   - input_number.tree_animation_speed
+kitchen:
+ name: Kitchen
+ entities:
+   - light.kitchen
+   - light.kitchen_1
+   - light.back_door_1
+stairs:
+ name: Stairs
+ entities:
+   - light.bottom_hallway
+   - light.stairs_1
+   - light.stairs_top_1
+landing:
+ name: Landing
+ entities:
+   - light.landing
+   - light.landing_1
+master_bedroom:
+ name: Master Bedroom
+ control: hidden
+ entities:
+   - light.bedroom
+   - light.bedroom_1
+   - light.bedroom_2
+   - switch.ensuite_fan
+   - light.ensuite_light
+spare_room:
+ name: Spare Room
+ control: hidden
+ entities:
+   - light.spare_room
+   - light.printer
+   - switch.anet_a8_power
+   - sensor.anet_printer_status
+   - sensor.anet_print_progress
+   - sensor.anet_hotend_temp
+   - switch.hypercube_power
+   - sensor.hc_printer_status
+   - sensor.hc_print_progress
+   - sensor.hc_hotend_temp
+   - switch.hc300_power
+   - switch.new_hypercube_power
+   - switch.tlm_power
+   - switch.sonoff_tlm
+   - sensor.spare_room_temperature  
+   - sensor.spare_room_humidity  
+   - sensor.spare_room_brightness  
+   - binary_sensor.spare_room_motion  
+   - light.spare_room_led
+   - sensor.tlm_current
+   - sensor.tlm_power
+   - sensor.tlm_energy_today
+   - sensor.tlm_energy_total
+   - sensor.tlm_energy_yesterday
+   - sensor.tlm_power
+   - sensor.tlm_power_factor
+   - sensor.tlm_voltage   
+misc_items:
+ name: Misc Sensors
+ entities:
+    - sensor.octoa8_actual_bed_temp
+    - sensor.octoa8_actual_tool0_temp
+    - sensor.octoa8_current_state
+    - sensor.octoa8_job_percentage
+    - sensor.octoa8_target_bed_temp
+    - sensor.octoa8_target_tool0_temp
+#    - sensor.speedtest_download
+#    - sensor.speedtest_upload
+#    - sensor.speedtest_ping
+    - sensor.sabnzbd_left
+    - sensor.sabnzbd_speed
+    - sensor.sabnzbd_status
+    - sensor.sabnzbd_queue
+    - sensor.bin_collection_date
+    - sensor.garden
+    - sensor.organics
+    - sensor.recycling
+    - sensor.rubbish
+guest_room:
+    name: Guest Room
+    control: hidden    
+    entities:  
+      - sensor.guest_room_temperature  
+      - sensor.guest_room_humidity  
+      - sensor.guest_room_brightness  
+      - binary_sensor.guest_room_motion  
+      - light.guest_room_led
+      - light.guest_room_closet
+basement:
+    name: Basement
+    entities:
+      - light.basement_main
+      - light.basement_front
+      - light.basement_furnace
+      - light.basement_back
+      - binary_sensor.washing_machine_door
+      - binary_sensor.washing_machine_motion
+      - sensor.basement_washing_machine_temp
+garage:
+    name: Garage
+    entities:
+      - cover.garage_door
+cameras:
+    name: Cameras
+    entities:
+      - camera.dafang3
+      - camera.dafang_motion_snapshot
+camera_sensors:
+    name: Camera Sensors
+    control: hidden
+    entities:
+      - switch.dafang_h264_rtsp_server
+      - switch.dafang_mjpeg_rtsp_server
+      - sensor.dafang
+      - device_tracker.dafang
+      - sensor.dafang_light_sensor
+      - switch.dafang_ir_filter
+      - switch.dafang_ir_led
+      - switch.dafang_night_mode
+      - switch.dafang_night_mode_auto
+      - switch.dafang_blue_led
+      - switch.dafang_yellow_led
+      - switch.dafang_motion_detection
+      - switch.dafang_motion_tracking
+      - binary_sensor.dafang_motion_sensor
+      - cover.dafang_move_leftright
+      - cover.dafang_move_updown
+Blink:
+    view: yes
+    entities:
+      - camera.blink_front
+      - camera.blink_back
+      - camera.blink_side
+      - alarm_control_panel.blink_sync
+      - group.blink_group
+Blink_Group:
+    name: Blink Sensors
+    control: hidden
+    entities:
+      - sensor.blink_front_battery
+      - sensor.blink_front_notifications
+      - sensor.blink_front_temperature
+      - sensor.blink_back_battery
+      - sensor.blink_back_notifications
+      - sensor.blink_back_temperature
+      - sensor.blink_side_battery
+      - sensor.blink_side_notifications
+      - sensor.blink_side_temperature
+      - binary_sensor.blink_back_camera_armed
+      - binary_sensor.blink_back_motion_detected
+      - binary_sensor.blink_front_camera_armed
+      - binary_sensor.blink_front_motion_detected
+      - binary_sensor.blink_side_camera_armed
+      - binary_sensor.blink_side_motion_detected
+      - switch.frontmotion
+      - switch.backmotion
+      - switch.sidemotion
+      - script.blink_snap_front
+      - script.blink_snap_back
+      - script.blink_snap_side
+Nest View:
+    view: yes
+    entities:
+      - group.nest_hello
+Camera View:
+    view: yes
+    entities:
+      - group.cameras
+      - group.camera_sensors
+default_view:
+    view: yes
+    icon: mdi:home
+    entities:
+      - climate.nest
+      - device_tracker.paul_s7phone
+      - sensor.time_to_bnr
+      - sun.sun
+      - group.living_room
+      - group.dining_room
+      - group.kitchen
+      - group.landing
+      - group.master_bedroom
+      - group.spare_room
+      - group.misc_items
+      - group.guest_room
+      - group.basement
+      - group.garage
+everything:
+    view: yes
+    entities:
+      - group.all_devices
+      - group.all_switches
+      - group.all_locks
+      - group.all_automations
+      - group.all_remotes
+      - group.all_lights
+      
