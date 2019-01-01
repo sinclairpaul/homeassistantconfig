@@ -1,0 +1,8 @@
+Blink:
+    view: yes
+    entities:
+      - camera.blink_front
+      - camera.blink_back
+      - camera.blink_side
+      - alarm_control_panel.blink_sync
+      - group.blink_group

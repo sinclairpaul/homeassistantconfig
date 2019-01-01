@@ -1,0 +1,7 @@
+dining_room:
+ name: Dining Room
+ entities:
+   - light.dining
+#   - switch.tree_power
+#   - light.tree_led
+#   - input_number.tree_animation_speed

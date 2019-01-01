@@ -1,3 +1,0 @@
-#- platform: ffmpeg
-#  name: DaFang3
-#  input: !secret camera_url

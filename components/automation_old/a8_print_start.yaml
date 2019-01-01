@@ -1,0 +1,8 @@
+alias: A8 Print - Switch on Lights
+trigger:
+- platform: state
+  entity_id: sensor.anet_printer_status
+  to: PRINTING
+action:
+  service: light.turn_on
+  entity_id: light.spare_room

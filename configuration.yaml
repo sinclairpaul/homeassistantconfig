@@ -10,11 +10,11 @@ homeassistant:
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Toronto
-  customize: !include customize.yaml
+  #customize: !include customize.yaml
   packages: !include_dir_named components/packages
 
 
-automation: !include automations.yaml
+#automation: !include automations.yaml
 
-group: !include group.yaml
+# group: !include group.yaml
 

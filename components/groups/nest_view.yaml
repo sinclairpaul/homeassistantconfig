@@ -1,0 +1,4 @@
+Nest View:
+    view: yes
+    entities:
+      - group.nest_hello

@@ -1,0 +1,18 @@
+default_view:
+    view: yes
+    icon: mdi:home
+    entities:
+      - climate.nest
+      - device_tracker.paul_s7phone
+      - sensor.time_to_bnr
+      - sun.sun
+      - group.living_room
+      - group.dining_room
+      - group.kitchen
+      - group.landing
+      - group.master_bedroom
+      - group.spare_room
+      - group.misc_items
+      - group.guest_room
+      - group.basement
+      - group.garage

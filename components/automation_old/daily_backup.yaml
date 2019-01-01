@@ -1,0 +1,9 @@
+alias: Daily Backup
+trigger:
+- at: 02:00:00
+  platform: time
+condition: []
+action:
+- data:
+    addon: ce20243c_remote_backup
+  service: hassio.addon_start

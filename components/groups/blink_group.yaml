@@ -1,0 +1,25 @@
+Blink_Group:
+    name: Blink Sensors
+    control: hidden
+    entities:
+      - sensor.blink_front_battery
+      - sensor.blink_front_notifications
+      - sensor.blink_front_temperature
+      - sensor.blink_back_battery
+      - sensor.blink_back_notifications
+      - sensor.blink_back_temperature
+      - sensor.blink_side_battery
+      - sensor.blink_side_notifications
+      - sensor.blink_side_temperature
+      - binary_sensor.blink_back_camera_armed
+      - binary_sensor.blink_back_motion_detected
+      - binary_sensor.blink_front_camera_armed
+      - binary_sensor.blink_front_motion_detected
+      - binary_sensor.blink_side_camera_armed
+      - binary_sensor.blink_side_motion_detected
+      - switch.frontmotion
+      - switch.backmotion
+      - switch.sidemotion
+      - script.blink_snap_front
+      - script.blink_snap_back
+      - script.blink_snap_side

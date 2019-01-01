@@ -1,0 +1,21 @@
+misc_items:
+ name: Misc Sensors
+ entities:
+    - sensor.octoa8_actual_bed_temp
+    - sensor.octoa8_actual_tool0_temp
+    - sensor.octoa8_current_state
+    - sensor.octoa8_job_percentage
+    - sensor.octoa8_target_bed_temp
+    - sensor.octoa8_target_tool0_temp
+#    - sensor.speedtest_download
+#    - sensor.speedtest_upload
+#    - sensor.speedtest_ping
+    - sensor.sabnzbd_left
+    - sensor.sabnzbd_speed
+    - sensor.sabnzbd_status
+    - sensor.sabnzbd_queue
+    - sensor.bin_collection_date
+    - sensor.garden
+    - sensor.organics
+    - sensor.recycling
+    - sensor.rubbish

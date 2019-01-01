@@ -1,0 +1,21 @@
+alias: Power state on HA start-up
+trigger:
+  platform: homeassistant
+  event: start
+action:
+- service: mqtt.publish
+  data:
+    topic: cmnd/sonoffensuitelight/POWER
+    payload: ''
+- service: mqtt.publish
+  data:
+    topic: cmnd/sonoffensuitefan/POWER
+    payload: ''
+- service: mqtt.publish
+  data:
+    topic: cmnd/sonofftlm/POWER
+    payload: ''
+- service: mqtt.publish
+  data:
+    topic: garage/door/1/action
+    payload: STATE

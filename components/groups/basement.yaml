@@ -1,0 +1,11 @@
+basement:
+    name: Basement
+    control: hidden   
+    entities:
+      - light.basement_main
+      - light.basement_front
+      - light.basement_furnace
+      - light.basement_back
+      - binary_sensor.washing_machine_door
+      - binary_sensor.washing_machine_motion
+      - sensor.basement_washing_machine_temp
