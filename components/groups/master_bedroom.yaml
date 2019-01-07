@@ -5,3 +5,6 @@ master_bedroom:
    - light.bedroom
    - switch.ensuite_fan
    - light.ensuite_light
+   - sensor.ensuite_humidity
+   - sensor.ensuite_temperature
+   - sensor.ensuite_brightness
