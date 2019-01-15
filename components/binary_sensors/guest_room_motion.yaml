@@ -1,5 +1,0 @@
-platform: mqtt
-device_class: motion
-name: "Guest Room Motion"
-state_topic: "guestroom/binary_sensor/guest_room_motion/state"
-availability_topic: "guestroom/status"

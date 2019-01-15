@@ -1,5 +1,0 @@
-platform: mqtt
-device_class: motion
-name: "Spare Room Motion"
-state_topic: "spareroom/binary_sensor/spare_room_motion/state"
-availability_topic: "spareroom/status"

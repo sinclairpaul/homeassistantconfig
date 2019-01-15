@@ -1,5 +1,5 @@
 mqtt:
-    broker: core-mosquitto
+    broker: a0d7b954-mqtt
     username: !secret mqtt_user
     password: !secret mqtt_pass
     client_id: ha
