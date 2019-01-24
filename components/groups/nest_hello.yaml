@@ -6,5 +6,5 @@ nest_hello:
    - binary_sensor.front_door_camera_person_detected
    - binary_sensor.front_door_camera_sound_detected
    - binary_sensor.front_door_camera_online
-   - binary_sensor.front_door_camera__zone_1_activity
+   - binary_sensor.front_door_camera_zone_1_activity
    - camera.front_door

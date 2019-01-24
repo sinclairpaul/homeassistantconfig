@@ -14,7 +14,7 @@ spare_room:
    - sensor.hc_hotend_temp
    - switch.hc300_power
    - switch.new_hypercube_power
-   - switch.tlm_power
+  #  - switch.tlm_power
    - switch.sonoff_tlm
    - sensor.spare_room_temperature  
    - sensor.spare_room_humidity  
