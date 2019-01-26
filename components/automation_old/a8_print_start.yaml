@@ -1,4 +1,5 @@
 alias: A8 Print - Switch on Lights
+initial_state: true
 trigger:
 - platform: state
   entity_id: sensor.anet_printer_status

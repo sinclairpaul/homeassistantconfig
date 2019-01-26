@@ -1,4 +1,5 @@
 alias: Power state on HA start-up
+initial_state: true
 trigger:
   platform: homeassistant
   event: start

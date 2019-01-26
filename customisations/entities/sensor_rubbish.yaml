@@ -1,0 +1,2 @@
+sensor.rubbish:
+  entity_picture: !secret garpic

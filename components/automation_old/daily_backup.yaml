@@ -1,4 +1,5 @@
 alias: Daily Backup
+initial_state: true
 trigger:
 - at: 02:00:00
   platform: time

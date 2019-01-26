@@ -1,4 +1,5 @@
 alias: Harmony
+initial_state: true
 hide_entity: True
 trigger:
   platform: state

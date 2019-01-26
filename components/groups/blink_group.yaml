@@ -3,13 +3,13 @@ Blink_Group:
     control: hidden
     entities:
       - sensor.blink_front_battery
-      - sensor.blink_front_notifications
+     # - sensor.blink_front_notifications
       - sensor.blink_front_temperature
       - sensor.blink_back_battery
-      - sensor.blink_back_notifications
+     # - sensor.blink_back_notifications
       - sensor.blink_back_temperature
       - sensor.blink_side_battery
-      - sensor.blink_side_notifications
+     # - sensor.blink_side_notifications
       - sensor.blink_side_temperature
       - binary_sensor.blink_back_camera_armed
       - binary_sensor.blink_back_motion_detected

@@ -1,0 +1,2 @@
+alarm_control_panel.blink_sync:
+  friendly_name: Blink Armed?

@@ -1,0 +1,2 @@
+sensor.organics:
+  entity_picture: !secret orgpic

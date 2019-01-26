@@ -1,0 +1,2 @@
+cover.garage_door:
+  device_class: garage

@@ -1,4 +1,5 @@
 alias: Lock Front Door after 5 minutes
+initial_state: true
 trigger:
 - entity_id: lock.front_door_lock
   for:
