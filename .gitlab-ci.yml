@@ -8,8 +8,6 @@ stages:
 # Generic preflight template
 .preflight: &preflight
   stage: preflight
-  tags:
-    - preflight
 
 # Generic test template
 .test: &test
@@ -25,8 +23,6 @@ stages:
         --config ./config/ \
         --script check_config \
         --info all
-  tags:
-    - test
 
 # Preflight jobs
 shellcheck:
