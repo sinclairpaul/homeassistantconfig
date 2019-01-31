@@ -1,1 +1,2 @@
+---
 notify: !include_dir_list ../notifications

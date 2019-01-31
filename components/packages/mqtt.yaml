@@ -1,3 +1,4 @@
+---
 mqtt:
     broker: a0d7b954-mqtt
     username: !secret mqtt_user
@@ -5,3 +6,4 @@ mqtt:
     client_id: ha
     discovery: true
     discovery_prefix: homeassistant
+    

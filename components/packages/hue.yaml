@@ -1,4 +1,6 @@
+---
 hue:
   bridges:
     - host: !secret hue_ip
       filename: phue.conf
+      

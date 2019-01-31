@@ -1,5 +1,7 @@
+---
 remote:
     platform: harmony
     name: Harmony
     host: !secret harmony_ip
     activity: 13449441
+    

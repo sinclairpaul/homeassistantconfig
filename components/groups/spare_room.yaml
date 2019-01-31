@@ -17,10 +17,10 @@ spare_room:
    - switch.new_hypercube_power
   #  - switch.tlm_power
    - switch.sonoff_tlm
-   - sensor.spare_room_temperature  
-   - sensor.spare_room_humidity  
-   - sensor.spare_room_brightness  
-   - binary_sensor.spare_room_motion  
+   - sensor.spare_room_temperature
+   - sensor.spare_room_humidity
+   - sensor.spare_room_brightness
+   - binary_sensor.spare_room_motion
    - light.spare_room_led
    - sensor.tlm_current
    - sensor.tlm_power

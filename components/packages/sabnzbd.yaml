@@ -1,3 +1,4 @@
+---
 sabnzbd:
     host: !secret sab_host
     port: !secret sab_port
@@ -7,3 +8,4 @@ sabnzbd:
       - 'speed'
       - 'queue_size'
       - 'queue_remaining'
+      
