@@ -1,3 +1,4 @@
+---
 path: blink
 title: Blink
 badges: []
@@ -35,3 +36,4 @@ cards:
     type: picture-entity
   - entity: camera.blink_side
     type: picture-entity
+    

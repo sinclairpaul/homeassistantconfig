@@ -1,3 +1,4 @@
+---
 alias: Power state on HA start-up
 initial_state: true
 trigger:

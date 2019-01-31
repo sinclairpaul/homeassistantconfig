@@ -1,3 +1,4 @@
+---
 path: main
 icon: 'mdi:home'
 title: Main
@@ -119,3 +120,4 @@ cards:
     show_header_toggle: true
     title: Garage
     type: entities
+    

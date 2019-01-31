@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   state_topic: "octoa8/temperature/tool0"
   name: 'Anet Hotend Temp'
@@ -12,3 +13,4 @@
   state_topic: "octoa8/event/PrinterStateChanged"
   name: 'Anet Printer Status'
   value_template: '{{ value_json.state_id }}'
+  

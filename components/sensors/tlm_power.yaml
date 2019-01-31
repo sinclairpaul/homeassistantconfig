@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   name: "TLM Voltage"
   state_topic: "tele/sonofftlm/SENSOR"
@@ -60,3 +61,4 @@
   qos: 1
   payload_available: "Online"
   payload_not_available: "Offline"
+  

@@ -1,2 +1,4 @@
+---
 sensor.garden:
   entity_picture: !secret yardpic
+  

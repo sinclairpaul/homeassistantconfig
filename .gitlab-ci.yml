@@ -16,7 +16,7 @@ stages:
     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
   before_script:
     - python -m homeassistant --version
-    - cp travis_secrets.yaml secrets.yaml					 
+    - cp travis_secrets.yaml secrets.yaml
   script:
     - |
       python -m homeassistant \
@@ -106,3 +106,4 @@ dev:
     name: homeassistant/home-assistant:dev
     entrypoint: [""]
   allow_failure: true
+  

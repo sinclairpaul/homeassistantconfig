@@ -1,3 +1,4 @@
+---
 path: nest_view
 title: Nest View
 badges: []
@@ -13,3 +14,4 @@ cards:
     type: entities
   - entity: camera.front_door
     type: picture-entity
+    

@@ -1,3 +1,4 @@
+---
 - platform: unifi
   host: !secret mqtt_broker
   username: !secret ubuser
@@ -50,3 +51,4 @@
   - tx_power
   - tx_rate
   - uptime
+  

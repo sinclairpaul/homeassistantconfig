@@ -1,3 +1,4 @@
+---
 path: camera_view
 title: Camera View
 badges: []
@@ -26,3 +27,4 @@ cards:
     show_header_toggle: false
     title: Camera Sensors
     type: entities
+    

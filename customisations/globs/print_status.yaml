@@ -1,2 +1,4 @@
+---
 sensor.*_print_status:
   icon: mdi:printer-3d
+  

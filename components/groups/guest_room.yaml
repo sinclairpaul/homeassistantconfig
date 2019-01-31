@@ -1,3 +1,4 @@
+---
 guest_room:
     name: Guest Room
     control: hidden    

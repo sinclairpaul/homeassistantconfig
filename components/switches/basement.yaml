@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   name: "Sonoff HA"
   state_topic: "stat/sonoffha/RESULT"
@@ -10,3 +11,4 @@
   payload_available: "Online"
   payload_not_available: "Offline"
   retain: false
+  

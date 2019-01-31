@@ -1,3 +1,4 @@
+---
 alias: Lock Front Door after 5 minutes
 initial_state: true
 trigger:

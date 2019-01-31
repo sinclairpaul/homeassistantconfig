@@ -1,3 +1,4 @@
+---
 harmony:
   name: Harmony Control
   options:
@@ -8,3 +9,4 @@ harmony:
     - Play PS4
     - Power Off
   icon: mdi:monitor
+  

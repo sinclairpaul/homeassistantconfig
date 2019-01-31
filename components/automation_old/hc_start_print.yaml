@@ -1,3 +1,4 @@
+---
 alias: HC Print - Switch on Lights
 initial_state: true
 trigger:

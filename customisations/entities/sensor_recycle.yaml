@@ -1,2 +1,4 @@
+---
 sensor.recycling:
   entity_picture: !secret recpic
+  

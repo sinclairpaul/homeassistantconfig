@@ -1,3 +1,4 @@
+ ---
  - platform: speedtest
    minute: 30
    hour:
@@ -7,3 +8,4 @@
     - ping
     - download
     - upload
+    

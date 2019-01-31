@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   name: "Basement Back"
   state_topic: "smartthings/Basement Back/switch/state"
@@ -26,3 +27,4 @@
   payload_on: "on"
   payload_off: "off"
   retain: false
+  

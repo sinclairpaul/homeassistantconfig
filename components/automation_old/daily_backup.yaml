@@ -1,3 +1,4 @@
+---
 alias: Daily Backup
 initial_state: true
 trigger:

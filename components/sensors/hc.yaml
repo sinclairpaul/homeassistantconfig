@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   state_topic: "octohy/temperature/tool0"
   name: 'HC Hotend Temp'
@@ -12,3 +13,4 @@
   name: 'HC Print Progress'
   unit_of_measurement: "%"
   value_template: '{{ value_json.progress }}'
+  

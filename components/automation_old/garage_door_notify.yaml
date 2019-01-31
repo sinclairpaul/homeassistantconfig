@@ -1,3 +1,4 @@
+---
 alias: Notify Garage Door
 initial_state: true
 trigger:

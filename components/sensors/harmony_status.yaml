@@ -1,5 +1,7 @@
+---
 - platform: template
   sensors:
     harmony:
       value_template: '{{ states.remote.harmony.attributes.current_activity }}'
       friendly_name: 'Harmony Status'
+      

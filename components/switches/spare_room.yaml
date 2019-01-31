@@ -1,3 +1,4 @@
+---
 - platform: tplink
   host: !secret hcswitch_ip
   name: Hypercube Power  
@@ -22,3 +23,4 @@
   payload_available: "Online"
   payload_not_available: "Offline"
   retain: false
+  

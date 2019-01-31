@@ -1,3 +1,4 @@
+---
 platform: yamaha
 name: Living Room Amp
 host: !secret amp_ip
@@ -15,3 +16,4 @@ source_ignore:
   - "SIRIUSXM"
   - "Pandora"
   - "Rhapsody"
+  

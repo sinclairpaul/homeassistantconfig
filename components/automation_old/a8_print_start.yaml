@@ -1,3 +1,4 @@
+---
 alias: A8 Print - Switch on Lights
 initial_state: true
 trigger:
