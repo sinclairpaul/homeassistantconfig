@@ -15,6 +15,8 @@
 esphomeyaml
 node-red
 
+custom_components.yaml
+
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 ip_bans.yaml
 secrets.yaml
