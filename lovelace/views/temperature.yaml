@@ -1,0 +1,75 @@
+title: Temperature/Humidity
+path: temperature
+badges: []
+panel: true
+cards:
+  - type: vertical-stack
+    cards:
+    - type: markdown
+      content: >
+        ## Indoor Temperature
+    - type: horizontal-stack
+      cards:
+        - type: 'custom:mini-graph-card'
+          entity: sensor.nest_thermostat_temperature
+          name: Living Room
+          hours_to_show: 48
+        - type: 'custom:mini-graph-card'
+          entity: sensor.guest_room_temperature
+          name: Guest Room
+          hours_to_show: 48
+        - type: 'custom:mini-graph-card'
+          entity: sensor.spare_room_temperature
+          name: Spare Room
+          hours_to_show: 48
+        - type: 'custom:mini-graph-card'
+          entity: sensor.ensuite_temperature
+          name: Ensuite
+          hours_to_show: 48
+        - type: 'custom:mini-graph-card'
+          entity: sensor.basement_washing_machine_temp
+          name: Basement
+          hours_to_show: 48
+    - type: markdown
+      content: >
+        ## Outdoor Temperature
+    - type: horizontal-stack
+      cards:
+        - type: 'custom:mini-graph-card'
+          entity: sensor.blink_front_temperature
+          name: Front
+          hours_to_show: 48
+        - type: 'custom:mini-graph-card'
+          entity: sensor.blink_side_temperature
+          name: Side
+          hours_to_show: 48
+        - type: 'custom:mini-graph-card'
+          entity: sensor.blink_back_temperature
+          name: Back
+          hours_to_show: 48
+    - type: markdown
+      content: >
+        ## Indoor Humidity
+    - type: horizontal-stack
+      cards:
+        - type: 'custom:mini-graph-card'
+          entity: sensor.nest_thermostat_humidity
+          name: Living Room
+          hours_to_show: 48
+        - type: 'custom:mini-graph-card'
+          entity: sensor.guest_room_humidity
+          name: Guest Room
+          hours_to_show: 48
+        - type: 'custom:mini-graph-card'
+          entity: sensor.guest_room_humidity
+          name: Spare Room
+          hours_to_show: 48
+        - type: 'custom:mini-graph-card'
+          entity: sensor.ensuite_humidity
+          name: Ensuite
+          hours_to_show: 48
+
+
+
+
+

@@ -1,0 +1,37 @@
+path: blink
+title: Blink
+badges: []
+cards:
+  - entities:
+      - entity: sensor.blink_front_battery
+      - entity: sensor.blink_front_temperature
+      - entity: sensor.blink_back_battery
+      - entity: sensor.blink_back_temperature
+      - entity: sensor.blink_side_battery
+      - entity: sensor.blink_side_temperature
+      - entity: binary_sensor.blink_back_camera_armed
+      - entity: binary_sensor.blink_back_motion_detected
+      - entity: binary_sensor.blink_front_camera_armed
+      - entity: binary_sensor.blink_front_motion_detected
+      - entity: binary_sensor.blink_side_camera_armed
+      - entity: binary_sensor.blink_side_motion_detected
+      - entity: switch.frontmotion
+      - entity: switch.backmotion
+      - entity: switch.sidemotion
+      - entity: script.blink_snap_front
+      - entity: script.blink_snap_back
+      - entity: script.blink_snap_side
+    show_header_toggle: false
+    title: Blink Sensors
+    type: entities
+  - entity: alarm_control_panel.blink_sync
+    states:
+      - arm_home
+      - arm_away
+    type: alarm-panel
+  - entity: camera.blink_front
+    type: picture-entity
+  - entity: camera.blink_back
+    type: picture-entity
+  - entity: camera.blink_side
+    type: picture-entity

@@ -1,0 +1,15 @@
+path: nest_view
+title: Nest View
+badges: []
+cards:
+  - entities:
+      - binary_sensor.front_door_camera_motion_detected
+      - binary_sensor.front_door_camera_person_detected
+      - binary_sensor.front_door_camera_sound_detected
+      - binary_sensor.front_door_camera_online
+      - binary_sensor.front_door_camera_zone_1_activity
+    show_header_toggle: false
+    title: Nest Hello
+    type: entities
+  - entity: camera.front_door
+    type: picture-entity

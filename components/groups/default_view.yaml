@@ -7,6 +7,7 @@ default_view:
       - sensor.time_to_bnr
       - sun.sun
       - group.living_room
+      - group.entertainment
       - group.dining_room
       - group.kitchen
       - group.landing

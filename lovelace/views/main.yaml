@@ -1,0 +1,121 @@
+path: main
+icon: 'mdi:home'
+title: Main
+badges:
+  - device_tracker.paul_s7phone
+  - sun.sun
+cards:
+  - entities:
+      - entity: light.living_room
+      - entity: light.front_door
+      - entity: lock.front_door_lock
+      - entity: sensor.front_door_lock_battery
+      - entity: binary_sensor.front_door
+      - entity: light.front_outside_light
+    show_header_toggle: false
+    title: Living Room
+    type: entities
+  - entity: climate.nest
+    type: 'custom:thermostat-card'
+    title: 'Living Room '
+  - title: Entertainment
+    type: entities
+    show_header_toggle: false
+    entities:
+      - remote.harmony
+      - sensor.harmony
+      - input_select.harmony  
+  - entity: media_player.kodi
+    type: 'custom:mini-media-player'
+  - entity: media_player.living_room_tv
+    type: 'custom:mini-media-player'
+    hide_volume: true
+    hide_controls: true
+  - entity: media_player.living_room_amp
+    type: 'custom:mini-media-player'
+    hide_controls: true
+  - entities:
+      - light.dining
+    show_header_toggle: true
+    title: Dining Room
+    type: entities
+  - entities:
+      - light.kitchen
+    show_header_toggle: true
+    title: Kitchen
+    type: entities
+  - entities:
+      - light.landing
+    show_header_toggle: true
+    title: Landing
+    type: entities
+  - entities:
+      - light.bedroom
+      - switch.ensuite_fan
+      - light.ensuite_light
+      - sensor.ensuite_brightness
+    show_header_toggle: false
+    title: Master Bedroom
+    type: entities
+  - entities:
+      - light.spare_room
+      - light.printer
+      - sensor.spare_room_brightness
+      - binary_sensor.spare_room_motion
+      - light.spare_room_led
+      - sensor.tlm_current
+      - sensor.tlm_power
+      - sensor.tlm_energy_today
+      - sensor.tlm_energy_total
+      - sensor.tlm_energy_yesterday
+      - sensor.tlm_power
+      - sensor.tlm_power_factor
+      - sensor.tlm_voltage
+    show_header_toggle: false
+    title: Spare Room
+    type: entities
+  - entities:
+      - sensor.sabnzbd_left
+      - sensor.sabnzbd_speed
+      - sensor.sabnzbd_status
+      - sensor.sabnzbd_queue
+      - sensor.bin_collection_date
+      - sensor.garden
+      - sensor.organics
+      - sensor.recycling
+      - sensor.rubbish
+    show_header_toggle: true
+    title: Misc Sensors
+    type: entities
+  - entities:
+      - sensor.guest_room_brightness
+      - binary_sensor.guest_room_motion
+      - light.guest_room_led
+      - light.guest_room_closet
+    show_header_toggle: false
+    title: Guest Room
+    type: entities
+  - entities:
+      - light.basement_main
+      - light.basement_front
+      - light.basement_furnace
+      - light.basement_back
+      - binary_sensor.washing_machine_door
+      - binary_sensor.washing_machine_motion
+      - switch.sonoff_ha
+      - sensor.ha_current
+      - sensor.ha_power
+      - sensor.ha_energy_today
+      - sensor.ha_energy_total
+      - sensor.ha_energy_yesterday
+      - sensor.ha_power
+      - sensor.ha_power_factor
+      - sensor.ha_voltage
+    show_header_toggle: false
+    title: Basement
+    type: entities
+  - entities:
+      - cover.garage_door
+    show_header_toggle: true
+    title: Garage
+    type: entities
