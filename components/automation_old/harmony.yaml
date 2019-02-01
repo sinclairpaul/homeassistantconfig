@@ -1,7 +1,7 @@
 ---
 alias: Harmony
 initial_state: true
-hide_entity: True
+hide_entity: true
 trigger:
   platform: state
   entity_id: input_select.harmony

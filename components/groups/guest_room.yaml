@@ -1,8 +1,8 @@
 ---
 guest_room:
   name: Guest Room
-  control: hidden    
-  entities:  
+  control: hidden
+  entities:
     - sensor.guest_room_temperature
     - sensor.guest_room_humidity
     - sensor.guest_room_brightness

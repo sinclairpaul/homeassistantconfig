@@ -1,11 +1,11 @@
 ---
 nest_hello:
- name: Nest Hello
- control: hidden
- entities:
-   - binary_sensor.front_door_camera_motion_detected
-   - binary_sensor.front_door_camera_person_detected
-   - binary_sensor.front_door_camera_sound_detected
-   - binary_sensor.front_door_camera_online
-   - binary_sensor.front_door_camera_zone_1_activity
-   - camera.front_door
+  name: Nest Hello
+  control: hidden
+  entities:
+    - binary_sensor.front_door_camera_motion_detected
+    - binary_sensor.front_door_camera_person_detected
+    - binary_sensor.front_door_camera_sound_detected
+    - binary_sensor.front_door_camera_online
+    - binary_sensor.front_door_camera_zone_1_activity
+    - camera.front_door

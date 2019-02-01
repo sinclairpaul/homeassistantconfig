@@ -1,10 +1,10 @@
 ---
 everything:
-    view: yes
-    entities:
-      - group.all_devices
-      - group.all_switches
-      - group.all_locks
-      - group.all_automations
-      - group.all_remotes
-      - group.all_lights
+  view: true
+  entities:
+    - group.all_devices
+    - group.all_switches
+    - group.all_locks
+    - group.all_automations
+    - group.all_remotes
+    - group.all_lights

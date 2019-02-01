@@ -2,9 +2,9 @@
 Entertainment:
   control: hidden
   entities:
-  - remote.harmony
-  - sensor.harmony
-  - input_select.harmony
-  - media_player.kodi
-  - media_player.living_room_tv
-  - media_player.living_room_amp
+    - remote.harmony
+    - sensor.harmony
+    - input_select.harmony
+    - media_player.kodi
+    - media_player.living_room_tv
+    - media_player.living_room_amp

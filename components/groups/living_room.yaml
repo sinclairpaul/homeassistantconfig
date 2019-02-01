@@ -1,19 +1,19 @@
 ---
 living_room:
- name: Living Room
- control: hidden
- entities:
-   - light.living_room
-   - light.front_door
-#   - remote.harmony
-#   - sensor.harmony
-#   - input_select.harmony
-   - climate.nest
-   - sensor.nest_thermostat_humidity
-#   - media_player.kodi
-#   - media_player.living_room_tv
-#   - media_player.living_room_amp
-   - lock.front_door_lock
-   - sensor.front_door_lock_battery
-   - binary_sensor.front_door
-   - light.front_outside_light
+  name: Living Room
+  control: hidden
+  entities:
+    - light.living_room
+    - light.front_door
+    #  - remote.harmony
+    #  - sensor.harmony
+    #  - input_select.harmony
+    - climate.nest
+    - sensor.nest_thermostat_humidity
+    #  - media_player.kodi
+    #  - media_player.living_room_tv
+    #  - media_player.living_room_amp
+    - lock.front_door_lock
+    - sensor.front_door_lock_battery
+    - binary_sensor.front_door
+    - light.front_outside_light

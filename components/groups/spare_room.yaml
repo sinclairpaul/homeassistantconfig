@@ -1,32 +1,32 @@
 ---
 spare_room:
- name: Spare Room
- control: hidden
- entities:
-   - light.spare_room
-   - light.printer
-   - switch.anet_a8_power
-   - sensor.anet_printer_status
-   - sensor.anet_print_progress
-   - sensor.anet_hotend_temp
-   - switch.hypercube_power
-   - sensor.hc_printer_status
-   - sensor.hc_print_progress
-   - sensor.hc_hotend_temp
-   - switch.hc300_power
-   - switch.new_hypercube_power
-  #  - switch.tlm_power
-   - switch.sonoff_tlm
-   - sensor.spare_room_temperature
-   - sensor.spare_room_humidity
-   - sensor.spare_room_brightness
-   - binary_sensor.spare_room_motion
-   - light.spare_room_led
-   - sensor.tlm_current
-   - sensor.tlm_power
-   - sensor.tlm_energy_today
-   - sensor.tlm_energy_total
-   - sensor.tlm_energy_yesterday
-   - sensor.tlm_power
-   - sensor.tlm_power_factor
-   - sensor.tlm_voltage
+  name: Spare Room
+  control: hidden
+  entities:
+    - light.spare_room
+    - light.printer
+    - switch.anet_a8_power
+    - sensor.anet_printer_status
+    - sensor.anet_print_progress
+    - sensor.anet_hotend_temp
+    - switch.hypercube_power
+    - sensor.hc_printer_status
+    - sensor.hc_print_progress
+    - sensor.hc_hotend_temp
+    - switch.hc300_power
+    - switch.new_hypercube_power
+    #  - switch.tlm_power
+    - switch.sonoff_tlm
+    - sensor.spare_room_temperature
+    - sensor.spare_room_humidity
+    - sensor.spare_room_brightness
+    - binary_sensor.spare_room_motion
+    - light.spare_room_led
+    - sensor.tlm_current
+    - sensor.tlm_power
+    - sensor.tlm_energy_today
+    - sensor.tlm_energy_total
+    - sensor.tlm_energy_yesterday
+    - sensor.tlm_power
+    - sensor.tlm_power_factor
+    - sensor.tlm_voltage

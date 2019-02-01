@@ -3,7 +3,7 @@
   state_topic: "octoa8/temperature/tool0"
   name: 'Anet Hotend Temp'
   value_template: '{{ value_json.actual }}'
-  unit_of_measurement: "°C" 
+  unit_of_measurement: "°C"
 - platform: mqtt
   state_topic: "octoa8/progress/printing"
   name: 'Anet Print Progress'

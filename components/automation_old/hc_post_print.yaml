@@ -2,10 +2,10 @@
 alias: Turn HC Off Post Print
 initial_state: true
 trigger:
-- entity_id: sensor.hc_printer_status
-  from: PRINTING
-  platform: state
-  to: OPERATIONAL
+  - entity_id: sensor.hc_printer_status
+    from: PRINTING
+    platform: state
+    to: OPERATIONAL
 action:
   service: switch.turn_off
   entity_id: switch.hypercube_power

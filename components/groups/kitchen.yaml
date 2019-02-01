@@ -1,5 +1,5 @@
 ---
 kitchen:
- name: Kitchen
- entities:
-   - light.kitchen
+  name: Kitchen
+  entities:
+    - light.kitchen

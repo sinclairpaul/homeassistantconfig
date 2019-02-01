@@ -1,5 +1,5 @@
 ---
 landing:
- name: Landing
- entities:
-   - light.landing
+  name: Landing
+  entities:
+    - light.landing
