@@ -1,1 +1,2 @@
-device_tracker: !include_dir_merge_list ../trackers
+---
+device_tracker: !include_dir_list ../trackers

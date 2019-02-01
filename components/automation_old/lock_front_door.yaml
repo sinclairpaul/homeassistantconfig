@@ -1,15 +1,16 @@
+---
 alias: Lock Front Door after 5 minutes
 initial_state: true
 trigger:
-- entity_id: lock.front_door_lock
-  for:
-    minutes: 5
-  platform: state
-  to: unlocked
+  - entity_id: lock.front_door_lock
+    for:
+      minutes: 5
+    platform: state
+    to: unlocked
 condition:
-- condition: state
-  entity_id: binary_sensor.front_door
-  state: Closed
+  - condition: state
+    entity_id: binary_sensor.front_door
+    state: Closed
 action:
-- entity_id: lock.front_door_lock
-  service: lock.lock
+  - entity_id: lock.front_door_lock
+    service: lock.lock

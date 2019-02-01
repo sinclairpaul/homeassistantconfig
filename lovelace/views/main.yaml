@@ -1,3 +1,4 @@
+---
 path: main
 icon: 'mdi:home'
 title: Main
@@ -24,7 +25,7 @@ cards:
     entities:
       - remote.harmony
       - sensor.harmony
-      - input_select.harmony  
+      - input_select.harmony
   - entity: media_player.kodi
     type: 'custom:mini-media-player'
   - entity: media_player.living_room_tv

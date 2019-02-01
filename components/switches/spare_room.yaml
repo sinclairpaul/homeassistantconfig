@@ -1,6 +1,7 @@
+---
 - platform: tplink
   host: !secret hcswitch_ip
-  name: Hypercube Power  
+  name: Hypercube Power
 - platform: tplink
   host: !secret hc300switch_ip
   name: TLM Power

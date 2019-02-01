@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   name: "HA Voltage"
   state_topic: "tele/sonoffha/SENSOR"

@@ -1,5 +1,6 @@
+---
 cameras:
-    name: Cameras
-    entities:
-      - camera.dafang3
-      - camera.dafang_motion_snapshot
+  name: Cameras
+  entities:
+    - camera.dafang3
+    - camera.dafang_motion_snapshot

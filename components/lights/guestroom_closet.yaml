@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   name: "Guest Room Closet"
   state_topic: "smartthings/Guest Room Closet/switch/state"

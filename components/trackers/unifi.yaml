@@ -1,14 +1,15 @@
-- platform: unifi
-  host: !secret mqtt_broker
-  username: !secret ubuser
-  password: !secret ubpass
-  ssid_filter:
-    - !secret ubwifi
-  verify_ssl: false
-  new_device_defaults:
-    track_new_devices: false
-    hide_if_away: false
-  monitored_conditions:
+---
+platform: unifi
+host: !secret mqtt_broker
+username: !secret ubuser
+password: !secret ubpass
+ssid_filter:
+  - !secret ubwifi
+verify_ssl: false
+new_device_defaults:
+  track_new_devices: false
+  hide_if_away: false
+monitored_conditions:
   - _id
   - _is_guest_by_uap
   - _last_seen_by_uap

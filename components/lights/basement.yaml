@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   name: "Basement Back"
   state_topic: "smartthings/Basement Back/switch/state"

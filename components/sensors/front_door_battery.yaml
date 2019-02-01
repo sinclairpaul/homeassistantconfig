@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   state_topic: "smartthings/Front Door Lock/battery/state"
   name: 'Front Door Lock Battery'

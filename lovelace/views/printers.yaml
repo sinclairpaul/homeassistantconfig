@@ -1,3 +1,4 @@
+---
 title: 3D Printers
 path: printers
 panel: true
@@ -5,51 +6,51 @@ badges: []
 cards:
   - type: horizontal-stack
     cards:
-    - type: vertical-stack
-      cards:
-        - type: entities
-          title: A8
-          show_header_toggle: false
-          entities:
-            - switch.anet_a8_power
-        - type: conditional
-          conditions:
-            - entity: switch.anet_a8_power
-              state: "on"
-          card:
-            type: entities
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: A8
+            show_header_toggle: false
             entities:
-              - sensor.anet_printer_status
-              - sensor.anet_print_progress
-              - sensor.anet_hotend_temp
-    - type: vertical-stack
-      cards:
-        - type: entities
-          title: Hypercube
-          show_header_toggle: false
-          entities:
-            - switch.hypercube_power
-        - type: conditional
-          conditions:
-            - entity: switch.hypercube_power
-              state: "on"
-          card:
-            type: entities
+              - switch.anet_a8_power
+          - type: conditional
+            conditions:
+              - entity: switch.anet_a8_power
+                state: "on"
+            card:
+              type: entities
+              entities:
+                - sensor.anet_printer_status
+                - sensor.anet_print_progress
+                - sensor.anet_hotend_temp
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Hypercube
+            show_header_toggle: false
             entities:
-              - sensor.hc_printer_status
-              - sensor.hc_print_progress
-              - sensor.hc_hotend_temp
-    - type: vertical-stack
-      cards:
-        - type: entities
-          title: HC300
-          show_header_toggle: false
-          entities:
-            - switch.new_hypercube_power
-    - type: vertical-stack
-      cards:
-        - type: entities
-          title: TLM
-          show_header_toggle: false
-          entities:
-            - switch.sonoff_tlm
+              - switch.hypercube_power
+          - type: conditional
+            conditions:
+              - entity: switch.hypercube_power
+                state: "on"
+            card:
+              type: entities
+              entities:
+                - sensor.hc_printer_status
+                - sensor.hc_print_progress
+                - sensor.hc_hotend_temp
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: HC300
+            show_header_toggle: false
+            entities:
+              - switch.new_hypercube_power
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: TLM
+            show_header_toggle: false
+            entities:
+              - switch.sonoff_tlm

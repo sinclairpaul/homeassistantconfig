@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   state_topic: "octohy/temperature/tool0"
   name: 'HC Hotend Temp'

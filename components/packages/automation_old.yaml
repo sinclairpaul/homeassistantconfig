@@ -1,1 +1,2 @@
+---
 automation old: !include_dir_list ../automation_old

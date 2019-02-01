@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   name: "Ensuite Light"
   state_topic: "stat/sonoffensuitelight/RESULT"

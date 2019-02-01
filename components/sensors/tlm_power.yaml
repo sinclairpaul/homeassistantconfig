@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   name: "TLM Voltage"
   state_topic: "tele/sonofftlm/SENSOR"

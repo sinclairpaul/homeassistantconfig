@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   state_topic: "/bins/date"
   name: 'Bin Collection Date'

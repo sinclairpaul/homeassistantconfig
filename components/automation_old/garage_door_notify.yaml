@@ -1,17 +1,18 @@
+---
 alias: Notify Garage Door
 initial_state: true
 trigger:
-- entity_id: cover.garage_door
-  platform: state
+  - entity_id: cover.garage_door
+    platform: state
 condition: []
 action:
-- data_template:
-    message: Garage Door just changed from {{ trigger.from_state.state }} to {{trigger.to_state.state
-      }}
-    title: Garage Door State Changed
-  service: notify.pushbullet
-- data_template:
-    message: Garage Door just changed from {{ trigger.from_state.state }} to {{trigger.to_state.state
-      }}
-    title: Garage Door State Changed
-  service: notify.living_room_tv
+  - data_template:
+      message: Garage Door just changed from {{ trigger.from_state.state }} to {{trigger.to_state.state
+        }}
+      title: Garage Door State Changed
+    service: notify.pushbullet
+  - data_template:
+      message: Garage Door just changed from {{ trigger.from_state.state }} to {{trigger.to_state.state
+        }}
+      title: Garage Door State Changed
+    service: notify.living_room_tv

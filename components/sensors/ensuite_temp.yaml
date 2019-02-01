@@ -1,3 +1,4 @@
+---
 - platform: mqtt
   state_topic: "smartthings/Bathroom Temp Humidity/temperature/state"
   name: 'Ensuite Temperature'

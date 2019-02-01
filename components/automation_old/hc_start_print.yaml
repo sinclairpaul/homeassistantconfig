@@ -1,9 +1,10 @@
+---
 alias: HC Print - Switch on Lights
 initial_state: true
 trigger:
-- platform: state
-  entity_id: sensor.hc_printer_status
-  to: PRINTING
+  - platform: state
+    entity_id: sensor.hc_printer_status
+    to: PRINTING
 action:
   service: light.turn_on
   entity_id: light.spare_room
