@@ -8,4 +8,3 @@ views:
   - !include lovelace/views/nest.yaml
   - !include lovelace/views/camera.yaml
   - !include lovelace/views/blink.yaml
-  

@@ -14,4 +14,3 @@ cards:
     type: entities
   - entity: camera.front_door
     type: picture-entity
-    

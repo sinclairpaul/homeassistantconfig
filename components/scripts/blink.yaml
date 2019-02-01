@@ -1,3 +1,4 @@
+---
 arm_blink:
   sequence:
     - service: alarm_control_panel.alarm_arm_away

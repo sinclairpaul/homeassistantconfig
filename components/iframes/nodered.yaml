@@ -2,4 +2,3 @@
 nodered:
   title: NodeRed
   url: !secret nodered_url
-  

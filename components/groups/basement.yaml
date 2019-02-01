@@ -1,21 +1,21 @@
 ---
 basement:
-    name: Basement
-    control: hidden   
-    entities:
-      - light.basement_main
-      - light.basement_front
-      - light.basement_furnace
-      - light.basement_back
-      - binary_sensor.washing_machine_door
-      - binary_sensor.washing_machine_motion
-      - sensor.basement_washing_machine_temp
-      - switch.sonoff_ha
-      - sensor.ha_current
-      - sensor.ha_power
-      - sensor.ha_energy_today
-      - sensor.ha_energy_total
-      - sensor.ha_energy_yesterday
-      - sensor.ha_power
-      - sensor.ha_power_factor
-      - sensor.ha_voltage
+  name: Basement
+  control: hidden   
+  entities:
+    - light.basement_main
+    - light.basement_front
+    - light.basement_furnace
+    - light.basement_back
+    - binary_sensor.washing_machine_door
+    - binary_sensor.washing_machine_motion
+    - sensor.basement_washing_machine_temp
+    - switch.sonoff_ha
+    - sensor.ha_current
+    - sensor.ha_power
+    - sensor.ha_energy_today
+    - sensor.ha_energy_total
+    - sensor.ha_energy_yesterday
+    - sensor.ha_power
+    - sensor.ha_power_factor
+    - sensor.ha_voltage

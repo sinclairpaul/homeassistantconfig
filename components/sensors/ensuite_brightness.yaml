@@ -3,4 +3,3 @@
   state_topic: "smartthings/Xiaomi Aqara Motion Sensor/illuminance/state"
   name: 'Ensuite Brightness'
   unit_of_measurement: "lux"
-  

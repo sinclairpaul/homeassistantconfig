@@ -3,4 +3,3 @@
   state_topic: "smartthings/Front Door Lock/battery/state"
   name: 'Front Door Lock Battery'
   unit_of_measurement: "%"
-  

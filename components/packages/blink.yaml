@@ -2,4 +2,3 @@
 blink:
   username: !secret normalemail
   password: !secret blinkpass
-  

@@ -13,4 +13,3 @@
   state_topic: "octohc300/event/PrinterStateChanged"
   name: 'HC300 Printer Status'
   value_template: '{{ value_json.state_id }}'
-  

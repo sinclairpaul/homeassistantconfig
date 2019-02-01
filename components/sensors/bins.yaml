@@ -19,4 +19,3 @@
   state_topic: "/bins/type"
   name: 'Garden'
   value_template: '{{ value_json[0].yard }}'
-  

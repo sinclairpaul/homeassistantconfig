@@ -2,4 +2,3 @@
 nest:
   client_id: !secret nestclientid
   client_secret: !secret nestclientsecret
-  

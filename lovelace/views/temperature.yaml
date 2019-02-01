@@ -69,4 +69,3 @@ cards:
           entity: sensor.ensuite_humidity
           name: Ensuite
           hours_to_show: 48
-          

@@ -13,4 +13,3 @@
   state_topic: "octoa8/event/PrinterStateChanged"
   name: 'Anet Printer Status'
   value_template: '{{ value_json.state_id }}'
-  

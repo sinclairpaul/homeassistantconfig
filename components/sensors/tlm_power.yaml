@@ -61,4 +61,3 @@
   qos: 1
   payload_available: "Online"
   payload_not_available: "Offline"
-  

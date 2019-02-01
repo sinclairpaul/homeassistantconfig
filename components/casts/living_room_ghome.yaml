@@ -1,4 +1,3 @@
 ---
 media_player:
   - host: !secret home_ip
-  

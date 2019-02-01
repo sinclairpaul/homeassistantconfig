@@ -1,11 +1,11 @@
 ---
 guest_room:
-    name: Guest Room
-    control: hidden    
-    entities:  
-      - sensor.guest_room_temperature  
-      - sensor.guest_room_humidity  
-      - sensor.guest_room_brightness  
-      - binary_sensor.guest_room_motion  
-      - light.guest_room_led
-      - light.guest_room_closet
+  name: Guest Room
+  control: hidden    
+  entities:  
+    - sensor.guest_room_temperature
+    - sensor.guest_room_humidity
+    - sensor.guest_room_brightness
+    - binary_sensor.guest_room_motion
+    - light.guest_room_led
+    - light.guest_room_closet

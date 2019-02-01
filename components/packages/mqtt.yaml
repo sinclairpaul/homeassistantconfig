@@ -6,4 +6,3 @@ mqtt:
     client_id: ha
     discovery: true
     discovery_prefix: homeassistant
-    

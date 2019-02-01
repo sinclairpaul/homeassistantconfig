@@ -8,4 +8,3 @@ sabnzbd:
       - 'speed'
       - 'queue_size'
       - 'queue_remaining'
-      

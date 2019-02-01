@@ -11,4 +11,3 @@ recorder:
       - sensor.anet_hotend_temp
       - sensor.hc300_hotend_temp
       - sensor.hc300_print_progress
-      
