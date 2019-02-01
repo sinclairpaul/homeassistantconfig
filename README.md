@@ -8,6 +8,6 @@ Some hardware/devices used are:
 * [Nest Thermostat/Hello](https://nest.com/)
 * [Samsung Smarthings](https://www.smartthings.com/)
 * [Harmony Remote](https://www.logitech.com/en-ca/harmony-universal-remotes)
-* Xiaomi Sensor
+* Xiaomi Sensors
 * [Philips Hue](https://www2.meethue.com/en-ca)
 * ESP8266 based sensors/devices using [Tasmota](https://github.com/arendst/Sonoff-Tasmota) and [ESPHome](https://esphomelib.com/)
