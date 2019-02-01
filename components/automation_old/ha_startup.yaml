@@ -5,23 +5,23 @@ trigger:
   platform: homeassistant
   event: start
 action:
-    - service: mqtt.publish
+  - service: mqtt.publish
     data:
-        topic: cmnd/sonoffensuitelight/POWER
-        payload: ''
-    - service: mqtt.publish
+      topic: cmnd/sonoffensuitelight/POWER
+      payload: ''
+  - service: mqtt.publish
     data:
-        topic: cmnd/sonoffensuitefan/POWER
-        payload: ''
-    - service: mqtt.publish
+      topic: cmnd/sonoffensuitefan/POWER
+      payload: ''
+  - service: mqtt.publish
     data:
-        topic: cmnd/sonofftlm/POWER
-        payload: ''
-    - service: mqtt.publish
+      topic: cmnd/sonofftlm/POWER
+      payload: ''
+  - service: mqtt.publish
     data:
-        topic: garage/door/1/action
-        payload: STATE
-    - service: mqtt.publish
+      topic: garage/door/1/action
+      payload: STATE
+  - service: mqtt.publish
     data:
-        topic: cmnd/sonoffha/POWER
-        payload: ''
+      topic: cmnd/sonoffha/POWER
+      payload: ''

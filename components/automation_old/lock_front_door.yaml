@@ -11,6 +11,6 @@ condition:
   - condition: state
     entity_id: binary_sensor.front_door
     state: Closed
-  action:
+action:
   - entity_id: lock.front_door_lock
     service: lock.lock
