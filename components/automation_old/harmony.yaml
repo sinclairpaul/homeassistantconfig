@@ -15,10 +15,14 @@ action:
           13449441
         {% elif is_state("input_select.harmony", "Play XBOX") %}
           13449442
-        {% elif is_state("input_select.harmony", "Watch Kodi") %}
-          13644148
+        {% elif is_state("input_select.harmony", "Android TV") %}
+          21496452
+        {% elif is_state("input_select.harmony", "SHIELD TV") %}
+          38239362
         {% elif is_state("input_select.harmony", "Play PS4") %}
           19936305
+        {% elif is_state("input_select.harmony", "Watch Fire TV") %}
+          36846873
         {% elif is_state("input_select.harmony", "Power Off") %}
           -1
         {% else %}

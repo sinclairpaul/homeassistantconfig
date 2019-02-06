@@ -10,6 +10,7 @@
 !*gitlab-ci.yml
 !.mdlrc
 !.yamllint
+!*.py
 
 # Ignore folders.
 .storage
@@ -18,8 +19,7 @@
 esphomeyaml
 node-red
 themes
-
-custom_components.yaml
+deps
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 ip_bans.yaml

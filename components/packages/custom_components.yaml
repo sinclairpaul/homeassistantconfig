@@ -1,0 +1,4 @@
+---
+custom_updater:
+  component_urls:
+    - https://raw.githubusercontent.com/robmarkcole/Hue-sensors-HASS/master/custom_updater.json
