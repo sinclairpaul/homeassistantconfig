@@ -2,9 +2,9 @@
 - platform: tplink
   host: !secret hcswitch_ip
   name: Hypercube Power
-- platform: tplink
-  host: !secret hc300switch_ip
-  name: TLM Power
+# - platform: tplink
+#   host: !secret hc300switch_ip
+#   name: TLM Power
 - platform: tplink
   host: !secret aneta8switch_ip
   name: ANET A8 Power
