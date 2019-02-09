@@ -19,8 +19,6 @@ Some hardware/devices used are:
     [Tasmota](https://github.com/arendst/Sonoff-Tasmota)
     and [ESPHome](https://esphomelib.com/)
 
-
-
 [gitlabci-shield]: https://gitlab.com/sinclairpaul/homeassistantconfig/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/sinclairpaul/homeassistantconfig/pipelines
 [last-commit-shield]: https://img.shields.io/github/last-commit/sinclairpaul/homeassistantconfig.svg
