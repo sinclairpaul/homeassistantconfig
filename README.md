@@ -1,5 +1,7 @@
 # Home Assistant Configuration
 
+[![GitLab CI][gitlabci-shield]][gitlabci]
+
 I run my [Home Assistant](https://home-assistant.io/) utilising
     [Hass.io](https://www.home-assistant.io/hassio/) on a Debian host.
 
@@ -14,3 +16,7 @@ Some hardware/devices used are:
 * ESP8266 based sensors/devices using
     [Tasmota](https://github.com/arendst/Sonoff-Tasmota)
     and [ESPHome](https://esphomelib.com/)
+
+
+
+[gitlabci-shield]: https://gitlab.com/sinclairpaul/homeassistantconfig/badges/master/pipeline.svg
