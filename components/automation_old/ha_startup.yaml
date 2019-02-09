@@ -7,13 +7,6 @@ trigger:
 action:
   - service: mqtt.publish
     data:
-      topic: cmnd/sonofftlm/POWER
-      payload: ''
-  - service: mqtt.publish
-    data:
       topic: garage/door/1/action
       payload: STATE
-  - service: mqtt.publish
-    data:
-      topic: cmnd/sonoffha/POWER
-      payload: ''
+

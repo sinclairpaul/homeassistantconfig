@@ -11,15 +11,4 @@
 - platform: tplink
   host: !secret hcnewswitch_ip
   name: New Hypercube Power
-- platform: mqtt
-  name: "Sonoff TLM"
-  state_topic: "stat/sonofftlm/RESULT"
-  value_template: "{{ value_json.POWER }}"
-  command_topic: "cmnd/sonofftlm/POWER"
-  availability_topic: "tele/sonofftlm/LWT"
-  qos: 1
-  payload_on: "ON"
-  payload_off: "OFF"
-  payload_available: "Online"
-  payload_not_available: "Offline"
-  retain: false
+

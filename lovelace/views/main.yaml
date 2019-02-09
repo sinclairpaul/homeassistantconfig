@@ -67,14 +67,6 @@ cards:
       - sensor.spare_room_brightness
       - binary_sensor.spare_room_motion
       - light.spare_room_led
-      - sensor.tlm_current
-      - sensor.tlm_power
-      - sensor.tlm_energy_today
-      - sensor.tlm_energy_total
-      - sensor.tlm_energy_yesterday
-      - sensor.tlm_power
-      - sensor.tlm_power_factor
-      - sensor.tlm_voltage
     show_header_toggle: false
     title: Spare Room
     type: entities
@@ -99,25 +91,20 @@ cards:
     show_header_toggle: false
     title: Guest Room
     type: entities
-  - entities:
+  - title: Basement
+    show_header_toggle: false
+    type: entities
+    entities:
       - light.basement_main
       - light.basement_front
       - light.basement_furnace
       - light.basement_back
       - binary_sensor.washing_machine_door
       - binary_sensor.washing_machine_motion
-      - switch.sonoff_ha
-      - sensor.ha_current
-      - sensor.ha_power
-      - sensor.ha_energy_today
-      - sensor.ha_energy_total
-      - sensor.ha_energy_yesterday
-      - sensor.ha_power
-      - sensor.ha_power_factor
-      - sensor.ha_voltage
-    show_header_toggle: false
-    title: Basement
-    type: entities
+      - switch.ha_power_switch
+      - sensor.ha_switch_current
+      - sensor.ha_switch_power
+      - sensor.ha_switch_voltage
   - entities:
       - cover.garage_door
     show_header_toggle: true

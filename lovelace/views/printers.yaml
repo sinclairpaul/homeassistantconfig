@@ -53,4 +53,14 @@ cards:
             title: TLM
             show_header_toggle: false
             entities:
-              - switch.sonoff_tlm
+              - switch.tlm_power_switch
+          - type: conditional
+            conditions:
+              - entity: switch.tlm_power_switch
+                state: "on"
+            card:
+              type: entities
+              entities:
+                - sensor.tlm_switch_current
+                - sensor.tlm_switch_power
+                - sensor.tlm_switch_voltage
