@@ -1,3 +1,4 @@
+---
 esphomeyaml:
   name: ensuitefan
   platform: ESP8266
@@ -42,12 +43,12 @@ switch:
     lambda: return id(relay).state;
     turn_on_action:
       then:
-       - switch.turn_on: relay
-       - light.turn_on: ensuite_fan_led
+        - switch.turn_on: relay
+        - light.turn_on: ensuite_fan_led
     turn_off_action:
       then:
-       - switch.turn_off: relay
-       - light.turn_off: ensuite_fan_led
+        - switch.turn_off: relay
+        - light.turn_off: ensuite_fan_led
 
 output:
   - platform: esp8266_pwm
