@@ -1,3 +1,4 @@
+---
 esphomeyaml:
   name: switchbox2
   platform: ESP8266
@@ -26,7 +27,7 @@ binary_sensor:
       - invert:
       - delayed_off: 50ms
     name: "Red Button Bottom"
-    internal: yes
+    internal: true
   - platform: gpio
     pin:
       number: GPIO12
@@ -35,7 +36,7 @@ binary_sensor:
       - invert:
       - delayed_off: 50ms
     name: "White Button Bottom"
-    internal: yes
+    internal: true
   - platform: gpio
     pin:
       number: GPIO13
@@ -44,7 +45,7 @@ binary_sensor:
       - invert:
       - delayed_off: 50ms
     name: "Yellow Button Bottom"
-    internal: yes
+    internal: true
   - platform: gpio
     pin:
       number: GPIO1
@@ -55,7 +56,7 @@ binary_sensor:
     on_press:
       - switch.turn_off: nest_switch
     name: "Blue Button Bottom"
-    internal: yes
+    internal: true
   - platform: gpio
     pin:
       number: GPIO5
@@ -64,23 +65,23 @@ binary_sensor:
       - invert:
       - delayed_off: 50ms
     name: "Orange Button Bottom"
-    internal: yes
+    internal: true
 switch:
   - platform: template
     name: "Show Nest Camera"
     id: nest_switch
     optimistic: true
-    internal: yes
+    internal: true
     turn_on_action:
       then:
         - homeassistant.service:
             service: remote.turn_on
-            data_template: {"entity_id" : "remote.harmony", "activity" : "SHIELD TV"}
+            data_template: {"entity_id":"remote.harmony", "activity":"SHIELD TV"}
         - delay: 2s
         - homeassistant.service:
             service: media_player.androidtv_intent
-            data_template: {"entity_id": "media_player.living_room_shield", "intent": "-n com.nest.android/com.obsidian.v4.tv.home.TvHomeActivity"}
+            data_template: {"entity_id":"media_player.living_room_shield", "intent":"-n com.nest.android/com.obsidian.v4.tv.home.TvHomeActivity"}
     turn_off_action:
       - homeassistant.service:
-            service: remote.turn_on
-            data_template: {"entity_id" : "remote.harmony", "activity" : "Watch TV"}
+          service: remote.turn_on
+          data_template: {"entity_id":"remote.harmony", "activity":"Watch TV"}

@@ -30,7 +30,7 @@ binary_sensor:
       mode: INPUT_PULLUP
     name: "Reed Switch"
     id: garage_door_open 
-    internal: yes
+    internal: true
     device_class: garage_door
 
 switch:
@@ -39,7 +39,7 @@ switch:
     pin: D1
     id: garage_door_relay
     restore_mode: RESTORE_DEFAULT_OFF
-    internal: yes
+    internal: true
 cover:
   - platform: template
     name: "Garage Door"

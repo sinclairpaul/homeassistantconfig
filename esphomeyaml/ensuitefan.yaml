@@ -23,9 +23,9 @@ binary_sensor:
     pin:
       number: GPIO0
       mode: INPUT_PULLUP
-      inverted: True
+      inverted: true
     name: "Ensuite Fan Internal Switch"
-    internal: yes
+    internal: true
     on_press:
       - switch.toggle: switch_main
 
@@ -35,7 +35,7 @@ switch:
     pin: GPIO12
     id: relay
     restore_mode: always off
-    internal: yes
+    internal: true
   - platform: template
     id: switch_main
     name: "Ensuite Fan Switch"
@@ -54,11 +54,11 @@ output:
     id: ensuite_fan_internal_led
     pin:
       number: GPIO13
-      inverted: True
+      inverted: true
 
 light:
   - platform: monochromatic
     name: "Ensuite Fan LED"
     output: ensuite_fan_internal_led
-    internal: yes
+    internal: true
     id: ensuite_fan_led

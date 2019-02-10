@@ -33,7 +33,7 @@ binary_sensor:
       max_length: 5000ms
       then:
         - switch.turn_off: lightstrip_switch
-    internal: yes
+    internal: true
   - platform: gpio
     pin:
       number: GPIO14
@@ -42,7 +42,7 @@ binary_sensor:
       - invert:
       - delayed_off: 50ms
     name: "White Button Top"
-    internal: yes
+    internal: true
   - platform: gpio
     pin:
       number: GPIO12
@@ -51,7 +51,7 @@ binary_sensor:
       - invert:
       - delayed_off: 50ms
     name: "Yellow Button Top"
-    internal: yes
+    internal: true
   - platform: gpio
     pin:
       number: GPIO13
@@ -62,7 +62,7 @@ binary_sensor:
     name: "Blue Button Top"
     on_press:
       - switch.turn_on: nest_switch
-    internal: yes
+    internal: true
   - platform: gpio
     pin:
       number: GPIO1
@@ -73,13 +73,13 @@ binary_sensor:
     name: "Orange Button Top"
     on_press:
       - switch.turn_on: bedside_switch
-    internal: yes
+    internal: true
 switch:
   - platform: template
     name: "Light Strip Relay"
     id: lightstrip_switch
     optimistic: true
-    internal: yes
+    internal: true
     turn_on_action:
       - homeassistant.service:
           service: light.turn_on
@@ -92,7 +92,7 @@ switch:
     name: "Bedside Lights"
     id: bedside_switch
     optimistic: true
-    internal: yes
+    internal: true
     turn_on_action:
       - homeassistant.service:
           service: switch.turn_on
@@ -104,7 +104,7 @@ switch:
     name: "Show Nest Camera"
     id: nest_switch
     optimistic: true
-    internal: yes
+    internal: true
     turn_on_action:
       then:
         - homeassistant.service:

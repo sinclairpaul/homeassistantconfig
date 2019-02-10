@@ -28,12 +28,12 @@ binary_sensor:
     pin:
       number: GPIO13
       mode: INPUT_PULLUP
-      inverted: True
+      inverted: true
     name: "Bedside Light 1 Button"
     on_press:
       then:
-       - switch.toggle: switch_main
-    internal: yes
+        - switch.toggle: switch_main
+    internal: true
   - platform: status
     name: "Bedside Light 1 Status"
 text_sensor:
@@ -41,55 +41,55 @@ text_sensor:
     id: halight2
     name: "Bedside Light 2 Switch Status"
     entity_id: switch.bedside_light_2_switch
-    internal: yes
-    
+    internal: true
+
 switch:
   - platform: gpio
     id: relay
     name: "Internal Relay"
     pin: GPIO15
     restore_mode: always off
-    internal: yes
+    internal: true
   - platform: template
     id: switch_main
     name: "Bedside Light 1 Switch"
     lambda: return id(relay).state;
     turn_on_action:
       then:
-       - switch.turn_on: relay
-       - light.turn_on: blueled
+        - switch.turn_on: relay
+        - light.turn_on: blueled
     turn_off_action:
       then:
-       - switch.turn_off: relay
-       - light.turn_off: blueled
-       - delay: 2s
-       - if:
-           condition:
-             lambda: 'return id(halight2).state == "on";'
-           then:
-             - logger.log: "Turning Light 2 off"
-             - homeassistant.service:
-                service: switch.turn_off
-                data_template: {"entity_id" : "switch.bedside_light_2_switch"}
+        - switch.turn_off: relay
+        - light.turn_off: blueled
+        - delay: 2s
+        - if:
+            condition:
+              lambda: 'return id(halight2).state == "on";'
+            then:
+              - logger.log: "Turning Light 2 off"
+              - homeassistant.service:
+                  service: switch.turn_off
+                  data_template: {"entity_id":"switch.bedside_light_2_switch"}
 
 output:
   - platform: esp8266_pwm
     id: blue_led
     pin:
       number: GPIO2
-      inverted: True
+      inverted: true
   - platform: esp8266_pwm
     id: red_led
     pin:
       number: GPIO0
-      inverted: True
+      inverted: true
 
 light:
   - platform: monochromatic
     name: "Bedside Light 1 Blue LED"
     output: blue_led
     id: blueled
-    internal: yes
+    internal: true
   - platform: monochromatic
     name: "Bedside Light 1 Red LED"
     output: red_led

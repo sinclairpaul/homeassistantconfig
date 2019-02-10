@@ -58,7 +58,7 @@ rules:
       .github/support.yml
       .github/settings.yml
     level: warning
-    max: 120
+    max: 150
     allow-non-breakable-words: true
     allow-non-breakable-inline-mappings: true
   new-line-at-end-of-file:

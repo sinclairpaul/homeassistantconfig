@@ -32,9 +32,9 @@ binary_sensor:
     pin:
       number: GPIO0
       mode: INPUT_PULLUP
-      inverted: True
+      inverted: true
     name: "HA Switch Button"
-    internal: yes
+    internal: true
     on_press:
       - switch.toggle: switch_main
 
@@ -43,7 +43,7 @@ switch:
     name: "HA Switch Relay"
     pin: GPIO12
     id: relay
-    internal: yes
+    internal: true
     restore_mode: always on
   - platform: template
     id: switch_main
@@ -63,13 +63,13 @@ output:
     id: ha_switch_internal_led
     pin:
       number: GPIO13
-      inverted: True
+      inverted: true
 
 light:
   - platform: monochromatic
     name: "HA Switch LED"
     output: ha_switch_internal_led
-    internal: yes
+    internal: true
     id: ha_switch_led
     
 sensor:

@@ -1,3 +1,4 @@
+---
 esphomeyaml:
   name: ensuitelight
   platform: ESP8266
@@ -23,9 +24,9 @@ binary_sensor:
     pin:
       number: GPIO0
       mode: INPUT_PULLUP
-      inverted: True
+      inverted: true
     name: "Ensuite Light Internal Switch"
-    internal: yes
+    internal: true
     on_press:
       - switch.toggle: switch_main
 
@@ -35,30 +36,30 @@ switch:
     pin: GPIO12
     id: relay
     restore_mode: always off
-    internal: yes
+    internal: true
   - platform: template
     id: switch_main
     name: "Ensuite Light Switch"
     lambda: return id(relay).state;
     turn_on_action:
-      then:
-       - switch.turn_on: relay
-       - light.turn_on: ensuite_light_led
+       then:
+        - switch.turn_on: relay
+        - light.turn_on: ensuite_light_led
     turn_off_action:
-      then:
-       - switch.turn_off: relay
-       - light.turn_off: ensuite_light_led
+       then:
+        - switch.turn_off: relay
+        - light.turn_off: ensuite_light_led
 
 output:
   - platform: esp8266_pwm
     id: ensuite_light_internal_led
     pin:
       number: GPIO13
-      inverted: True
+      inverted: true
 
 light:
   - platform: monochromatic
     name: "Ensuite LED"
     output: ensuite_light_internal_led
-    internal: yes
+    internal: true
     id: ensuite_light_led

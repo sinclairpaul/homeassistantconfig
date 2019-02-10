@@ -32,9 +32,9 @@ binary_sensor:
     pin:
       number: GPIO0
       mode: INPUT_PULLUP
-      inverted: True
+      inverted: true
     name: "TLM Switch Button"
-    internal: yes
+    internal: true
     on_press:
       - switch.toggle: switch_main
 
@@ -44,7 +44,7 @@ switch:
     pin: GPIO12
     id: relay
     restore_mode: RESTORE_DEFAULT_ON
-    internal: yes
+    internal: true
   - platform: template
     id: switch_main
     name: "TLM Power Switch"
@@ -63,13 +63,13 @@ output:
     id: tlm_switch_internal_led
     pin:
       number: GPIO13
-      inverted: True
+      inverted: true
 
 light:
   - platform: monochromatic
     name: "TLM Switch LED"
     output: tlm_switch_internal_led
-    internal: yes
+    internal: true
     id: tlm_switch_led
     
 sensor:
