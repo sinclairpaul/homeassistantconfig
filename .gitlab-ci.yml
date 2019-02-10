@@ -32,11 +32,11 @@ stages:
     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
   before_script:
     - esphomeyaml dummy.yaml version
-    - cp travis_secrets.yaml ./config/esphomeyaml/secrets.yaml
+    - cp travis_secrets.yaml ./esphomeyaml/secrets.yaml
   script:
     - |
       for file in $(find \
-        ./config/esphomeyaml \
+        ./esphomeyaml \
         -type f \
         -name "*.yaml"\
         -not -name "secrets.yaml"
