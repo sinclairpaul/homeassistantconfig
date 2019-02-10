@@ -16,8 +16,7 @@ Some hardware/devices used are:
 * Xiaomi Sensors
 * [Philips Hue](https://www2.meethue.com/en-ca)
 * ESP8266 based sensors/devices using
-    [Tasmota](https://github.com/arendst/Sonoff-Tasmota)
-    and [ESPHome](https://esphomelib.com/)
+  [ESPHome](https://esphomelib.com/)
 
 [gitlabci-shield]: https://gitlab.com/sinclairpaul/homeassistantconfig/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/sinclairpaul/homeassistantconfig/pipelines
