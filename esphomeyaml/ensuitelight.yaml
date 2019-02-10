@@ -1,0 +1,64 @@
+esphomeyaml:
+  name: ensuitelight
+  platform: ESP8266
+  board: esp01_1m
+  board_flash_mode: dout
+
+wifi:
+  domain: !secret dnsdomain
+  ssid: !secret wifi
+  password: !secret wifipass
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: !secret otapass
+
+ota:
+  password: !secret otapass
+
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "Ensuite Light Internal Switch"
+    internal: yes
+    on_press:
+      - switch.toggle: switch_main
+
+switch:
+  - platform: gpio
+    name: "Ensuite Switch Relay"
+    pin: GPIO12
+    id: relay
+    restore_mode: always off
+    internal: yes
+  - platform: template
+    id: switch_main
+    name: "Ensuite Light Switch"
+    lambda: return id(relay).state;
+    turn_on_action:
+      then:
+       - switch.turn_on: relay
+       - light.turn_on: ensuite_light_led
+    turn_off_action:
+      then:
+       - switch.turn_off: relay
+       - light.turn_off: ensuite_light_led
+
+output:
+  - platform: esp8266_pwm
+    id: ensuite_light_internal_led
+    pin:
+      number: GPIO13
+      inverted: True
+
+light:
+  - platform: monochromatic
+    name: "Ensuite LED"
+    output: ensuite_light_internal_led
+    internal: yes
+    id: ensuite_light_led

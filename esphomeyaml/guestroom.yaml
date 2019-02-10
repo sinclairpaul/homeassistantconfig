@@ -1,0 +1,62 @@
+---
+esphomeyaml:
+  name: guestroom
+  platform: ESP8266
+  board: nodemcuv2
+
+wifi:
+  domain: !secret dnsdomain
+  ssid: !secret wifi
+  password: !secret wifipass
+  manual_ip:
+    static_ip: !secret guestroomsensorip
+    gateway: !secret iotgateway
+    subnet: !secret iotsubnet
+api:
+  password: !secret otapass
+
+# Enable logging
+logger:
+
+ota:
+  password: !secret otapass
+
+sensor:
+  - platform: dht
+    pin: D7
+    temperature:
+      name: "Guest Room Temperature"
+    humidity:
+      name: "Guest Room Humidity"
+    model: DHT22
+  - platform: adc
+    pin: A0
+    name: "Guest Room Brightness"
+    unit_of_measurement: lux
+    filters:
+      - lambda: >-
+          return (x / 10000.0) * 2000000.0;
+
+binary_sensor:
+  - platform: gpio
+    pin: D5
+    name: "Guest Room Motion"
+    device_class: motion
+
+output:
+  - platform: esp8266_pwm
+    pin: D1
+    id: redgpio
+  - platform: esp8266_pwm
+    pin: D2
+    id: greengpio
+  - platform: esp8266_pwm
+    pin: D3
+    id: bluegpio
+
+light:
+  - platform: rgb
+    name: "Guest Room LED"
+    red: redgpio
+    green: greengpio
+    blue: bluegpio

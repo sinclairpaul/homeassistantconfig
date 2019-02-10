@@ -1,0 +1,120 @@
+esphomeyaml:
+  name: switchbox
+  platform: ESP8266
+  board: nodemcuv2
+
+wifi:
+  domain: !secret dnsdomain
+  ssid: !secret wifi
+  password: !secret wifipass
+# Enable logging
+logger: 
+
+# Enable Home Assistant API
+api:
+  password: !secret otapass
+
+ota:
+  password: !secret otapass
+
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO5
+      mode: INPUT_PULLUP
+    filters:
+      - invert:
+      - delayed_off: 50ms
+    name: "Red Button Top"
+    on_press:
+      - switch.turn_on: lightstrip_switch
+    on_click:
+      min_length: 1000ms
+      max_length: 5000ms
+      then:
+        - switch.turn_off: lightstrip_switch
+    internal: yes
+  - platform: gpio
+    pin:
+      number: GPIO14
+      mode: INPUT_PULLUP
+    filters:
+      - invert:
+      - delayed_off: 50ms
+    name: "White Button Top"
+    internal: yes
+  - platform: gpio
+    pin:
+      number: GPIO12
+      mode: INPUT_PULLUP
+    filters:
+      - invert:
+      - delayed_off: 50ms
+    name: "Yellow Button Top"
+    internal: yes
+  - platform: gpio
+    pin:
+      number: GPIO13
+      mode: INPUT_PULLUP
+    filters:
+      - invert:
+      - delayed_off: 50ms
+    name: "Blue Button Top"
+    on_press:
+      - switch.turn_on: nest_switch
+    internal: yes
+  - platform: gpio
+    pin:
+      number: GPIO1
+      mode: INPUT_PULLUP
+    filters:
+      - invert:
+      - delayed_off: 50ms
+    name: "Orange Button Top"
+    on_press:
+      - switch.turn_on: bedside_switch
+    internal: yes
+switch:
+  - platform: template
+    name: "Light Strip Relay"
+    id: lightstrip_switch
+    optimistic: true
+    internal: yes
+    turn_on_action:
+      - homeassistant.service:
+          service: light.turn_on
+          data_template: {"entity_id" : "light.living_room_light_strip"}
+    turn_off_action:
+      - homeassistant.service:
+          service: light.turn_off
+          data_template: {"entity_id" : "light.living_room_light_strip"}
+  - platform: template
+    name: "Bedside Lights"
+    id: bedside_switch
+    optimistic: true
+    internal: yes
+    turn_on_action:
+      - homeassistant.service:
+          service: switch.turn_on
+          data_template: {"entity_id" : "switch.bedside_light_1_switch"}
+      - homeassistant.service:
+          service: switch.turn_on
+          data_template: {"entity_id" : "switch.bedside_light_2_switch"}
+  - platform: template
+    name: "Show Nest Camera"
+    id: nest_switch
+    optimistic: true
+    internal: yes
+    turn_on_action:
+      then:
+        - homeassistant.service:
+            service: remote.turn_on
+            data_template: {"entity_id" : "remote.harmony", "activity" : "SHIELD TV"}
+        - delay: 2s
+        - homeassistant.service:
+            service: media_player.androidtv_intent
+            data_template: {"entity_id": "media_player.living_room_shield", "intent": "-n com.nest.android/com.obsidian.v4.tv.home.TvHomeActivity"}
+    turn_off_action:
+      - homeassistant.service:
+            service: remote.turn_on
+            data_template: {"entity_id" : "remote.harmony", "activity" : "Watch TV"}

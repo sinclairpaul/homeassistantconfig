@@ -1,0 +1,67 @@
+---
+esphomeyaml:
+  name: garagedoor
+  platform: ESP8266
+  board: d1_mini
+
+wifi:
+  domain: !secret dnsdomain
+  ssid: !secret wifi
+  password: !secret wifipass
+  manual_ip:
+    static_ip: !secret garagedoorip
+    gateway: !secret iotgateway
+    subnet: !secret iotsubnet
+
+  # Enable logging
+logger: 
+
+# Enable Home Assistant API
+api:
+  password: !secret otapass
+
+ota:
+  password: !secret otapass
+
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: D2
+      mode: INPUT_PULLUP
+    name: "Reed Switch"
+    id: garage_door_open 
+    internal: yes
+    device_class: garage_door
+
+switch:
+  - platform: gpio
+    name: "Garage Door Relay"
+    pin: D1
+    id: garage_door_relay
+    restore_mode: RESTORE_DEFAULT_OFF
+    internal: yes
+cover:
+  - platform: template
+    name: "Garage Door"
+    lambda: >-
+      if (id(garage_door_open).state) {
+        return cover::COVER_OPEN;
+      } else {
+        return cover::COVER_CLOSED;
+      }
+    open_action:
+      - switch.turn_off:
+          id: garage_door_relay
+      - switch.turn_on:
+          id: garage_door_relay
+      - delay: 0.5s
+      - switch.turn_off:
+          id: garage_door_relay
+    close_action:
+      - switch.turn_off:
+          id: garage_door_relay
+      - switch.turn_on:
+          id: garage_door_relay
+      - delay: 0.5s
+      - switch.turn_off:
+          id: garage_door_relay

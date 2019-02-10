@@ -16,7 +16,6 @@
 .storage
 .cloud
 .google.token
-esphomeyaml
 node-red
 themes
 deps

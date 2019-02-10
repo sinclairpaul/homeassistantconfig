@@ -1,0 +1,51 @@
+---
+esphomeyaml:
+  name: moailight
+  platform: ESP8266
+  board: esp01_1m
+  board_flash_mode: dout
+
+wifi:
+  domain: !secret dnsdomain
+  ssid: !secret wifi
+  password: !secret wifipass
+  manual_ip:
+    static_ip: !secret moailightip
+    gateway: !secret iotgateway
+    subnet: !secret iotsubnet
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: !secret otapass
+
+ota:
+  password: !secret otapass
+
+output:
+  - platform: esp8266_pwm
+    pin: GPIO14
+    frequency: 500 Hz
+    id: redgpio
+  - platform: esp8266_pwm
+    pin: GPIO12
+    frequency: 500 Hz
+    id: greengpio
+  - platform: esp8266_pwm
+    pin: GPIO13
+    frequency: 500 Hz
+    id: bluegpio
+  - platform: esp8266_pwm
+    pin: GPIO4
+    frequency: 500 Hz
+    id: whitegpio
+
+light:
+  - platform: rgbw
+    name: "Moai Light"
+    default_transition_length: 500ms
+    red: redgpio
+    green: greengpio
+    blue: bluegpio
+    white: whitegpio

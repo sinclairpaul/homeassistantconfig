@@ -1,0 +1,82 @@
+---
+esphomeyaml:
+  name: haswitchpow
+  platform: ESP8266
+  board: esp01_1m
+  board_flash_mode: dout
+
+wifi:
+  domain: !secret dnsdomain
+  ssid: !secret wifi
+  password: !secret wifipass
+  manual_ip:
+    static_ip: !secret haswitchip
+    gateway: !secret iotgateway
+    subnet: !secret iotsubnet
+# Enable logging
+logger:
+  baud_rate: 0
+# Enable Home Assistant API
+api:
+  password: !secret otapass
+  
+ota:
+  password: !secret otapass
+  
+uart:
+  rx_pin: RX
+  baud_rate: 4800
+  
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "HA Switch Button"
+    internal: yes
+    on_press:
+      - switch.toggle: switch_main
+
+switch:
+  - platform: gpio
+    name: "HA Switch Relay"
+    pin: GPIO12
+    id: relay
+    internal: yes
+    restore_mode: always on
+  - platform: template
+    id: switch_main
+    name: "HA Power Switch"
+    lambda: return id(relay).state;
+    turn_on_action:
+      then:
+       - switch.turn_on: relay
+       - light.turn_on: ha_switch_led
+    turn_off_action:
+      then:
+       - switch.turn_off: relay
+       - light.turn_off: ha_switch_led
+
+output:
+  - platform: esp8266_pwm
+    id: ha_switch_internal_led
+    pin:
+      number: GPIO13
+      inverted: True
+
+light:
+  - platform: monochromatic
+    name: "HA Switch LED"
+    output: ha_switch_internal_led
+    internal: yes
+    id: ha_switch_led
+    
+sensor:
+  - platform: cse7766
+    current:
+      name: "HA Switch Current"
+    voltage:
+      name: "HA Switch Voltage"
+    power:
+      name: "HA Switch Power"

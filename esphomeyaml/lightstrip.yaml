@@ -1,0 +1,42 @@
+---
+esphomeyaml:
+  name: lightstrip
+  platform: ESP8266
+  board: nodemcuv2
+
+wifi:
+  domain: !secret dnsdomain
+  ssid: !secret wifi
+  password: !secret wifipass
+  manual_ip:
+    static_ip: !secret lrlightstripip
+    gateway: !secret iotgateway
+    subnet: !secret iotsubnet
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: !secret otapass
+
+ota:
+  password: !secret otapass
+
+light:
+  - platform: fastled_clockless
+    chipset: WS2812B
+    pin: D2
+    num_leds: 149
+    rgb_order: GRB
+    name: "Living Room Light Strip"
+    effects:
+      - random:
+      - strobe:
+      - flicker:
+      - addressable_rainbow:
+      - addressable_color_wipe:
+      - addressable_scan:
+      - addressable_twinkle:
+      - addressable_random_twinkle:
+      - addressable_fireworks:
+      - addressable_flicker:
