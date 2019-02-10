@@ -9,7 +9,7 @@ wifi:
   ssid: !secret wifi
   password: !secret wifipass
 # Enable logging
-logger: 
+logger:
 
 # Enable Home Assistant API
 api:
@@ -76,12 +76,12 @@ switch:
       then:
         - homeassistant.service:
             service: remote.turn_on
-            data_template: {"entity_id":"remote.harmony", "activity":"SHIELD TV"}
+            data_template: {"entity_id": "remote.harmony", "activity": "SHIELD TV"}
         - delay: 2s
         - homeassistant.service:
             service: media_player.androidtv_intent
-            data_template: {"entity_id":"media_player.living_room_shield", "intent":"-n com.nest.android/com.obsidian.v4.tv.home.TvHomeActivity"}
+            data_template: {"entity_id": "media_player.living_room_shield", "intent": "-n com.nest.android/com.obsidian.v4.tv.home.TvHomeActivity"}
     turn_off_action:
       - homeassistant.service:
           service: remote.turn_on
-          data_template: {"entity_id":"remote.harmony", "activity":"Watch TV"}
+          data_template: {"entity_id": "remote.harmony", "activity": "Watch TV"}

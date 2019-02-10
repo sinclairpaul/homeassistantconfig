@@ -70,7 +70,7 @@ switch:
               - logger.log: "Turning Light 2 off"
               - homeassistant.service:
                   service: switch.turn_off
-                  data_template: {"entity_id":"switch.bedside_light_2_switch"}
+                  data_template: {"entity_id": "switch.bedside_light_2_switch"}
 
 output:
   - platform: esp8266_pwm

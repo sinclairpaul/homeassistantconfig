@@ -42,11 +42,11 @@ switch:
     name: "Ensuite Light Switch"
     lambda: return id(relay).state;
     turn_on_action:
-       then:
+      then:
         - switch.turn_on: relay
         - light.turn_on: ensuite_light_led
     turn_off_action:
-       then:
+      then:
         - switch.turn_off: relay
         - light.turn_off: ensuite_light_led
 

@@ -13,8 +13,8 @@ wifi:
     gateway: !secret iotgateway
     subnet: !secret iotsubnet
 
-  # Enable logging
-logger: 
+# Enable logging
+logger:
 
 # Enable Home Assistant API
 api:
@@ -29,7 +29,7 @@ binary_sensor:
       number: D2
       mode: INPUT_PULLUP
     name: "Reed Switch"
-    id: garage_door_open 
+    id: garage_door_open
     internal: true
     device_class: garage_door
 
