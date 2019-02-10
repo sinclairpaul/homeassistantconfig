@@ -70,19 +70,15 @@ cards:
     show_header_toggle: false
     title: Spare Room
     type: entities
-  - entities:
-      - sensor.sabnzbd_left
-      - sensor.sabnzbd_speed
-      - sensor.sabnzbd_status
-      - sensor.sabnzbd_queue
+  - title: Misc Sensors
+    show_header_toggle: true
+    type: entities
+    entities:
       - sensor.bin_collection_date
       - sensor.garden
       - sensor.organics
       - sensor.recycling
       - sensor.rubbish
-    show_header_toggle: true
-    title: Misc Sensors
-    type: entities
   - entities:
       - sensor.guest_room_brightness
       - binary_sensor.guest_room_motion
