@@ -93,3 +93,7 @@ light:
   - platform: monochromatic
     name: "Bedside Light 1 Red LED"
     output: red_led
+
+sensor:
+  - platform: uptime
+    name: "Bedside Light 1 Uptime Sensor"

@@ -43,7 +43,7 @@ switch:
     name: "TLM Switch Relay"
     pin: GPIO12
     id: relay
-    restore_mode: RESTORE_DEFAULT_ON
+    restore_mode: ALWAYS_OFF
     internal: true
   - platform: template
     id: switch_main
@@ -80,3 +80,6 @@ sensor:
       name: "TLM Switch Voltage"
     power:
       name: "TLM Switch Power"
+  - platform: uptime
+    name: TLM Switch Uptime Sensor
+    update_interval: 10s

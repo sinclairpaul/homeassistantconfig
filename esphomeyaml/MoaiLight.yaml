@@ -49,3 +49,7 @@ light:
     green: greengpio
     blue: bluegpio
     white: whitegpio
+
+sensor:
+  - platform: uptime
+    name: "Moai Light Uptime Sensor"

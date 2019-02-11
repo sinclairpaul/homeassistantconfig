@@ -40,3 +40,7 @@ light:
       - addressable_random_twinkle:
       - addressable_fireworks:
       - addressable_flicker:
+
+sensor:
+  - platform: uptime
+    name: "Light Strip Uptime Sensor"

@@ -16,6 +16,7 @@ wifi:
 # Enable logging
 logger:
   baud_rate: 0
+  level: DEBUG
 # Enable Home Assistant API
 api:
   password: !secret otapass
@@ -80,3 +81,7 @@ sensor:
       name: "HA Switch Voltage"
     power:
       name: "HA Switch Power"
+  - platform: uptime
+    name: HA Switch Uptime Sensor
+    update_interval: 10s
+

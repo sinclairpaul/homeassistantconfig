@@ -35,6 +35,8 @@ sensor:
     filters:
       - lambda: >-
           return (x / 10000.0) * 2000000.0;
+  - platform: uptime
+    name: "Spare Room Uptime Sensor"
 
 binary_sensor:
   - platform: gpio
