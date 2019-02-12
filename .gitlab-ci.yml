@@ -17,7 +17,7 @@ stages:
     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
   before_script:
     - python -m homeassistant --version
-    - cp travis_secrets.yaml secrets.yaml
+    - cp ci_secrets.yaml secrets.yaml
   script:
     - |
       python -m homeassistant \
@@ -32,7 +32,7 @@ stages:
     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
   before_script:
     - esphomeyaml dummy.yaml version
-    - cp travis_secrets.yaml ./esphomeyaml/secrets.yaml
+    - cp ci_secrets.yaml ./esphomeyaml/secrets.yaml
   script:
     - |
       for file in $(find \
