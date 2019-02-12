@@ -1,0 +1,9 @@
+---
+dori_last_fed:
+  name: Dori Last Fed at
+  has_date: false
+  has_time: true
+bin_collection_date:
+  name: Bin Collection Date
+  has_date: true
+  has_time: false

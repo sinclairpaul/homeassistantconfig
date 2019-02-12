@@ -1,0 +1,5 @@
+---
+bin_collection_date:
+  name: Bin Collection Date
+  has_date: true
+  has_time: false

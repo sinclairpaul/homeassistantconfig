@@ -6,7 +6,10 @@ badges:
   - device_tracker.paul_s7phone
   - sun.sun
 cards:
-  - entities:
+  - title: Living Room
+    show_header_toggle: false
+    type: entities
+    entities:
       - entity: light.living_room
       - entity: light.front_door
       - entity: lock.front_door_lock
@@ -14,12 +17,9 @@ cards:
       - entity: binary_sensor.front_door
       - entity: light.front_outside_light
       - entity: light.living_room_light_strip
-    show_header_toggle: false
-    title: Living Room
-    type: entities
-  - entity: climate.nest
+  - title: 'Living Room '
+    entity: climate.nest
     type: 'custom:thermostat-card'
-    title: 'Living Room '
   - title: Entertainment
     type: entities
     show_header_toggle: false
@@ -36,57 +36,58 @@ cards:
   - entity: media_player.living_room_amp
     type: 'custom:mini-media-player'
     hide_controls: true
-  - entities:
+  - title: Dining Room
+    type: entities
+    show_header_toggle: false
+    entities:
       - light.dining
-    show_header_toggle: true
-    title: Dining Room
+  - title: Kitchen
     type: entities
-  - entities:
+    show_header_toggle: false
+    entities:
       - light.kitchen
-    show_header_toggle: true
-    title: Kitchen
+  - title: Landing
     type: entities
-  - entities:
+    show_header_toggle: false
+    entities:
       - light.landing
-    show_header_toggle: true
-    title: Landing
+  - title: Master Bedroom
     type: entities
-  - entities:
+    show_header_toggle: false
+    entities:
       - light.bedroom
       - switch.ensuite_fan_switch
       - switch.ensuite_light_switch
       - sensor.ensuite_brightness
       - switch.bedside_light_1_switch
       - switch.bedside_light_2_switch
-    show_header_toggle: false
-    title: Master Bedroom
+  - title: Spare Room
     type: entities
-  - entities:
+    show_header_toggle: false
+    entities:
       - light.spare_room
       - light.printer
       - sensor.spare_room_brightness
       - binary_sensor.spare_room_motion
       - light.spare_room_led
-    show_header_toggle: false
-    title: Spare Room
-    type: entities
   - title: Misc Sensors
-    show_header_toggle: true
+    show_header_toggle: false
     type: entities
     entities:
-      - sensor.bin_collection_date
+      - input_datetime.bin_collection_date
       - sensor.garden
       - sensor.organics
       - sensor.recycling
       - sensor.rubbish
-  - entities:
+      - input_datetime.dori_last_fed
+  - title: Guest Room
+    type: entities
+    show_header_toggle: false
+    entities:
       - sensor.guest_room_brightness
       - binary_sensor.guest_room_motion
       - light.guest_room_led
       - light.guest_room_closet
-    show_header_toggle: false
-    title: Guest Room
-    type: entities
   - title: Basement
     show_header_toggle: false
     type: entities
@@ -101,8 +102,8 @@ cards:
       - sensor.ha_switch_current
       - sensor.ha_switch_power
       - sensor.ha_switch_voltage
-  - entities:
-      - cover.garage_door
-    show_header_toggle: true
-    title: Garage
+  - title: Garage
+    show_header_toggle: false
     type: entities
+    entities:
+      - cover.garage_door
