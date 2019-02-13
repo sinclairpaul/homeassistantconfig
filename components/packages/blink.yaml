@@ -2,3 +2,4 @@
 blink:
   username: !secret normalemail
   password: !secret blinkpass
+  scan_interval: 600

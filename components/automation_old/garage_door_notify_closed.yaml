@@ -4,6 +4,8 @@ initial_state: true
 trigger:
   - entity_id: cover.garage_door
     platform: state
+    from: 'open'
+    to: 'closed'
 condition: []
 action:
   - data_template:
