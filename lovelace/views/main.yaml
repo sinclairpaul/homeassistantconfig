@@ -71,8 +71,8 @@ cards:
       - binary_sensor.spare_room_motion
       - light.spare_room_led
   - title: Misc Sensors
-    show_header_toggle: false
     type: entities
+    show_header_toggle: false
     entities:
       - input_datetime.bin_collection_date
       - sensor.garden
