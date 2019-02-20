@@ -34,7 +34,7 @@ cards:
               - value: 25
                 color: "#c0392b"
           - type: 'custom:mini-graph-card'
-            entities: 
+            entities:
               - sensor.guest_room_temperature
             name: Guest Room
             hours_to_show: 48
@@ -54,7 +54,7 @@ cards:
               - value: 25
                 color: "#c0392b"
           - type: 'custom:mini-graph-card'
-            entities: 
+            entities:
               - sensor.spare_room_temperature
             name: Spare Room
             hours_to_show: 48
@@ -141,7 +141,7 @@ cards:
               - value: 25
                 color: "#c0392b"
           - type: 'custom:mini-graph-card'
-            entities: 
+            entities:
               - sensor.blink_front_temperature
             name: Front
             hours_to_show: 48
@@ -233,17 +233,17 @@ cards:
             name: Living Room
             hours_to_show: 48
           - type: 'custom:mini-graph-card'
-            entities: 
+            entities:
               - sensor.guest_room_humidity
             name: Guest Room
             hours_to_show: 48
           - type: 'custom:mini-graph-card'
-            entities: 
+            entities:
               - sensor.guest_room_humidity
             name: Spare Room
             hours_to_show: 48
           - type: 'custom:mini-graph-card'
-            entities: 
+            entities:
               - sensor.ensuite_humidity
             name: Ensuite
             hours_to_show: 48
@@ -260,7 +260,7 @@ cards:
             name: Garage
             hours_to_show: 48
           - type: 'custom:mini-graph-card'
-            entities: 
+            entities:
               - sensor.acuritev2_cca6_hum
             name: Back
             hours_to_show: 48
