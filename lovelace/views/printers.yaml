@@ -25,8 +25,8 @@ cards:
                 - sensor.anet_printer_status
                 - sensor.anet_print_progress
                 - sensor.anet_hotend_temp
-#      - type: vertical-stack
-#        cards:
+# - type: vertical-stack
+# cards:
           - type: entities
             title: Hypercube
             show_header_toggle: false
@@ -42,15 +42,15 @@ cards:
                 - sensor.hc_printer_status
                 - sensor.hc_print_progress
                 - sensor.hc_hotend_temp
-#      - type: vertical-stack
-#        cards:
+# - type: vertical-stack
+# cards:
           - type: entities
             title: HC300
             show_header_toggle: false
             entities:
               - switch.new_hypercube_power
-#      - type: vertical-stack
-#        cards:
+# - type: vertical-stack
+# cards:
           - type: entities
             title: TLM
             show_header_toggle: false

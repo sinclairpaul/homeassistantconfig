@@ -14,7 +14,7 @@ cards:
         column_width: 200
         cards:
           - type: 'custom:mini-graph-card'
-            entities: 
+            entities:
               - sensor.nest_thermostat_temperature
             name: Living Room
             hours_to_show: 48
@@ -26,7 +26,7 @@ cards:
               - value: -10
                 color: "#ADD8E6"
               - value: 5
-                color: "#00FF00	"
+                color: "#00FF00"
               - value: 15
                 color: "#f39c12"
               - value: 20
@@ -46,7 +46,7 @@ cards:
               - value: -10
                 color: "#ADD8E6"
               - value: 5
-                color: "#00FF00	"
+                color: "#00FF00"
               - value: 15
                 color: "#f39c12"
               - value: 20
@@ -66,7 +66,7 @@ cards:
               - value: -10
                 color: "#ADD8E6"
               - value: 5
-                color: "#00FF00	"
+                color: "#00FF00"
               - value: 15
                 color: "#f39c12"
               - value: 20
@@ -74,7 +74,7 @@ cards:
               - value: 25
                 color: "#c0392b"
           - type: 'custom:mini-graph-card'
-            entities: 
+            entities:
               - sensor.ensuite_temperature
             name: Ensuite
             hours_to_show: 48
@@ -86,7 +86,7 @@ cards:
               - value: -10
                 color: "#ADD8E6"
               - value: 5
-                color: "#00FF00	"
+                color: "#00FF00"
               - value: 15
                 color: "#f39c12"
               - value: 20
@@ -94,7 +94,7 @@ cards:
               - value: 25
                 color: "#c0392b"
           - type: 'custom:mini-graph-card'
-            entities: 
+            entities:
               - sensor.basement_washing_machine_temp
             name: Basement
             hours_to_show: 48
@@ -106,7 +106,7 @@ cards:
               - value: -10
                 color: "#ADD8E6"
               - value: 5
-                color: "#00FF00	"
+                color: "#00FF00"
               - value: 15
                 color: "#f39c12"
               - value: 20
@@ -121,7 +121,7 @@ cards:
         column_width: 200
         cards:
           - type: 'custom:mini-graph-card'
-            entities: 
+            entities:
               - sensor.acuritev2_e923_temp
             name: Garage
             hours_to_show: 48
@@ -133,7 +133,7 @@ cards:
               - value: -10
                 color: "#ADD8E6"
               - value: 5
-                color: "#00FF00	"
+                color: "#00FF00"
               - value: 15
                 color: "#f39c12"
               - value: 20
@@ -153,7 +153,7 @@ cards:
               - value: -10
                 color: "#ADD8E6"
               - value: 5
-                color: "#00FF00	"
+                color: "#00FF00"
               - value: 15
                 color: "#f39c12"
               - value: 20
@@ -161,7 +161,7 @@ cards:
               - value: 25
                 color: "#c0392b"
           - type: 'custom:mini-graph-card'
-            entities: 
+            entities:
               - sensor.blink_side_temperature
             name: Side
             hours_to_show: 48
@@ -173,7 +173,7 @@ cards:
               - value: -10
                 color: "#ADD8E6"
               - value: 5
-                color: "#00FF00	"
+                color: "#00FF00"
               - value: 15
                 color: "#f39c12"
               - value: 20
@@ -181,7 +181,7 @@ cards:
               - value: 25
                 color: "#c0392b"
           - type: 'custom:mini-graph-card'
-            entities: 
+            entities:
               - sensor.blink_back_temperature
             name: Back
             hours_to_show: 48
@@ -193,7 +193,7 @@ cards:
               - value: -10
                 color: "#ADD8E6"
               - value: 5
-                color: "#00FF00	"
+                color: "#00FF00"
               - value: 15
                 color: "#f39c12"
               - value: 20
@@ -201,7 +201,7 @@ cards:
               - value: 25
                 color: "#c0392b"
           - type: 'custom:mini-graph-card'
-            entities: 
+            entities:
               - sensor.acuritev2_cca6_temp
             name: Back Sensor
             hours_to_show: 48
@@ -213,7 +213,7 @@ cards:
               - value: -10
                 color: "#ADD8E6"
               - value: 5
-                color: "#00FF00	"
+                color: "#00FF00"
               - value: 15
                 color: "#f39c12"
               - value: 20
@@ -228,7 +228,7 @@ cards:
         column_width: 200
         cards:
           - type: 'custom:mini-graph-card'
-            entities: 
+            entities:
               - sensor.nest_thermostat_humidity
             name: Living Room
             hours_to_show: 48
@@ -255,7 +255,7 @@ cards:
         column_width: 200
         cards:
           - type: 'custom:mini-graph-card'
-            entities: 
+            entities:
               - sensor.acuritev2_e923_hum
             name: Garage
             hours_to_show: 48

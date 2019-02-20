@@ -7,4 +7,3 @@ dorifood:
       {%- else -%}
         She was already fed at {{ states("input_datetime.dori_last_fed") }}
       {%- endif -%}
-      
