@@ -1,0 +1,3 @@
+---
+sensor.acuritev2_cca6_temp:
+  friendly_name: Outside Back Temperature

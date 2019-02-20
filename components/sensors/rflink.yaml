@@ -1,0 +1,3 @@
+---
+- platform: rflink
+  automatic_add: true

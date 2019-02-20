@@ -1,0 +1,17 @@
+---
+cloud:
+  google_actions:
+    filter:
+      exclude_domains:
+        - switch
+        - group
+        - input_boolean
+        - script
+        - fan
+        - scene
+        - cover
+        - media_player
+        - climate
+        - light
+        - lock
+

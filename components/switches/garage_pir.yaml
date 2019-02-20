@@ -1,0 +1,5 @@
+---
+  platform: rflink
+  devices:
+    ev1527_0a7644_06:
+      name: Garage PIR

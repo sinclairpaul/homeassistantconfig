@@ -4,6 +4,7 @@ icon: 'mdi:home'
 title: Main
 badges:
   - device_tracker.paul_s7phone
+  - device_tracker.tile_3e997fde80a64875
   - sun.sun
 cards:
   - title: Living Room
