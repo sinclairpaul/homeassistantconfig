@@ -4,10 +4,10 @@ path: printers
 panel: true
 badges: []
 cards:
-  - type: horizontal-stack
+  - type: vertical-stack
     cards:
       - type: custom:layout-card
-        layout: horizontal
+        layout: vertical
         column_width: 200
         cards:
           - type: entities

@@ -18,6 +18,8 @@ cards:
               - sensor.nest_thermostat_temperature
             name: Living Room
             hours_to_show: 48
+            show:
+              extrema: true
             color_thresholds:
               - value: -50
                 color: "##9400D3"
@@ -38,6 +40,8 @@ cards:
               - sensor.guest_room_temperature
             name: Guest Room
             hours_to_show: 48
+            show:
+              extrema: true
             color_thresholds:
               - value: -50
                 color: "##9400D3"
@@ -58,6 +62,8 @@ cards:
               - sensor.spare_room_temperature
             name: Spare Room
             hours_to_show: 48
+            show:
+              extrema: true
             color_thresholds:
               - value: -50
                 color: "##9400D3"
@@ -78,6 +84,8 @@ cards:
               - sensor.ensuite_temperature
             name: Ensuite
             hours_to_show: 48
+            show:
+              extrema: true
             color_thresholds:
               - value: -50
                 color: "##9400D3"
@@ -98,6 +106,8 @@ cards:
               - sensor.basement_washing_machine_temp
             name: Basement
             hours_to_show: 48
+            show:
+              extrema: true
             color_thresholds:
               - value: -50
                 color: "##9400D3"
@@ -125,6 +135,8 @@ cards:
               - sensor.acuritev2_e923_temp
             name: Garage
             hours_to_show: 48
+            show:
+              extrema: true
             color_thresholds:
               - value: -50
                 color: "##9400D3"
@@ -145,6 +157,8 @@ cards:
               - sensor.blink_front_temperature
             name: Front
             hours_to_show: 48
+            show:
+              extrema: true
             color_thresholds:
               - value: -50
                 color: "##9400D3"
@@ -165,6 +179,8 @@ cards:
               - sensor.blink_side_temperature
             name: Side
             hours_to_show: 48
+            show:
+              extrema: true
             color_thresholds:
               - value: -50
                 color: "##9400D3"
@@ -185,6 +201,8 @@ cards:
               - sensor.blink_back_temperature
             name: Back
             hours_to_show: 48
+            show:
+              extrema: true
             color_thresholds:
               - value: -50
                 color: "##9400D3"
@@ -205,6 +223,8 @@ cards:
               - sensor.acuritev2_cca6_temp
             name: Back Sensor
             hours_to_show: 48
+            show:
+              extrema: true
             color_thresholds:
               - value: -50
                 color: "##9400D3"
@@ -232,21 +252,29 @@ cards:
               - sensor.nest_thermostat_humidity
             name: Living Room
             hours_to_show: 48
+            show:
+              extrema: true
           - type: 'custom:mini-graph-card'
             entities:
               - sensor.guest_room_humidity
             name: Guest Room
             hours_to_show: 48
+            show:
+              extrema: true
           - type: 'custom:mini-graph-card'
             entities:
               - sensor.guest_room_humidity
             name: Spare Room
             hours_to_show: 48
+            show:
+              extrema: true
           - type: 'custom:mini-graph-card'
             entities:
               - sensor.ensuite_humidity
             name: Ensuite
             hours_to_show: 48
+            show:
+              extrema: true
       - type: markdown
         content: >
           ## Outdoor Humidity
@@ -259,8 +287,12 @@ cards:
               - sensor.acuritev2_e923_hum
             name: Garage
             hours_to_show: 48
+            show:
+              extrema: true
           - type: 'custom:mini-graph-card'
             entities:
               - sensor.acuritev2_cca6_hum
             name: Back
             hours_to_show: 48
+            show:
+              extrema: true
