@@ -9,8 +9,10 @@ wifi:
   domain: !secret dnsdomain
   ssid: !secret wifi
   password: !secret wifipass
+
 # Enable logging
 logger:
+
 # Enable Home Assistant API
 api:
   password: !secret otapass
