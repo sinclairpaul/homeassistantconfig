@@ -1,6 +1,6 @@
 ---
-esphomeyaml:
-  name: spareroom
+esphome:
+  name: guestroom
   platform: ESP8266
   board: nodemcuv2
 
@@ -9,11 +9,12 @@ wifi:
   ssid: !secret wifi
   password: !secret wifipass
   manual_ip:
-    static_ip: !secret spareroomsensorip
+    static_ip: !secret guestroomsensorip
     gateway: !secret iotgateway
     subnet: !secret iotsubnet
 api:
   password: !secret otapass
+
 # Enable logging
 logger:
 
@@ -24,24 +25,22 @@ sensor:
   - platform: dht
     pin: D7
     temperature:
-      name: "Spare Room Temperature"
+      name: "Guest Room Temperature"
     humidity:
-      name: "Spare Room Humidity"
+      name: "Guest Room Humidity"
     model: DHT22
   - platform: adc
     pin: A0
-    name: "Spare Room Brightness"
+    name: "Guest Room Brightness"
     unit_of_measurement: lux
     filters:
       - lambda: >-
           return (x / 10000.0) * 2000000.0;
-  - platform: uptime
-    name: "Spare Room Uptime Sensor"
 
 binary_sensor:
   - platform: gpio
     pin: D5
-    name: "Spare Room Motion"
+    name: "Guest Room Motion"
     device_class: motion
 
 output:
@@ -57,7 +56,7 @@ output:
 
 light:
   - platform: rgb
-    name: "Spare Room LED"
+    name: "Guest Room LED"
     red: redgpio
     green: greengpio
     blue: bluegpio

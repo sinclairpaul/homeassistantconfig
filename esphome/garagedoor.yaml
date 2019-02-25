@@ -1,5 +1,5 @@
 ---
-esphomeyaml:
+esphome:
   name: garagedoor
   platform: ESP8266
   board: d1_mini

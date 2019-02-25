@@ -1,6 +1,6 @@
 ---
-esphomeyaml:
-  name: haswitchpow
+esphome:
+  name: bedsidelight2
   platform: ESP8266
   board: esp01_1m
   board_flash_mode: dout
@@ -10,12 +10,12 @@ wifi:
   ssid: !secret wifi
   password: !secret wifipass
   manual_ip:
-    static_ip: !secret haswitchip
+    static_ip: !secret bedsidel2ip
     gateway: !secret iotgateway
     subnet: !secret iotsubnet
 # Enable logging
 logger:
-#  baud_rate: 0
+
 # Enable Home Assistant API
 api:
   password: !secret otapass
@@ -23,64 +23,58 @@ api:
 ota:
   password: !secret otapass
 
-uart:
-  rx_pin: RX
-  baud_rate: 4800
-
 binary_sensor:
   - platform: gpio
     pin:
-      number: GPIO0
+      number: GPIO13
       mode: INPUT_PULLUP
       inverted: true
-    name: "HA Switch Button"
-    internal: true
+    name: "Bedside Light 2 Button"
     on_press:
-      - switch.toggle: switch_main
+      then:
+        - switch.toggle: switch_main
+    internal: true
+  - platform: status
+    name: "Bedside Light 2 Status"
 
 switch:
   - platform: gpio
-    name: "HA Switch Relay"
-    pin: GPIO12
     id: relay
+    name: "Internal Relay"
+    pin: GPIO15
+    restore_mode: always off
     internal: true
-    restore_mode: always on
   - platform: template
     id: switch_main
-    name: "HA Power Switch"
+    name: "Bedside Light 2 Switch"
     lambda: return id(relay).state;
     turn_on_action:
       then:
         - switch.turn_on: relay
-        - light.turn_on: ha_switch_led
+        - light.turn_on: blueled
     turn_off_action:
       then:
         - switch.turn_off: relay
-        - light.turn_off: ha_switch_led
+        - light.turn_off: blueled
 
 output:
   - platform: esp8266_pwm
-    id: ha_switch_internal_led
+    id: blue_led
     pin:
-      number: GPIO13
+      number: GPIO2
+      inverted: true
+  - platform: esp8266_pwm
+    id: red_led
+    pin:
+      number: GPIO0
       inverted: true
 
 light:
   - platform: monochromatic
-    name: "HA Switch LED"
-    output: ha_switch_internal_led
+    name: "Bedside Light 2 Blue LED"
+    output: blue_led
+    id: blueled
     internal: true
-    id: ha_switch_led
-
-sensor:
-  - platform: cse7766
-    current:
-      name: "HA Switch Current"
-    voltage:
-      name: "HA Switch Voltage"
-    power:
-      name: "HA Switch Power"
-  - platform: uptime
-    name: HA Switch Uptime Sensor
-    update_interval: 10s
-
+  - platform: monochromatic
+    name: "Bedside Light 2 Red LED"
+    output: red_led

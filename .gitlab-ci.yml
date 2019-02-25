@@ -31,17 +31,17 @@ stages:
   variables:
     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
   before_script:
-    - esphomeyaml dummy.yaml version
-    - cp ci_secrets.yaml ./esphomeyaml/secrets.yaml
+    - esphome dummy.yaml version
+    - cp ci_secrets.yaml ./esphome/secrets.yaml
   script:
     - |
       for file in $(find \
-        ./esphomeyaml \
+        ./esphome \
         -type f \
         -name "*.yaml"\
         -not -name "secrets.yaml"
         ); do
-        esphomeyaml $file config
+        esphome $file config
       done
 
 # Preflight jobs
@@ -131,19 +131,19 @@ dev:
 esphome-latest:
   <<: *esphome
   image:
-    name: ottowinter/esphomeyaml:latest
+    name: esphome/esphome:latest
     entrypoint: [""]
 
 esphome-rc:
   <<: *esphome
   image:
-    name: ottowinter/esphomeyaml:rc
+    name: esphome/esphome:beta
     entrypoint: [""]
   allow_failure: true
 
 esphome-dev:
   <<: *esphome
   image:
-    name: ottowinter/esphomeyaml:dev
+    name: esphome/esphome:dev
     entrypoint: [""]
   allow_failure: true

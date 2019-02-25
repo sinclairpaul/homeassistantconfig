@@ -1,17 +1,13 @@
 ---
-esphomeyaml:
+esphome:
   name: lightstrip
-  platform: ESP8266
-  board: nodemcuv2
+  platform: ESP32
+  board: featheresp32
 
 wifi:
   domain: !secret dnsdomain
   ssid: !secret wifi
   password: !secret wifipass
-  manual_ip:
-    static_ip: !secret lrlightstripip
-    gateway: !secret iotgateway
-    subnet: !secret iotsubnet
 # Enable logging
 logger:
 
@@ -25,7 +21,7 @@ ota:
 light:
   - platform: fastled_clockless
     chipset: WS2812B
-    pin: D2
+    pin: GPIO21
     num_leds: 149
     rgb_order: GRB
     name: "Living Room Light Strip"

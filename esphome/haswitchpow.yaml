@@ -1,6 +1,6 @@
 ---
-esphomeyaml:
-  name: tlmswitchpow
+esphome:
+  name: haswitchpow
   platform: ESP8266
   board: esp01_1m
   board_flash_mode: dout
@@ -10,7 +10,7 @@ wifi:
   ssid: !secret wifi
   password: !secret wifipass
   manual_ip:
-    static_ip: !secret tlmswitchip
+    static_ip: !secret haswitchip
     gateway: !secret iotgateway
     subnet: !secret iotsubnet
 # Enable logging
@@ -33,53 +33,54 @@ binary_sensor:
       number: GPIO0
       mode: INPUT_PULLUP
       inverted: true
-    name: "TLM Switch Button"
+    name: "HA Switch Button"
     internal: true
     on_press:
       - switch.toggle: switch_main
 
 switch:
   - platform: gpio
-    name: "TLM Switch Relay"
+    name: "HA Switch Relay"
     pin: GPIO12
     id: relay
-    restore_mode: ALWAYS_OFF
     internal: true
+    restore_mode: always on
   - platform: template
     id: switch_main
-    name: "TLM Power Switch"
+    name: "HA Power Switch"
     lambda: return id(relay).state;
     turn_on_action:
       then:
         - switch.turn_on: relay
-        - light.turn_on: tlm_switch_led
+        - light.turn_on: ha_switch_led
     turn_off_action:
       then:
         - switch.turn_off: relay
-        - light.turn_off: tlm_switch_led
+        - light.turn_off: ha_switch_led
 
 output:
   - platform: esp8266_pwm
-    id: tlm_switch_internal_led
+    id: ha_switch_internal_led
     pin:
       number: GPIO13
       inverted: true
 
 light:
   - platform: monochromatic
-    name: "TLM Switch LED"
-    output: tlm_switch_internal_led
+    name: "HA Switch LED"
+    output: ha_switch_internal_led
     internal: true
-    id: tlm_switch_led
+    id: ha_switch_led
 
 sensor:
   - platform: cse7766
     current:
-      name: "TLM Switch Current"
+      name: "HA Switch Current"
     voltage:
-      name: "TLM Switch Voltage"
+      name: "HA Switch Voltage"
     power:
-      name: "TLM Switch Power"
+      name: "HA Switch Power"
   - platform: uptime
-    name: TLM Switch Uptime Sensor
+    name: HA Switch Uptime Sensor
     update_interval: 10s
+

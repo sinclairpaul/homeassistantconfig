@@ -1,5 +1,5 @@
 ---
-esphomeyaml:
+esphome:
   name: switchbox
   platform: ESP8266
   board: nodemcuv2

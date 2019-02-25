@@ -1,7 +1,0 @@
----
-platform: mqtt
-device_class: door
-name: "Washing Machine Door"
-state_topic: "smartthings/Multipurpose Sensor/contact/state"
-payload_on: "open"
-payload_off: "closed"

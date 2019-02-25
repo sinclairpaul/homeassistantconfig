@@ -1,7 +1,0 @@
----
-platform: mqtt
-device_class: motion
-name: "Washing Machine Motion"
-state_topic: "smartthings/Multipurpose Sensor/acceleration/state"
-payload_on: "active"
-payload_off: "inactive"

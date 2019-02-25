@@ -1,7 +1,0 @@
----
-platform: mqtt
-device_class: door
-name: "Front Door"
-state_topic: "smartthings/Front Door Sensor/contact/state"
-payload_on: "open"
-payload_off: "closed"

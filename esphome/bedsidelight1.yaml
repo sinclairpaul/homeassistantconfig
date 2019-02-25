@@ -1,6 +1,6 @@
 ---
-esphomeyaml:
-  name: bedsidelight2
+esphome:
+  name: bedsidelight1
   platform: ESP8266
   board: esp01_1m
   board_flash_mode: dout
@@ -10,7 +10,7 @@ wifi:
   ssid: !secret wifi
   password: !secret wifipass
   manual_ip:
-    static_ip: !secret bedsidel2ip
+    static_ip: !secret bedsidel1ip
     gateway: !secret iotgateway
     subnet: !secret iotsubnet
 # Enable logging
@@ -29,13 +29,19 @@ binary_sensor:
       number: GPIO13
       mode: INPUT_PULLUP
       inverted: true
-    name: "Bedside Light 2 Button"
+    name: "Bedside Light 1 Button"
     on_press:
       then:
         - switch.toggle: switch_main
     internal: true
   - platform: status
-    name: "Bedside Light 2 Status"
+    name: "Bedside Light 1 Status"
+text_sensor:
+  - platform: homeassistant
+    id: halight2
+    name: "Bedside Light 2 Switch Status"
+    entity_id: switch.bedside_light_2_switch
+    internal: true
 
 switch:
   - platform: gpio
@@ -46,7 +52,7 @@ switch:
     internal: true
   - platform: template
     id: switch_main
-    name: "Bedside Light 2 Switch"
+    name: "Bedside Light 1 Switch"
     lambda: return id(relay).state;
     turn_on_action:
       then:
@@ -56,6 +62,15 @@ switch:
       then:
         - switch.turn_off: relay
         - light.turn_off: blueled
+        - delay: 2s
+        - if:
+            condition:
+              lambda: 'return id(halight2).state == "on";'
+            then:
+              - logger.log: "Turning Light 2 off"
+              - homeassistant.service:
+                  service: switch.turn_off
+                  data_template: {"entity_id": "switch.bedside_light_2_switch"}
 
 output:
   - platform: esp8266_pwm
@@ -71,10 +86,14 @@ output:
 
 light:
   - platform: monochromatic
-    name: "Bedside Light 2 Blue LED"
+    name: "Bedside Light 1 Blue LED"
     output: blue_led
     id: blueled
     internal: true
   - platform: monochromatic
-    name: "Bedside Light 2 Red LED"
+    name: "Bedside Light 1 Red LED"
     output: red_led
+
+sensor:
+  - platform: uptime
+    name: "Bedside Light 1 Uptime Sensor"

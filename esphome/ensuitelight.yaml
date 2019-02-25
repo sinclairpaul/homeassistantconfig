@@ -1,6 +1,6 @@
 ---
-esphomeyaml:
-  name: ensuitefan
+esphome:
+  name: ensuitelight
   platform: ESP8266
   board: esp01_1m
   board_flash_mode: dout
@@ -25,41 +25,41 @@ binary_sensor:
       number: GPIO0
       mode: INPUT_PULLUP
       inverted: true
-    name: "Ensuite Fan Internal Switch"
+    name: "Ensuite Light Internal Switch"
     internal: true
     on_press:
       - switch.toggle: switch_main
 
 switch:
   - platform: gpio
-    name: "Ensuite Fan Relay"
+    name: "Ensuite Switch Relay"
     pin: GPIO12
     id: relay
     restore_mode: always off
     internal: true
   - platform: template
     id: switch_main
-    name: "Ensuite Fan Switch"
+    name: "Ensuite Light Switch"
     lambda: return id(relay).state;
     turn_on_action:
       then:
         - switch.turn_on: relay
-        - light.turn_on: ensuite_fan_led
+        - light.turn_on: ensuite_light_led
     turn_off_action:
       then:
         - switch.turn_off: relay
-        - light.turn_off: ensuite_fan_led
+        - light.turn_off: ensuite_light_led
 
 output:
   - platform: esp8266_pwm
-    id: ensuite_fan_internal_led
+    id: ensuite_light_internal_led
     pin:
       number: GPIO13
       inverted: true
 
 light:
   - platform: monochromatic
-    name: "Ensuite Fan LED"
-    output: ensuite_fan_internal_led
+    name: "Ensuite LED"
+    output: ensuite_light_internal_led
     internal: true
-    id: ensuite_fan_led
+    id: ensuite_light_led

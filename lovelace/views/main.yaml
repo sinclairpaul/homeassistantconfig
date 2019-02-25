@@ -7,6 +7,12 @@ badges:
   - device_tracker.tile_3e997fde80a64875
   - sun.sun
 cards:
+  - type: custom:compact-custom-header
+    main_config: true
+    menu: show
+    options: clock
+    voice: hide
+    clock_format: 24
   - title: Living Room
     show_header_toggle: false
     type: entities
@@ -15,7 +21,7 @@ cards:
       - entity: light.front_door
       - entity: lock.front_door_lock
       - entity: sensor.front_door_lock_battery
-      - entity: binary_sensor.front_door
+      - entity: binary_sensor.front_door_sensor_contact
       - entity: light.front_outside_light
       - entity: light.living_room_light_strip
   - title: 'Living Room '
@@ -59,7 +65,7 @@ cards:
       - light.bedroom
       - switch.ensuite_fan_switch
       - switch.ensuite_light_switch
-      - sensor.ensuite_brightness
+      - sensor.ensuite_motion_sensor_illuminance
       - switch.bedside_light_1_switch
       - switch.bedside_light_2_switch
   - title: Spare Room
@@ -97,8 +103,8 @@ cards:
       - light.basement_front
       - light.basement_furnace
       - light.basement_back
-      - binary_sensor.washing_machine_door
-      - binary_sensor.washing_machine_motion
+      - binary_sensor.multipurpose_sensor_contact
+      - binary_sensor.multipurpose_sensor_acceleration
       - switch.ha_power_switch
       - sensor.ha_switch_current
       - sensor.ha_switch_power
