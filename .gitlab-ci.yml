@@ -42,7 +42,6 @@ stages:
         -not -name "secrets.yaml"
         ); do
         esphome $file config
-        esphome $file compile
       done
 
 # Preflight jobs
