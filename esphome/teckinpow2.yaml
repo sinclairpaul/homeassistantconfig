@@ -79,13 +79,13 @@ sensor:
   - platform: uptime
     name: "Teckin Pow 2 Uptime Sensor"
   - platform: hlw8012
-    sel_pin: 
+    sel_pin:
       number: GPIO12
       inverted: true
     cf_pin: GPIO05
     cf1_pin: GPIO14
-    current_resistor: 0.0025
-    voltage_divider: 840
+    current_resistor: 0.00221
+    voltage_divider: 871
     current:
       name: "tpow2current"
       unit_of_measurement: A
@@ -96,5 +96,5 @@ sensor:
       name: "tpow2power"
       id: my_power
       unit_of_measurement: W
-    change_mode_every: 1
+    change_mode_every: 8
     update_interval: 10s

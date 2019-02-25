@@ -79,7 +79,7 @@ sensor:
   - platform: uptime
     name: "Teckin Pow Uptime Sensor"
   - platform: hlw8012
-    sel_pin: 
+    sel_pin:
       number: GPIO12
       inverted: true
     cf_pin: GPIO05
