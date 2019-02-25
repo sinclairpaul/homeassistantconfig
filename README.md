@@ -5,7 +5,7 @@
 [![GitHub Last Commit][last-commit-shield]][commits]
 
 I run my [Home Assistant](https://home-assistant.io/) utilising
-    [Hass.io](https://www.home-assistant.io/hassio/) on a Debian host.
+    [Hass.io](https://www.home-assistant.io/hassio/) on an Ubuntu host.
 
 Some hardware/devices used are:
 
@@ -16,7 +16,7 @@ Some hardware/devices used are:
 * Xiaomi Sensors
 * [Philips Hue](https://www2.meethue.com/en-ca)
 * ESP8266 based sensors/devices using
-  [ESPHome](https://esphomelib.com/)
+  [ESPHome](https://esphome.io/)
 
 [gitlabci-shield]: https://gitlab.com/sinclairpaul/homeassistantconfig/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/sinclairpaul/homeassistantconfig/pipelines
