@@ -72,12 +72,12 @@ light:
     id: blueled
     internal: true
   - platform: monochromatic
-    name: "Teckin Pow Red LED"
+    name: "Teckin Pow2 Red LED"
     output: red_led
 
 sensor:
   - platform: uptime
-    name: "Teckin Pow 2 Uptime Sensor"
+    name: "Teckin Pow2 Uptime Sensor"
   - platform: hlw8012
     sel_pin:
       number: GPIO12
@@ -87,14 +87,11 @@ sensor:
     current_resistor: 0.00221
     voltage_divider: 871
     current:
-      name: "tpow2current"
-      unit_of_measurement: A
+      name: "Teckin Pow2 Current"
+      accuracy_decimals: 2
     voltage:
-      name: "tpow2voltage"
-      unit_of_measurement: V
+      name: "Teckin Pow2 voltage"
     power:
-      name: "tpow2power"
-      id: my_power
-      unit_of_measurement: W
-    change_mode_every: 8
-    update_interval: 10s
+      name: "Teckin Pow2 power"
+    update_interval: 15s
+

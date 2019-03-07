@@ -1,6 +1,6 @@
 ---
 esphome:
-  name: teckinpow
+  name: teckinoutdoor
   platform: ESP8266
   board: esp01_1m
   board_flash_mode: dout
@@ -9,7 +9,6 @@ wifi:
   domain: !secret dnsdomain
   ssid: !secret wifi
   password: !secret wifipass
-
 # Enable logging
 logger:
 
@@ -26,71 +25,62 @@ binary_sensor:
       number: GPIO13
       mode: INPUT_PULLUP
       inverted: true
-    name: "Teckin Pow  Button"
+    name: "Teckin Outdoor Button"
     on_press:
       then:
-        - switch.toggle: switch_main
+        - switch.toggle: switch_main1
     internal: true
   - platform: status
-    name: "Teckin Pow  Status"
+    name: "Teckin Outdoor Status"
+
 switch:
   - platform: gpio
-    id: relay
-    name: "Internal Relay"
-    pin: GPIO4
+    id: relay1
+    name: "Internal Relay 1"
+    pin: GPIO14
+    restore_mode: always off
+    internal: true
+  - platform: gpio
+    id: relay2
+    name: "Internal Relay 2"
+    pin: GPIO12
     restore_mode: always off
     internal: true
   - platform: template
-    id: switch_main
-    name: "Teckin Pow Switch"
-    lambda: return id(relay).state;
+    id: switch_main1
+    name: "Teckin Outdoor Switch 1"
+    lambda: return id(relay1).state;
     turn_on_action:
       then:
-        - switch.turn_on: relay
+        - switch.turn_on: relay1
         - light.turn_on: blueled
     turn_off_action:
       then:
-        - switch.turn_off: relay
+        - switch.turn_off: relay1
         - light.turn_off: blueled
 
 output:
   - platform: esp8266_pwm
     id: blue_led
     pin:
-      number: GPIO2
+      number: GPIO4
       inverted: true
   - platform: esp8266_pwm
-    id: red_led
+    id: green_led
     pin:
-      number: GPIO0
+      number: GPIO5
       inverted: true
 
 light:
   - platform: monochromatic
-    name: "Teckin Pow Blue LED"
+    name: "Teckin Outdoor Blue LED"
     output: blue_led
     id: blueled
     internal: true
   - platform: monochromatic
-    name: "Teckin Pow Red LED"
-    output: red_led
+    name: "Teckin Outdoor Blue LED"
+    output: green_led
+    id: greenled
+    internal: true
 
-sensor:
-  - platform: uptime
-    name: "Teckin Pow Uptime Sensor"
-  - platform: hlw8012
-    sel_pin:
-      number: GPIO12
-      inverted: true
-    cf_pin: GPIO05
-    cf1_pin: GPIO14
-    current_resistor: 0.00221
-    voltage_divider: 871
-    current:
-      name: "Teckin Pow Current"
-      accuracy_decimals: 2
-    voltage:
-      name: "Teckin Pow voltage"
-    power:
-      name: "Teckin Pow power"
-    update_interval: 15s
+
