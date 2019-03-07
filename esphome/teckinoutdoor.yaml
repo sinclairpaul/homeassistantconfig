@@ -82,5 +82,3 @@ light:
     output: green_led
     id: greenled
     internal: true
-
-
