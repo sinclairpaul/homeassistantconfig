@@ -105,7 +105,8 @@ cards:
       - light.basement_back
       - binary_sensor.multipurpose_sensor_contact
       - binary_sensor.multipurpose_sensor_acceleration
-      - switch.ha_power_switch
+      - entity: switch.ha_power_switch
+        type: custom:toggle-lock-entity-row
       - sensor.ha_switch_current
       - sensor.ha_switch_power
       - sensor.ha_switch_voltage
