@@ -7,12 +7,8 @@ esphome:
 
 wifi:
   domain: !secret dnsdomain
-  ssid: !secret wifi
+  ssid: !secret wifi2
   password: !secret wifipass
-  manual_ip:
-    static_ip: !secret bedsidel1ip
-    gateway: !secret iotgateway
-    subnet: !secret iotsubnet
 # Enable logging
 logger:
 

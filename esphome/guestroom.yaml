@@ -6,12 +6,9 @@ esphome:
 
 wifi:
   domain: !secret dnsdomain
-  ssid: !secret wifi
+  ssid: !secret wifi2
   password: !secret wifipass
-  manual_ip:
-    static_ip: !secret guestroomsensorip
-    gateway: !secret iotgateway
-    subnet: !secret iotsubnet
+
 api:
   password: !secret otapass
 

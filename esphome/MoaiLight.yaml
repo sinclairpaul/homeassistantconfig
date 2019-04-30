@@ -6,7 +6,7 @@ esphome:
 
 wifi:
   domain: !secret dnsdomain
-  ssid: !secret wifi
+  ssid: !secret wifi2
   password: !secret wifipass
 
 # Enable logging

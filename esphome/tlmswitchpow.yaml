@@ -9,10 +9,6 @@ wifi:
   domain: !secret dnsdomain
   ssid: !secret wifi
   password: !secret wifipass
-  manual_ip:
-    static_ip: !secret tlmswitchip
-    gateway: !secret iotgateway
-    subnet: !secret iotsubnet
 # Enable logging
 logger:
   baud_rate: 0
