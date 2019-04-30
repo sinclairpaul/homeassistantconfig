@@ -1,0 +1,5 @@
+---
+platform: generic
+name: Living Room
+still_image_url: !secret living_room_camera_image
+stream_source: !secret living_room_camera_stream

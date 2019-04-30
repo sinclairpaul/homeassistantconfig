@@ -6,4 +6,5 @@ views:
   - !include lovelace/views/temperature.yaml
   - !include lovelace/views/printers.yaml
   - !include lovelace/views/nest.yaml
+  - !include lovelace/views/cameras.yaml
   - !include lovelace/views/blink.yaml

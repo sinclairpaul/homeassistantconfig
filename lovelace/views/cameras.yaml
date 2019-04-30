@@ -1,0 +1,15 @@
+---
+path: camera_view
+title: Camera View
+badges: []
+cards:
+  - title: Cameras
+    type: entities
+    show_header_toggle: false
+    entities:
+      - entity: camera.dining_room
+        type: 'custom:camera-card'
+        name: Dining Room Camera
+      - entity: camera.living_room
+        type: 'custom:camera-card'
+        name: Living Room Camera
