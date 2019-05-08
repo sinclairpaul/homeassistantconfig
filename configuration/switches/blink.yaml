@@ -1,0 +1,72 @@
+---
+- platform: template
+  switches:
+    armed:
+      friendly_name: 'Blink Armed Toggle'
+      value_template: "{{ is_state('alarm_control_panel.blink_sync' , 'armed_away') }}"
+      turn_on:
+        service: script.turn_on
+        entity_id: script.arm_blink
+      turn_off:
+        service: script.turn_on
+        entity_id: script.disarm_blink
+- platform: template
+  switches:
+    frontmotion:
+      friendly_name: 'Blink Front Motion'
+      value_template: "{{ is_state('binary_sensor.blink_front_camera_armed' , 'on') }}"
+      turn_on:
+        service: script.turn_on
+        entity_id: script.blink_motion_on_front
+      turn_off:
+        service: script.turn_on
+        entity_id: script.blink_motion_off_front
+- platform: template
+  switches:
+    backmotion:
+      friendly_name: 'Blink Back Motion'
+      value_template: "{{ is_state('binary_sensor.blink_back_camera_armed' , 'on') }}"
+      turn_on:
+        service: script.turn_on
+        entity_id: script.blink_motion_on_back
+      turn_off:
+        service: script.turn_on
+        entity_id: script.blink_motion_off_back
+- platform: template
+  switches:
+    sidemotion:
+      friendly_name: 'Blink Side Motion'
+      value_template: "{{ is_state('binary_sensor.blink_side_camera_armed' , 'on') }}"
+      turn_on:
+        service: script.turn_on
+        entity_id: script.blink_motion_on_side
+      turn_off:
+        service: script.turn_on
+        entity_id: script.blink_motion_off_side
+- platform: mqtt
+  name: "Blink Full Arm"
+  state_topic: "smartthings/Blink Arm Switch/switch/state"
+  command_topic: "smartthings/Blink Arm Switch/switch/cmd"
+  payload_on: "on"
+  payload_off: "off"
+  state_on: "on"
+  state_off: "off"
+  retain: true
+- platform: mqtt
+  name: "Back Blink Switch"
+  state_topic: "smartthings/Back Disarm Switch/switch/state"
+  command_topic: "smartthings/Back Disarm Switch/switch/cmd"
+  payload_on: "on"
+  payload_off: "off"
+  state_on: "on"
+  state_off: "off"
+  retain: true
+- platform: mqtt
+  name: "Back Blink Arm Switch"
+  state_topic: "smartthings/Back Arm Switch/switch/state"
+  command_topic: "smartthings/Back Arm Switch/switch/cmd"
+  payload_on: "on"
+  payload_off: "off"
+  state_on: "on"
+  state_off: "off"
+  retain: true

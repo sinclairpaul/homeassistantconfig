@@ -1,0 +1,5 @@
+---
+platform: nfandroidtv
+name: Living Room TV
+host: !secret tv_ip
+position: top-right

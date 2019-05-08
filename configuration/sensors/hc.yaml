@@ -1,0 +1,15 @@
+---
+- platform: mqtt
+  state_topic: "octohy/temperature/tool0"
+  name: 'HC Hotend Temp'
+  value_template: '{{ value_json.actual }}'
+  unit_of_measurement: "°C"
+- platform: mqtt
+  state_topic: "octohy/event/PrinterStateChanged"
+  name: 'HC Printer Status'
+  value_template: '{{ value_json.state_id }}'
+- platform: mqtt
+  state_topic: "octohy/progress/printing"
+  name: 'HC Print Progress'
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.progress }}'

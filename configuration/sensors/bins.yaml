@@ -1,0 +1,41 @@
+---
+- platform: template
+  sensors:
+    rubbish:
+      friendly_name: 'Rubbish'
+      value_template: >-
+        {% if is_state('input_boolean.rubbish_collection', 'off') %}
+          False
+        {% elif is_state('input_boolean.rubbish_collection', 'on') %}
+          True
+        {% endif %}
+- platform: template
+  sensors:
+    organics:
+      friendly_name: 'Organics'
+      value_template: >-
+        {% if is_state('input_boolean.organics_collection', 'off') %}
+          False
+        {% elif is_state('input_boolean.organics_collection', 'on') %}
+          True
+        {% endif %}
+- platform: template
+  sensors:
+    recycling:
+      friendly_name: 'Recycling'
+      value_template: >-
+        {% if is_state('input_boolean.recycling_collection', 'off') %}
+          False
+        {% elif is_state('input_boolean.recycling_collection', 'on') %}
+          True
+        {% endif %}
+- platform: template
+  sensors:
+    garden:
+      friendly_name: 'Garden'
+      value_template: >-
+        {% if is_state('input_boolean.garden_collection', 'off') %}
+          False
+        {% elif is_state('input_boolean.garden_collection', 'on') %}
+          True
+        {% endif %}

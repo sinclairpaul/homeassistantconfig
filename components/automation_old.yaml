@@ -1,0 +1,2 @@
+---
+automation old: !include_dir_list ../configuration/automation_old

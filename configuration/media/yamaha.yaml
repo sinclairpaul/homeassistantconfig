@@ -1,0 +1,18 @@
+---
+platform: yamaha
+name: Living Room Amp
+host: !secret amp_ip
+source_names:
+  HDMI1: "XBOX"
+  HDMI2: "TV"
+  HDMI3: "Kodi"
+  HDMI4: "PS4"
+zone_ignore:
+  - "Zone_2"
+source_ignore:
+  - "AUDIO1"
+  - "AUDIO2"
+  - "TIDAL"
+  - "SIRIUSXM"
+  - "Pandora"
+  - "Rhapsody"

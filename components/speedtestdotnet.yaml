@@ -1,0 +1,8 @@
+---
+speedtestdotnet:
+  scan_interval:
+    hours: 8
+  monitored_conditions:
+    - ping
+    - download
+    - upload

@@ -1,9 +1,0 @@
----
-dorifood:
-  speech:
-    text: >
-      {%- if is_state('input_boolean.dori_needs_food', 'on') -%}
-        She's probably hungry
-      {%- else -%}
-        She was already fed at {{ states("input_datetime.dori_last_fed") }}
-      {%- endif -%}

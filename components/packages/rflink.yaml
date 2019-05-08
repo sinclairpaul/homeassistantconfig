@@ -1,4 +1,0 @@
----
-rflink:
-  host: !secret rflink
-  port: !secret rflink_port

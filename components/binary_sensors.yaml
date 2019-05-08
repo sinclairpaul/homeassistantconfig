@@ -1,0 +1,2 @@
+---
+binary_sensor: !include_dir_list ../configuration/binary_sensors

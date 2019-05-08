@@ -1,0 +1,4 @@
+---
+name: Pushbullet
+platform: pushbullet
+api_key: !secret pushbulletapi

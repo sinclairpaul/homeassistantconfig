@@ -1,0 +1,7 @@
+---
+stairs:
+  name: Stairs
+  entities:
+    - light.bottom_hallway
+    - light.stairs_1
+    - light.stairs_top_1

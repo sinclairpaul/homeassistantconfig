@@ -1,0 +1,5 @@
+---
+landing:
+  name: Landing
+  entities:
+    - light.landing

@@ -1,0 +1,33 @@
+---
+alias: Harmony
+initial_state: true
+hide_entity: true
+trigger:
+  platform: state
+  entity_id: input_select.harmony
+  from: 'Select Input'
+action:
+  - service: remote.turn_on
+    entity_id: remote.harmony
+    data_template:
+      activity: >
+        {% if is_state("input_select.harmony", "Watch TV") %}
+          13449441
+        {% elif is_state("input_select.harmony", "Play XBOX") %}
+          13449442
+        {% elif is_state("input_select.harmony", "Android TV") %}
+          21496452
+        {% elif is_state("input_select.harmony", "SHIELD TV") %}
+          38239362
+        {% elif is_state("input_select.harmony", "Play PS4") %}
+          19936305
+        {% elif is_state("input_select.harmony", "Watch Fire TV") %}
+          36846873
+        {% elif is_state("input_select.harmony", "Power Off") %}
+          -1
+        {% else %}
+        {% endif %}
+  - service: input_select.select_option
+    entity_id: input_select.harmony
+    data_template:
+      option: "Select Input"

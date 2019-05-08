@@ -1,0 +1,4 @@
+---
+platform: braviatv
+host: !secret tv_ip
+name: Living Room TV

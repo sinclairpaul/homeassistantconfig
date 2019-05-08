@@ -1,2 +1,0 @@
----
-device_tracker: !include_dir_list ../trackers

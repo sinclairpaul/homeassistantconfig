@@ -1,8 +1,0 @@
----
-platform: rflink
-devices:
-  ev1527_07afe8_06:
-    name: Basement PIR
-    device_class: motion
-    off_delay: 5
-    force_update: true

@@ -1,0 +1,15 @@
+---
+- platform: mqtt
+  state_topic: "octoa8/temperature/tool0"
+  name: 'Anet Hotend Temp'
+  value_template: '{{ value_json.actual }}'
+  unit_of_measurement: "°C"
+- platform: mqtt
+  state_topic: "octoa8/progress/printing"
+  name: 'Anet Print Progress'
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.progress }}'
+- platform: mqtt
+  state_topic: "octoa8/event/PrinterStateChanged"
+  name: 'Anet Printer Status'
+  value_template: '{{ value_json.state_id }}'
