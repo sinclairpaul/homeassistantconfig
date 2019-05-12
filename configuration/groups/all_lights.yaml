@@ -1,0 +1,25 @@
+---
+light_control:
+  name: Lights
+  control: hidden
+  entities:
+    - light.basement_main
+    - light.basement_front
+    - light.basement_furnace
+    - light.basement_back
+    - light.back_door_1
+    - light.bedroom
+    - light.closet
+    - light.bottom_hallway
+    - light.dining
+    - light.front_door
+    - light.front_outside
+    - light.guest_room_closet
+    - light.kitchen
+    - light.landing
+    - light.living_room
+    - light.living_room_light_strip
+    - light.printer
+    - light.spare_room
+    - light.stairs_1
+    - light.stairs_top_1

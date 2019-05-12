@@ -1,0 +1,12 @@
+---
+alias: 'Toggle Dining Room Lights'
+initial_state: 'on'
+trigger:
+  platform: event
+  event_type: deconz_event
+  event_data:
+    id: dining_room_switch
+    event: 1002
+action:
+  service: light.toggle
+  entity_id: light.dining
