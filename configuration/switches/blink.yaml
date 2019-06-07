@@ -43,30 +43,3 @@
       turn_off:
         service: script.turn_on
         entity_id: script.blink_motion_off_side
-- platform: mqtt
-  name: "Blink Full Arm"
-  state_topic: "smartthings/Blink Arm Switch/switch/state"
-  command_topic: "smartthings/Blink Arm Switch/switch/cmd"
-  payload_on: "on"
-  payload_off: "off"
-  state_on: "on"
-  state_off: "off"
-  retain: true
-- platform: mqtt
-  name: "Back Blink Switch"
-  state_topic: "smartthings/Back Disarm Switch/switch/state"
-  command_topic: "smartthings/Back Disarm Switch/switch/cmd"
-  payload_on: "on"
-  payload_off: "off"
-  state_on: "on"
-  state_off: "off"
-  retain: true
-- platform: mqtt
-  name: "Back Blink Arm Switch"
-  state_topic: "smartthings/Back Arm Switch/switch/state"
-  command_topic: "smartthings/Back Arm Switch/switch/cmd"
-  payload_on: "on"
-  payload_off: "off"
-  state_on: "on"
-  state_off: "off"
-  retain: true
