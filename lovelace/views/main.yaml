@@ -34,8 +34,8 @@ cards:
       - remote.harmony
       - sensor.harmony
       - input_select.harmony
-  - entity: media_player.kodi
-    type: 'custom:mini-media-player'
+# - entity: media_player.kodi
+#   type: 'custom:mini-media-player'
   - entity: media_player.living_room_tv
     type: 'custom:mini-media-player'
     hide_volume: true
@@ -66,7 +66,7 @@ cards:
       - light.bedroom
       - switch.ensuite_fan_switch
       - switch.ensuite_light_switch
-      - sensor.ensuite_motion_sensor_illuminance
+      - sensor.bathroom_illuminance
       - switch.bedside_light_1_switch
       - switch.bedside_light_2_switch
   - title: Spare Room

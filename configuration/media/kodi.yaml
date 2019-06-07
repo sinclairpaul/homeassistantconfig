@@ -1,4 +1,0 @@
----
-platform: kodi
-host: !secret kodi_host
-port: 80
