@@ -20,9 +20,10 @@ cards:
             hours_to_show: 48
             show:
               extrema: true
+              fill: fade
             color_thresholds:
               - value: -50
-                color: "##9400D3"
+                color: "#9400D3"
               - value: -20
                 color: "#00008B"
               - value: -10
@@ -42,9 +43,10 @@ cards:
             hours_to_show: 48
             show:
               extrema: true
+              fill: fade
             color_thresholds:
               - value: -50
-                color: "##9400D3"
+                color: "#9400D3"
               - value: -20
                 color: "#00008B"
               - value: -10
@@ -64,9 +66,10 @@ cards:
             hours_to_show: 48
             show:
               extrema: true
+              fill: fade
             color_thresholds:
               - value: -50
-                color: "##9400D3"
+                color: "#9400D3"
               - value: -20
                 color: "#00008B"
               - value: -10
@@ -86,9 +89,10 @@ cards:
             hours_to_show: 48
             show:
               extrema: true
+              fill: fade
             color_thresholds:
               - value: -50
-                color: "##9400D3"
+                color: "#9400D3"
               - value: -20
                 color: "#00008B"
               - value: -10
@@ -108,9 +112,10 @@ cards:
             hours_to_show: 48
             show:
               extrema: true
+              fill: fade
             color_thresholds:
               - value: -50
-                color: "##9400D3"
+                color: "#9400D3"
               - value: -20
                 color: "#00008B"
               - value: -10
@@ -137,9 +142,10 @@ cards:
             hours_to_show: 48
             show:
               extrema: true
+              fill: fade
             color_thresholds:
               - value: -50
-                color: "##9400D3"
+                color: "#9400D3"
               - value: -20
                 color: "#00008B"
               - value: -10
@@ -159,9 +165,10 @@ cards:
             hours_to_show: 48
             show:
               extrema: true
+              fill: fade
             color_thresholds:
               - value: -50
-                color: "##9400D3"
+                color: "#9400D3"
               - value: -20
                 color: "#00008B"
               - value: -10
@@ -181,9 +188,10 @@ cards:
             hours_to_show: 48
             show:
               extrema: true
+              fill: fade
             color_thresholds:
               - value: -50
-                color: "##9400D3"
+                color: "#9400D3"
               - value: -20
                 color: "#00008B"
               - value: -10
@@ -203,9 +211,10 @@ cards:
             hours_to_show: 48
             show:
               extrema: true
+              fill: fade
             color_thresholds:
               - value: -50
-                color: "##9400D3"
+                color: "#9400D3"
               - value: -20
                 color: "#00008B"
               - value: -10
@@ -225,9 +234,10 @@ cards:
             hours_to_show: 48
             show:
               extrema: true
+              fill: fade
             color_thresholds:
               - value: -50
-                color: "##9400D3"
+                color: "#9400D3"
               - value: -20
                 color: "#00008B"
               - value: -10
