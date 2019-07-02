@@ -20,7 +20,7 @@ stages:
     - cp ci_secrets.yaml secrets.yaml
     - pip install \
         $(curl https://raw.githubusercontent.com/custom-components/hacs/master/requirements.txt)
-    - python3 -c 'from custom_components import hacs'
+    #- python3 -c 'from custom_components import hacs'
   script:
     - |
       python3 -m homeassistant \
