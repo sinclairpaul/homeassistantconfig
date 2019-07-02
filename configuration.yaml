@@ -13,3 +13,5 @@ homeassistant:
   time_zone: America/Toronto
   packages: !include_dir_named components
 person:
+hacs:
+  token: !secret github_token

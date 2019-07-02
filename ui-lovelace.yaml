@@ -1,6 +1,11 @@
 ---
 title: Home
 resources: !include_dir_list lovelace/resources
+cch:
+  menu: show
+  options: clock
+  voice: hide
+  clock_format: 24
 views:
   - !include lovelace/views/main.yaml
   - !include lovelace/views/temperature.yaml
