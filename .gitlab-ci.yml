@@ -18,10 +18,9 @@ stages:
   before_script:
     - python -m homeassistant --version
     - cp ci_secrets.yaml secrets.yaml
+    - python3 -c 'from custom_components import hacs'
   script:
     - |
-      python -m homeassistant \
-        --config ./
       python -m homeassistant \
         --config ./ \
         --script check_config \
