@@ -11,6 +11,7 @@
 !.mdlrc
 !.yamllint
 !*.py
+!manifest.json
 
 # Ignore folders.
 .storage
