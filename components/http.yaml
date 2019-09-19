@@ -5,3 +5,5 @@ http:
   base_url: !secret http_url
   use_x_forwarded_for: true
   trusted_proxies: !secret proxy_ip
+  cors_allowed_origins:
+    - https://cast.home-assistant.io

@@ -1,0 +1,13 @@
+---
+alias: dori_return_stop_vacuum
+trigger:
+  platform: state
+  entity_id: binary_sensor.dori_lead_tracker
+  to: 'on'
+condition:
+  condition: state
+  entity_id: vacuum.roomba
+  state: 'on'
+action:
+  - service: vacuum.return_to_base
+    entity_id: vacuum.roomba

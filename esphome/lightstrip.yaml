@@ -18,6 +18,15 @@ api:
 ota:
   password: !secret otapass
 
+esp32_ble_tracker:
+  scan_interval: 300s
+  
+binary_sensor:
+  - platform: ble_presence
+    device_class: presence
+    mac_address: !secret doritracker
+    name: "Dori Lead Tracker"
+
 light:
   - platform: fastled_clockless
     chipset: WS2812B
@@ -55,3 +64,6 @@ light:
 sensor:
   - platform: uptime
     name: "Light Strip Uptime Sensor"
+  - platform: ble_rssi
+    mac_address: !secret doritracker
+    name: "Dori Lead Tracker RSSI value"

@@ -1,0 +1,57 @@
+---
+esphome:
+  name: termlamp
+  platform: ESP32
+  board: esp32doit-devkit-v1
+
+wifi:
+  domain: !secret dnsdomain
+  ssid: !secret wifi2
+  password: !secret wifipass
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: !secret otapass
+
+ota:
+  password: !secret otapass
+
+light:
+  - platform: fastled_clockless
+    chipset: WS2811
+    pin: GPIO13
+    num_leds: 12
+    rgb_order: RGB
+    name: "Terminator Lamp"
+    effects:
+      - random:
+      - strobe:
+      - flicker:
+      - addressable_rainbow:
+      - addressable_color_wipe:
+      - addressable_scan:
+      - addressable_twinkle:
+      - addressable_random_twinkle:
+      - addressable_fireworks:
+      - addressable_flicker:
+      - addressable_lambda:
+          name: "My Custom Effect"
+          update_interval: 100ms
+          lambda: |-
+            // it.size() - Number of LEDs
+            // it[num] - Access the LED at index num.
+            // Set the LED at num to the given r, g, b values
+            // it[num] = light::ESPColor(r, g, b);
+            // Get the color at index num (ESPColor instance)
+            // it[num].get();
+            // Example: Simple color wipe
+            for (int i = 1; i < it.size(); i++) {
+              it[i] = it[i - 1].get();
+            }
+            it[0] = light::ESPColor::random_color();
+
+sensor:
+  - platform: uptime
+    name: "Terminator Lamp Uptime Sensor"

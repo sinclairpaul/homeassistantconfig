@@ -1,0 +1,21 @@
+---
+alias: dori_away_vacuum
+trigger:
+  platform: state
+  entity_id: binary_sensor.dori_lead_tracker
+  to: 'off'
+condition:
+  condition: and
+  conditions:
+    - condition: time
+      # At least one of the following is required.
+      after: '06:30:00'
+      before: '21:00:00'
+    - condition: state
+      entity_id: vacuum.roomba
+      state: 'off'
+      for:
+        hours: 1
+action:
+  - service: vacuum.turn_on
+    entity_id: vacuum.roomba

@@ -1,0 +1,7 @@
+---
+- platform: rest
+  name: wireguard
+  resource: http://a0d7b954-wireguard
+  json_attributes:
+    - android
+  value_template: 'OK'
