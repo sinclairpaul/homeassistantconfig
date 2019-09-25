@@ -12,6 +12,7 @@
 !.yamllint
 !*.py
 !manifest.json
+!.github
 
 # Ignore folders.
 .storage
