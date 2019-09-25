@@ -1,0 +1,3 @@
+---
+plex:
+  host: !secret mqtt_broker
