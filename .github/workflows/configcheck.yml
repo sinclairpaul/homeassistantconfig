@@ -11,4 +11,4 @@ jobs:
       - name: Checkout Config
         uses: actions/checkout@v1.0.0
       - name: Running ha check
-        uses: sinclairpaul/ha-action
+        uses: sinclairpaul/ha-action@master
