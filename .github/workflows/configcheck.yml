@@ -5,10 +5,10 @@ on:
   schedule:
     - cron: 0 12 * * *
 jobs:
-  lint:
+  configcheck:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Config
         uses: actions/checkout@v1.0.0
       - name: Running ha check
-        uses: sinclairpaul/ha-action@v0.0.1
+        uses: sinclairpaul/ha-action
