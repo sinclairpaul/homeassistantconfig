@@ -4,6 +4,8 @@ trigger:
   platform: state
   entity_id: binary_sensor.dori_lead_tracker
   to: 'off'
+  for:
+    minutes: 6
 condition:
   condition: and
   conditions:
@@ -16,6 +18,9 @@ condition:
       state: 'off'
       for:
         hours: 1
+    - condition: state
+      entity_id: 'binary_sensor.workday_sensor'
+      state: 'on'
 action:
   - service: vacuum.turn_on
     entity_id: vacuum.roomba
