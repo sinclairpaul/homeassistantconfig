@@ -1,7 +1,7 @@
 # Home Assistant Configuration
 
 [![GitLab CI][gitlabci-shield]][gitlabci]
-[![GitHub Actions]][githubactions]
+[![GitHub Actions][githubactions]]
 [![GitHub Activity][commits-shield]][commits]
 [![GitHub Last Commit][last-commit-shield]][commits]
 
