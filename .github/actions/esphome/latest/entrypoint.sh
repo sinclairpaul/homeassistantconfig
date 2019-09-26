@@ -1,14 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
-sh -c "esphome dummy.yaml version"
-sh -c "cp ci_secrets.yaml ./esphome/secrets.yaml"
-sh -c "for file in $(find \
-        ./esphome \
-        -type f \
-        -name "*.yaml" \
-        -not -name "secrets.yaml" \
-        ); do
-        esphome $(file) config
-      done"
+esphome dummy.yaml version
+cp ci_secrets.yaml ./esphome/secrets.yaml
+find ./esphome -name '*.yaml' -type f -not -name "secrets.yaml" \
+         -exec esphome {} config \;
