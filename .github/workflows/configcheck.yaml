@@ -34,3 +34,17 @@ jobs:
         uses: actions/checkout@v1.0.0
       - name: Running esphome check latest
         uses: ./.github/actions/esphome/latest
+  esphomebeta:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Config
+        uses: actions/checkout@v1.0.0
+      - name: Running esphome check beta
+        uses: ./.github/actions/esphome/beta
+  esphomedev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Config
+        uses: actions/checkout@v1.0.0
+      - name: Running esphome check dev
+        uses: ./.github/actions/esphome/dev
