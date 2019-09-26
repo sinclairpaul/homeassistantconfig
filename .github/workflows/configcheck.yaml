@@ -24,6 +24,8 @@ jobs:
   mdllint:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Config
+        uses: actions/checkout@v1.0.0
       - name: Running mdl version
         uses: ./.github/actions/linting/markdown
         with:
