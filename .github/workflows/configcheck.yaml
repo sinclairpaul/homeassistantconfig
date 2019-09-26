@@ -34,7 +34,7 @@ jobs:
       - name: Running mdl
         uses: ./.github/actions/linting/markdown
         with:
-          entrypoint: yamllint
+          entrypoint: mdl
           args: --style all --warnings .
   haconfig:
     needs: [yamllint, mdllint]
