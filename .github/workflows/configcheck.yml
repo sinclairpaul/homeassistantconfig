@@ -28,4 +28,6 @@ jobs:
       - name: Checkout Config
         uses: actions/checkout@v1.0.0
       - name: Running ha check dev
-        uses: sinclairpaul/ha-action@dev
+        uses: sinclairpaul/ha-action@master
+        with:
+          habranch: dev
