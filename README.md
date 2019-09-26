@@ -10,6 +10,11 @@ I run my [Home Assistant](https://home-assistant.io/) utilising
 
 Some hardware/devices used are:
 
+
+
+
+
+
 * [Blink XT Cameras](https://blinkforhome.com/)
 * [Nest Thermostat/Hello](https://nest.com/)
 * [Samsung Smarthings](https://www.smartthings.com/)
