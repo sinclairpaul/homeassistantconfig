@@ -1,4 +1,4 @@
-FROM homeassistant/home-assistant:latest
+FROM esphome/esphome:latest
 
 COPY entrypoint.sh /entrypoint.sh
 
