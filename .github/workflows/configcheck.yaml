@@ -14,4 +14,4 @@ jobs:
       - name: Running yamllint
         uses: ./.github/actions/linting/yamllint
         with:
-          entrypoint: yamllint .
+          entrypoint: yamllint
