@@ -16,12 +16,12 @@ jobs:
   configcheckrc:
     runs-on: ubuntu-latest
     steps:
-      - env:
-        habranch: rc
       - name: Checkout Config
         uses: actions/checkout@v1.0.0
       - name: Running ha check rc
         uses: sinclairpaul/ha-action@master
+        env:
+          habranch: rc
   configcheckdev:
     runs-on: ubuntu-latest
     steps:
