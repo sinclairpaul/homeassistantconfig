@@ -13,7 +13,6 @@
 !*.py
 !manifest.json
 !.github/**
-!*.yml
 
 # Ignore folders.
 .storage
