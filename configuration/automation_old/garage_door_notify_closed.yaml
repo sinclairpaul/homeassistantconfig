@@ -9,12 +9,12 @@ trigger:
 condition: []
 action:
   - data_template:
-      message: Garage Door just changed from {{ trigger.from_state.state }} to {{trigger.to_state.state
-        }}
+      message: Garage Door just changed from {{ trigger.from_state.state }}
+        to {{ trigger.to_state.state }}
       title: Garage Door State Changed
     service: notify.pushbullet
   - data_template:
-      message: Garage Door just changed from {{ trigger.from_state.state }} to {{trigger.to_state.state
-        }}
+      message: Garage Door just changed from {{ trigger.from_state.state }}
+        to {{trigger.to_state.state}}
       title: Garage Door State Changed
     service: notify.living_room_tv
