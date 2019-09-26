@@ -12,7 +12,7 @@ jobs:
       - name: Checkout Config
         uses: actions/checkout@v1.0.0
       - name: Prepare
-        run: pip3 install yamllint --no-cache-dir
+        run: pip install yamllint --no-cache-dir
       - name: Show yamllint version
         run:  yamllint --version
       - name: yamllint
