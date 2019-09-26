@@ -1,7 +1,7 @@
 # Home Assistant Configuration
 
 [![GitLab CI][gitlabci-shield]][gitlabci]
-[![GitHub Actions][githubactions]]
+[![GitHub Actions][githubactions]][githubactionslink]
 [![GitHub Activity][commits-shield]][commits]
 [![GitHub Last Commit][last-commit-shield]][commits]
 
@@ -25,3 +25,4 @@ Some hardware/devices used are:
 [commits-shield]: https://img.shields.io/github/commit-activity/y/sinclairpaul/homeassistantconfig.svg
 [commits]: https://github.com/sinclairpaul/homeassistantconfig/commits/master
 [githubactions]: https://github.com/sinclairpaul/homeassistantconfig/workflows/HA%20Config%20Check/badge.svg
+[githubactionslink]: https://github.com/sinclairpaul/homeassistantconfig/actions
