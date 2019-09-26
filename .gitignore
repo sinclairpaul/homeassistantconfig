@@ -17,12 +17,14 @@
 .storage
 .cloud
 .google.token
+.vscode
 node-red
 themes
 deps
+esphome/**/
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 ip_bans.yaml
 secrets.yaml
 known_devices.yaml
-**/hacs/services.yaml
+*.conf
