@@ -12,18 +12,18 @@ jobs:
       - name: Checkout Config
         uses: actions/checkout@v1.0.0
       - name: Running ha check latest
-        uses: ./.github/actions/hachecklatest
+        uses: ./.github/actions/hacheck/latest
   configcheckrc:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Config
         uses: actions/checkout@v1.0.0
       - name: Running ha check rc
-        uses: ./.github/actions/hacheckrc
+        uses: ./.github/actions/hacheck/rc
   configcheckdev:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Config
         uses: actions/checkout@v1.0.0
       - name: Running ha check dev
-        uses: ./.github/actions/hacheckdev
+        uses: ./.github/actions/hacheck/dev
