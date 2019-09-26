@@ -1,6 +1,6 @@
 ---
 name: Config Check
-on:
+on:  # yamllint disable-truthy
   push:
   pull_request:
   schedule:
