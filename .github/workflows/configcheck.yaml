@@ -13,3 +13,5 @@ jobs:
         uses: actions/checkout@v1.0.0
       - name: Running yamllint
         uses: ./.github/actions/linting/yamllint
+        with:
+          entrypoint: yamllint .
