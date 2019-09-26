@@ -11,9 +11,5 @@ jobs:
     steps:
       - name: Checkout Config
         uses: actions/checkout@v1.0.0
-      - name: Prepare
-        run: pip install --user yamllint
-      - name: Show yamllint version
-        run:  yamllint --version
-      - name: yamllint
-        run: yamllint . 
+      - name: Running yamllint
+        uses: ./.github/actions/linting/yamllint
