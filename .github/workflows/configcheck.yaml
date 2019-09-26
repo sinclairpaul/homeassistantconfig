@@ -13,8 +13,9 @@ jobs:
         uses: actions/checkout@v1.0.0
       - name: Prepare
         run: pip install yamllint
+      - name: Show yamllint version
+        run:  yamllint --version
       - name: yamllint
-        run: yamllint --version
         run: yamllint . 
   configchecklatest:
     runs-on: ubuntu-latest
