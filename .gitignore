@@ -6,7 +6,6 @@
 !*.yaml
 !.gitignore
 !*.md
-!*travis.yml
 !*gitlab-ci.yml
 !.mdlrc
 !.yamllint
@@ -26,3 +25,4 @@ deps
 ip_bans.yaml
 secrets.yaml
 known_devices.yaml
+**/hacs/services.yaml
