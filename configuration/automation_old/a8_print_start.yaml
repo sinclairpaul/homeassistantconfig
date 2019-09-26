@@ -8,3 +8,4 @@ trigger:
 action:
   service: light.turn_on
   entity_id: light.spare_room
+  
