@@ -12,8 +12,7 @@
 !.yamllint
 !*.py
 !manifest.json
-!.github/
-!.github/*
+!.github/**
 !*.yml
 
 # Ignore folders.
