@@ -6,7 +6,7 @@ on:  # yamllint disable-truthy
   schedule:
     - cron: 0 22 * * *
 jobs:
-  linting:
+  yamllint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Config
@@ -21,8 +21,21 @@ jobs:
         with:
           entrypoint: yamllint
           args: .
+  mdllint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running mdl version
+        uses: ./.github/actions/linting/markdown
+        with:
+          entrypoint: mdl
+          args: --version
+      - name: Running mdl
+        uses: ./.github/actions/linting/markdown
+        with:
+          entrypoint: yamllint
+          args: --style all --warnings .
   haconfig:
-    needs: linting
+    needs: [yamllint, mdllint]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Config
@@ -34,7 +47,7 @@ jobs:
       - name: Running ha check dev
         uses: ./.github/actions/hacheck/dev
   esphome:
-    needs: linting
+    needs: [yamllint, mdllint]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Config
