@@ -12,43 +12,8 @@ jobs:
       - name: Checkout Config
         uses: actions/checkout@v1.0.0
       - name: Prepare
-        run: pip install yamllint
+        run: pip3 install yamllint --no-cache-dir
       - name: Show yamllint version
         run:  yamllint --version
       - name: yamllint
         run: yamllint . 
-  configchecklatest:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Config
-        uses: actions/checkout@v1.0.0
-      - name: Running ha check latest
-        uses: ./.github/actions/hacheck/latest
-  configcheckrc:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Config
-        uses: actions/checkout@v1.0.0
-      - name: Running ha check rc
-        uses: ./.github/actions/hacheck/rc
-  configcheckdev:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Config
-        uses: actions/checkout@v1.0.0
-      - name: Running ha check dev
-        uses: ./.github/actions/hacheck/dev
-  esphomelatest:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Config
-        uses: actions/checkout@v1.0.0
-      - name: Running esphome check latest
-        uses: ./.github/actions/esphome/latest
-  esphomebeta:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Config
-        uses: actions/checkout@v1.0.0
-      - name: Running esphome check beta
-        uses: ./.github/actions/esphome/beta
