@@ -11,8 +11,14 @@ jobs:
     steps:
       - name: Checkout Config
         uses: actions/checkout@v1.0.0
+      - name: Running yamllint version
+        uses: ./.github/actions/linting/yamllint
+        with:
+          entrypoint: yamllint
+          args: --version
       - name: Running yamllint
         uses: ./.github/actions/linting/yamllint
         with:
           entrypoint: yamllint
           args: .
+
