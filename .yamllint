@@ -1,7 +1,6 @@
 ---
 ignore: |
   custom_components/
-  .github/
   ip_bans.yaml
 rules:
   braces:
