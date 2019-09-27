@@ -1,6 +1,6 @@
 ---
 name: HA Config Check
-on:  # yamllint disable-truthy
+on:  # yamllint disable-line rule:truthy
   push:
   pull_request:
   schedule:
