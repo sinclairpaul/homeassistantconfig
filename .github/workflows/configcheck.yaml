@@ -43,7 +43,7 @@ jobs:
       - name: Checkout Config
         uses: actions/checkout@v1.0.0
       - name: Running ha check latest
-        uses: ./.github/actions/hacheck/latest
+        uses: sinclairpaul/ha-configcheck@v0.0.1
       - name: Running ha check rc
         uses: ./.github/actions/hacheck/rc
       - name: Running ha check dev
