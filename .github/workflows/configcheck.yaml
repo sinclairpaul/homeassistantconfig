@@ -44,6 +44,8 @@ jobs:
         uses: actions/checkout@v1.0.0
       - name: Running ha check latest
         uses: sinclairpaul/ha-configcheck@v0.0.2
+        with:
+          secretsfile: ci_secrets.yaml
       - name: Running ha check rc
         uses: ./.github/actions/hacheck/rc
       - name: Running ha check dev
