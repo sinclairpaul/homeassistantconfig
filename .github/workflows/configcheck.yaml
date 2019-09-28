@@ -43,7 +43,7 @@ jobs:
       - name: Checkout Config
         uses: actions/checkout@v1.0.0
       - name: Running ha check latest
-        uses: sinclairpaul/ha-configcheck@v0.0.2
+        uses: sinclairpaul/ha-configcheck@master
         with:
           secretsfile: cab_secrets.yaml
       - name: Running ha check rc
