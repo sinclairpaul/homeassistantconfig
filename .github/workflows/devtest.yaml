@@ -10,8 +10,6 @@ jobs:
         uses: actions/checkout@v1.0.0
       - name: Running ha check dev
         uses: ./.github/actions/hacheck/dev
-        with:
-          HA_TEST: dev
      - name: Dump job context
         env:
           JOB_CONTEXT: ${{ toJson(job) }}
