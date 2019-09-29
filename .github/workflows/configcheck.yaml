@@ -1,8 +1,8 @@
 ---
 name: HA Config Check
 on:  # yamllint disable-line rule:truthy
-#  push:
-#  pull_request:
+  push:
+  pull_request:
   schedule:
     - cron: 0 22 * * *
 jobs:
