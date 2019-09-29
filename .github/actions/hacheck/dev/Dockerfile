@@ -2,7 +2,7 @@ ARG  HA_VERSION=dev
 
 FROM homeassistant/home-assistant:${HA_VERSION}
 
-RUN export
+RUN echo $(env)
 
 COPY entrypoint.sh /entrypoint.sh
 
