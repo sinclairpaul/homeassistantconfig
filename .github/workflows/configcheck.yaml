@@ -4,7 +4,7 @@ on:  # yamllint disable-line rule:truthy
   push:
   pull_request:
   schedule:
-    - cron: 0 22 * * *
+    - cron: 0 04 * * *
 jobs:
   yamllint:
     runs-on: ubuntu-latest
