@@ -1,6 +1,6 @@
 ---
 ignore: |
-  custom_components/
+  ./custom_components/hacs/services.yaml
   ip_bans.yaml
 rules:
   braces:

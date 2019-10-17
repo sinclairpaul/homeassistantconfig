@@ -75,7 +75,7 @@ yamllint:
   before_script:
     - yamllint --version
   script:
-    - yamllint -d relaxed .
+    - yamllint .
 
 jsonlint:
   <<: *preflight
