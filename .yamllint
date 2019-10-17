@@ -2,6 +2,7 @@
 ignore: |
   /custom_components/
   ip_bans.yaml
+  automations.yaml
 rules:
   braces:
     level: error
