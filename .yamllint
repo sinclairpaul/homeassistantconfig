@@ -1,6 +1,6 @@
 ---
 ignore: |
-  ./custom_components/hacs/services.yaml
+  /custom_components/
   ip_bans.yaml
 rules:
   braces:
@@ -37,7 +37,7 @@ rules:
     level: error
     present: true
     ignore: |
-      config/known_devices.yaml
+      custom_components/hacs/services.yaml
   empty-lines:
     level: error
     max: 1
@@ -63,6 +63,8 @@ rules:
     allow-non-breakable-inline-mappings: true
   new-line-at-end-of-file:
     level: error
+    ignore: |
+      custom_components/hacs/services.yaml
   new-lines:
     level: error
     type: unix
