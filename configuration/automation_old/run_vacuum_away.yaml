@@ -5,7 +5,7 @@ trigger:
   entity_id: binary_sensor.dori_lead_tracker
   to: 'off'
   for:
-    minutes: 6
+    minutes: 30
 condition:
   condition: and
   conditions:
