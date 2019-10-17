@@ -1,6 +1,6 @@
 ---
 ignore: |
-  /custom_components/
+  custom_components/*
   ip_bans.yaml
   automations.yaml
 rules:
