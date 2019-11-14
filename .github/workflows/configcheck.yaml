@@ -48,8 +48,10 @@ jobs:
           secretsfile: ci_secrets.yaml
       - name: Running ha check rc
         uses: ./.github/actions/hacheck/rc
+        continue-on-error: true
       - name: Running ha check dev
         uses: ./.github/actions/hacheck/dev
+        continue-on-error: true
   esphome:
     needs: [yamllint, mdllint]
     runs-on: ubuntu-latest
@@ -60,3 +62,4 @@ jobs:
         uses: ./.github/actions/esphome/latest
       - name: Running esphome check beta
         uses: ./.github/actions/esphome/beta
+        continue-on-error: true
