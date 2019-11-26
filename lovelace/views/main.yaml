@@ -17,7 +17,7 @@ cards:
       - entity: sensor.front_door_lock_battery
       - entity: binary_sensor.front_door_sensor_contact
       - entity: light.front_outside_light
-      - entity: light.living_room_light_strip
+      - entity: light.living_room_lamp
       - entity: light.moai_bulb_rgb
   - title: 'Living Room '
     entity: climate.nest

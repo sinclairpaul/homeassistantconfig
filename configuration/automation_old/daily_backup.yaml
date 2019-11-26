@@ -16,9 +16,7 @@ action:
         - a0d7b954_nodered
         - a0d7b954_adb
         - a0d7b954_ssh
-        - a0d7b954_grafana
         - a0d7b954_motioneye
-        - a0d7b954_influxdb
         - a0d7b954_adguard
         - a0d7b954_unifi
         - 15ef4d2f_esphome

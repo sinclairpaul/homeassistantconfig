@@ -3,6 +3,7 @@ alias: dori_away_vacuum
 trigger:
   platform: state
   entity_id: binary_sensor.dori_lead_tracker
+  from: 'on'
   to: 'off'
   for:
     minutes: 30
