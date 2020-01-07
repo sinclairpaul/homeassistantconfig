@@ -61,17 +61,16 @@ output:
     power_supply: relay
     min_power: ${pwm_min_power}
 
-
 light:
   - platform: monochromatic
     name: ${friendly_name}
     output: pwm
-    default_transition_length: ${no_delay} 
+    default_transition_length: ${no_delay}
     id: dimmer
 
 power_supply:
   - id: relay
-    pin: 
+    pin:
       number: GPIO16
       inverted: true
     enable_time: ${no_delay}
@@ -79,7 +78,7 @@ power_supply:
 
 binary_sensor:
   - platform: gpio
-    pin: 
+    pin:
       number: GPIO0
       inverted: true
       mode: INPUT_PULLUP
@@ -105,7 +104,7 @@ binary_sensor:
             brightness: ${long_press_up}
 
   - platform: gpio
-    pin: 
+    pin:
       number: GPIO1
       inverted: true
       mode: INPUT_PULLUP
@@ -130,7 +129,7 @@ binary_sensor:
             brightness: ${long_press_down}
 
   - platform: gpio
-    pin: 
+    pin:
       number: GPIO15
       mode: INPUT_PULLUP
     name: ${friendly_name} Main Button
@@ -148,7 +147,7 @@ binary_sensor:
 globals:
   - id: dimmer_lvl
     type: float
-    restore_value: no
+    restore_value: false
     initial_value: '1.0'
 
 script:
