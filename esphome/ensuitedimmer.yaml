@@ -1,7 +1,6 @@
 # Basic Config
 ---
 substitutions:
-#   # https://esphome.io/guides/configuration-types.html#substitutions
   device_name: ensuitedimmer  # hostname & entity_id
   friendly_name: Ensuite Dimmer   # Displayed in HA frontend
   pwm_min_power: 15%   # keep dimming functional at lowest levels
@@ -13,67 +12,50 @@ substitutions:
   long_press_down: 33%   # long press brightness
   long_press_main: 50%   # long press brightness
 
-
 esphome:
-  # https://esphome.io/components/esphome
   name: ${device_name}
   platform: ESP8266
   board: esp01_1m
   esp8266_restore_from_flash: true
 
-
 wifi:
-  # https://esphome.io/components/wifi
   domain: !secret dnsdomain
   ssid: !secret wifi2
   password: !secret wifipass
 
 web_server:
   port: 80
-  # https://esphome.io/components/web_server.html
-
 
 logger:
-  # https://esphome.io/components/logger
-
 
 api:
   password: !secret otapass
-  # https://esphome.io/components/api
-
 
 ota:
   password: !secret otapass
-  # https://esphome.io/components/ota
-
 
 output:
   - platform: gpio
-    # https://esphome.io/components/output/gpio.html
     pin: GPIO3
     inverted: true
     id: led5
 
   - platform: gpio
-    # https://esphome.io/components/output/gpio.html
     pin: GPIO5
     inverted: true
     id: led4
 
   - platform: gpio
-    # https://esphome.io/components/output/gpio.html
     pin: GPIO12
     inverted: true
     id: led3
 
   - platform: gpio
-    # https://esphome.io/components/output/gpio.html
     pin: GPIO14
     inverted: true
     id: led2
 
   - platform: esp8266_pwm
-    # https://esphome.io/components/output/index.html#config-output
     pin: GPIO13
     id: pwm
     power_supply: relay
@@ -82,33 +64,28 @@ output:
 
 light:
   - platform: monochromatic
-    # https://esphome.io/components/light/monochromatic.html
     name: ${friendly_name}
     output: pwm
     default_transition_length: ${no_delay} 
     id: dimmer
 
-
 power_supply:
   - id: relay
-    # https://esphome.io/components/power_supply.html
     pin: 
       number: GPIO16
-      inverted: True
+      inverted: true
     enable_time: ${no_delay}
     keep_on_time: ${no_delay}
 
-
 binary_sensor:
   - platform: gpio
-    # https://esphome.io/components/binary_sensor/gpio.html
     pin: 
       number: GPIO0
-      inverted: True
+      inverted: true
       mode: INPUT_PULLUP
     name: ${friendly_name} Up Button
     id: up_button
-    internal: True
+    internal: true
     on_press:
       then:
         - lambda: |-
@@ -120,7 +97,6 @@ binary_sensor:
             };
             id(apply_dimming).execute();
     on_click:
-      # https://esphome.io/components/binary_sensor/index.html#on-click
       min_length: ${long_press_min}
       max_length: ${long_press_max}
       then:
@@ -129,13 +105,12 @@ binary_sensor:
             brightness: ${long_press_up}
 
   - platform: gpio
-    # https://esphome.io/components/binary_sensor/gpio.html
     pin: 
       number: GPIO1
-      inverted: True
+      inverted: true
       mode: INPUT_PULLUP
     name: ${friendly_name} Down Button
-    internal: True
+    internal: true
     on_press:
       then:
         - lambda: !lambda |-
@@ -147,7 +122,6 @@ binary_sensor:
             };
             id(apply_dimming).execute();
     on_click:
-      # https://esphome.io/components/binary_sensor/index.html#on-click
       min_length: ${long_press_min}
       max_length: ${long_press_max}
       then:
@@ -156,16 +130,14 @@ binary_sensor:
             brightness: ${long_press_down}
 
   - platform: gpio
-    # https://esphome.io/components/binary_sensor/gpio.html
     pin: 
       number: GPIO15
       mode: INPUT_PULLUP
     name: ${friendly_name} Main Button
-    internal: True
+    internal: true
     on_press:
       - light.toggle: dimmer
     on_click:
-      # https://esphome.io/components/binary_sensor/index.html#on-click
       min_length: ${long_press_min}
       max_length: ${long_press_max}
       then:
@@ -173,18 +145,14 @@ binary_sensor:
             id: dimmer
             brightness: ${long_press_main}
 
-
 globals:
   - id: dimmer_lvl
-    # https://esphome.io/guides/automations.html#bonus-2-global-variables
     type: float
     restore_value: no
     initial_value: '1.0'
 
-
 script:
   - id: apply_dimming
-    # https://esphome.io/guides/automations.html#script-execute-action
     then:
       - lambda: |-
           auto call = id(dimmer).turn_on();
@@ -194,10 +162,8 @@ script:
           format: "dimmer_lvl = %.2f"
           args: ['id(dimmer_lvl)']
 
-
 interval:
   - interval: 250ms
-    # https://esphome.io/guides/automations.html#interval
     then:
       - lambda: |-
           auto dimmer_vals = id(dimmer).get_current_values();
