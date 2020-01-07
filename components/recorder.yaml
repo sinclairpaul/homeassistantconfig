@@ -7,7 +7,6 @@ recorder:
     entities:
       - sensor.hc_hotend_temp
       - sensor.hc_print_progress
-      - sensor.anet_print_progress
-      - sensor.anet_hotend_temp
+      - sensor.ender_job_percentage
       - sensor.hc300_hotend_temp
       - sensor.hc300_print_progress

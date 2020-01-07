@@ -17,8 +17,10 @@ cards:
       - entity: sensor.front_door_lock_battery
       - entity: binary_sensor.front_door_sensor_contact
       - entity: light.front_outside_light
+      - entity: light.living_room_strip
       - entity: light.living_room_lamp
       - entity: light.moai_bulb_rgb
+      - entity: light.porch_strip
   - title: 'Living Room '
     entity: climate.nest
     type: 'custom:thermostat-card'
@@ -59,7 +61,7 @@ cards:
     entities:
       - light.bedroom
       - switch.ensuite_fan_switch
-      - switch.ensuite_light_switch
+      - light.ensuite_dimmer
       - sensor.bathroom_illuminance
       - switch.bedside_light_1_switch
       - switch.bedside_light_2_switch

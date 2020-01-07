@@ -23,3 +23,8 @@ light_control:
     - light.spare_room
     - light.stairs_1
     - light.stairs_top_1
+    - light.porch_strip
+    - light.dining_room_1
+    - light.dining_room_2
+    - light.tree_lights
+    - light.porch_strip

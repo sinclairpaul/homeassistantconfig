@@ -11,20 +11,21 @@ cards:
         column_width: 200
         cards:
           - type: entities
-            title: A8
+            title: Ender3
             show_header_toggle: false
             entities:
-              - switch.anet_a8_power
+              - switch.ender3_power
           - type: conditional
             conditions:
-              - entity: switch.anet_a8_power
+              - entity: switch.ender3_power
                 state: "on"
             card:
               type: entities
               entities:
-                - sensor.anet_printer_status
-                - sensor.anet_print_progress
-                - sensor.anet_hotend_temp
+                - binary_sensor.ender_printing
+                - binary_sensor.ender_printing_error
+                - sensor.ender_current_state
+                - sensor.ender_job_percentage
           - type: entities
             title: Hypercube
             show_header_toggle: false

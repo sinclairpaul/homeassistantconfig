@@ -1,0 +1,11 @@
+---
+octoprint:
+  host: !secret ender3host
+  api_key: !secret ender3api
+  name: Ender
+  number_of_tools: 1
+  bed: true
+  sensors:
+    monitored_conditions:
+      - 'Current State'
+      - 'Job Percentage'

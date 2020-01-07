@@ -3,6 +3,7 @@ import json
 from aiogithubapi import AIOGitHubException
 from homeassistant.loader import async_get_custom_components
 from .repository import HacsRepository, register_repository_class
+from ..hacsbase.exceptions import HacsRequirement
 
 
 @register_repository_class
@@ -16,7 +17,6 @@ class HacsIntegration(HacsRepository):
         super().__init__()
         self.information.full_name = full_name
         self.information.category = self.category
-        self.manifest = None
         self.domain = None
         self.content.path.remote = "custom_components"
         self.content.path.local = self.localpath
@@ -29,8 +29,8 @@ class HacsIntegration(HacsRepository):
     @property
     def config_flow(self):
         """Return bool if integration has config_flow."""
-        if self.manifest is not None:
-            if self.information.full_name == "custom-components/hacs":
+        if self.manifest:
+            if self.information.full_name == "hacs/integration":
                 return False
             return self.manifest.get("config_flow", False)
         return False
@@ -100,6 +100,8 @@ class HacsIntegration(HacsRepository):
 
     async def update_repository(self):
         """Update."""
+        if self.github.ratelimits.remaining == 0:
+            return
         await self.common_update()
 
         # Get integration objects.
@@ -125,8 +127,9 @@ class HacsIntegration(HacsRepository):
             return
 
         self.content.files = []
-        for filename in self.content.objects or []:
-            self.content.files.append(filename.name)
+        if isinstance(self.content.objects, list):
+            for filename in self.content.objects or []:
+                self.content.files.append(filename.name)
 
         await self.get_manifest()
 
@@ -151,13 +154,18 @@ class HacsIntegration(HacsRepository):
             return False
 
         if manifest:
-            self.manifest = manifest
-            self.information.authors = manifest["codeowners"]
-            self.domain = manifest["domain"]
-            self.information.name = manifest["name"]
-            self.information.homeassistant_version = manifest.get("homeassistant")
+            try:
+                self.manifest = manifest
+                self.information.authors = manifest["codeowners"]
+                self.domain = manifest["domain"]
+                self.information.name = manifest["name"]
+                self.information.homeassistant_version = manifest.get("homeassistant")
 
-            # Set local path
-            self.content.path.local = self.localpath
-            return True
+                # Set local path
+                self.content.path.local = self.localpath
+                return True
+            except KeyError as exception:
+                raise HacsRequirement(
+                    f"Missing expected key {exception} in 'manifest.json'"
+                )
         return False

@@ -7,7 +7,7 @@ esphome:
 
 wifi:
   domain: !secret dnsdomain
-  ssid: !secret wifi
+  ssid: !secret wifi2
   password: !secret wifipass
 # Enable logging
 logger:
@@ -36,19 +36,16 @@ binary_sensor:
 switch:
   - platform: gpio
     id: relay1
-    name: "Internal Relay 1"
+    name: "Socket 1"
     pin: GPIO14
-    restore_mode: always off
     internal: true
   - platform: gpio
     id: relay2
-    name: "Internal Relay 2"
+    name: "Socket 2"
     pin: GPIO12
-    restore_mode: always off
-    internal: true
   - platform: template
     id: switch_main1
-    name: "Teckin Outdoor Switch 1"
+    name: "Teckin Outdoor Switch"
     lambda: return id(relay1).state;
     turn_on_action:
       then:

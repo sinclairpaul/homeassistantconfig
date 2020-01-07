@@ -1,0 +1,10 @@
+---
+alias: Ender Print - Switch on Lights
+initial_state: true
+trigger:
+  - platform: state
+    entity_id: binary_sensor.ender_printing
+    to: 'on'
+action:
+  service: light.turn_on
+  entity_id: light.printer
