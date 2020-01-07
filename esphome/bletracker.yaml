@@ -32,7 +32,7 @@ sensor:
   - platform: ble_rssi
     mac_address: !secret doritracker
     name: "Dori Lead Tracker RSSI value"
-    
+
 switch:
   - platform: restart
     name: "BLE Restart"
