@@ -18,7 +18,7 @@ api:
 
 ota:
   password: !secret otapass
-  
+
 web_server:
   port: 80
 
