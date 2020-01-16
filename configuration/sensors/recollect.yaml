@@ -1,0 +1,4 @@
+---
+- platform: recollect_waste
+  place_id: !secret recollectplace
+  service_id: !secret recollectservice

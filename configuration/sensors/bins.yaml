@@ -3,39 +3,55 @@
   sensors:
     rubbish:
       friendly_name: 'Rubbish'
+      icon_template: >-
+        mdi:trash-can
       value_template: >-
-        {% if is_state('input_boolean.rubbish_collection', 'off') %}
-          False
-        {% elif is_state('input_boolean.rubbish_collection', 'on') %}
-          True
+        {% if 'garbage' in state_attr("sensor.recollect_waste", "pickup_types") %}
+         True
+        {% else %}
+         False
         {% endif %}
 - platform: template
   sensors:
     organics:
       friendly_name: 'Organics'
+      icon_template: >-
+        mdi:apple
       value_template: >-
-        {% if is_state('input_boolean.organics_collection', 'off') %}
-          False
-        {% elif is_state('input_boolean.organics_collection', 'on') %}
-          True
+        {% if 'organics' in state_attr("sensor.recollect_waste", "pickup_types") %}
+         True
+        {% else %}
+         False
         {% endif %}
 - platform: template
   sensors:
     recycling:
       friendly_name: 'Recycling'
+      icon_template: >-
+        mdi:recycle
       value_template: >-
-        {% if is_state('input_boolean.recycling_collection', 'off') %}
-          False
-        {% elif is_state('input_boolean.recycling_collection', 'on') %}
-          True
+        {% if 'recycling' in state_attr("sensor.recollect_waste", "pickup_types") %}
+         True
+        {% else %}
+         False
         {% endif %}
 - platform: template
   sensors:
     garden:
       friendly_name: 'Garden'
+      icon_template: >-
+        mdi:flower
       value_template: >-
-        {% if is_state('input_boolean.garden_collection', 'off') %}
-          False
-        {% elif is_state('input_boolean.garden_collection', 'on') %}
-          True
+        {% if 'garden' in state_attr("sensor.recollect_waste", "pickup_types") %}
+         True
+        {% else %}
+         False
         {% endif %}
+- platform: template
+  sensors:
+    bin_collection_date:
+      friendly_name: 'Bin Collection Date'
+      icon_template: >-
+        mdi:calendar
+      value_template: >-
+        {{ states("sensor.recollect_waste") }}

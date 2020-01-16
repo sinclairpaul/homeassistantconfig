@@ -78,7 +78,7 @@ cards:
     type: entities
     show_header_toggle: false
     entities:
-      - input_datetime.bin_collection_date
+      - sensor.bin_collection_date
       - sensor.garden
       - sensor.organics
       - sensor.recycling
