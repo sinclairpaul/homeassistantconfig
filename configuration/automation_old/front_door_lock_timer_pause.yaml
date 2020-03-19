@@ -5,6 +5,6 @@ trigger:
   - platform: state
     entity_id: binary_sensor.front_door_sensor_contact
     to: open
-action: 
+action:
   service: timer.pause
   entity_id: timer.lockdoor
