@@ -1,7 +1,6 @@
 ---
 spare_room:
   name: Spare Room
-  control: hidden
   entities:
     - light.spare_room
     - light.printer

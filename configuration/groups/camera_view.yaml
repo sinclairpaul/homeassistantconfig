@@ -1,6 +1,5 @@
 ---
 Camera View:
-  view: true
   entities:
     - group.cameras
     - group.camera_sensors

@@ -27,7 +27,7 @@ binary_sensor:
       - invert:
       - delayed_off: 50ms
     name: "Red Button Top"
-    on_press:
+    on_release:
       - switch.turn_on: lightstrip_switch
     on_click:
       min_length: 1000ms
@@ -72,7 +72,7 @@ binary_sensor:
       - invert:
       - delayed_off: 50ms
     name: "Orange Button Top"
-    on_press:
+    on_release:
       - switch.turn_on: bedside_switch
     internal: true
 switch:
@@ -84,11 +84,11 @@ switch:
     turn_on_action:
       - homeassistant.service:
           service: light.turn_on
-          data_template: {"entity_id": "light.living_room_light_strip"}
+          data_template: {"entity_id": "light.living_room_strip"}
     turn_off_action:
       - homeassistant.service:
           service: light.turn_off
-          data_template: {"entity_id": "light.living_room_light_strip"}
+          data_template: {"entity_id": "light.living_room_strip"}
   - platform: template
     name: "Bedside Lights"
     id: bedside_switch

@@ -1,2 +1,42 @@
----
-[]
+- id: '1582841771406'
+  alias: Notify Front Door Unlocked
+  description: ''
+  trigger:
+  - device_id: 9d2e9090350a419a9a336eadd8c2d8ae
+    domain: lock
+    entity_id: lock.front_door_lock
+    platform: device
+    type: unlocked
+  condition: []
+  action:
+  - data:
+      message: Front Door Unlocked
+    service: notify.mobile_app_sm_g935w8
+- id: '1583173003301'
+  alias: Turn On Basement Lights
+  description: ''
+  trigger:
+  - device_id: 7ce77f65a61245fb8aaa67215d496e77
+    domain: zha
+    platform: device
+    subtype: turn_on
+    type: remote_button_short_press
+  condition: []
+  action:
+  - data: {}
+    entity_id: light.basement
+    service: light.turn_on
+- id: '1583173075443'
+  alias: Turn Off Basement Lights
+  description: ''
+  trigger:
+  - device_id: 7ce77f65a61245fb8aaa67215d496e77
+    domain: zha
+    platform: device
+    subtype: turn_off
+    type: remote_button_short_press
+  condition: []
+  action:
+  - data: {}
+    entity_id: light.basement
+    service: light.turn_off

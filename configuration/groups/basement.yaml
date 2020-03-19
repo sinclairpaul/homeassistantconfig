@@ -1,7 +1,6 @@
 ---
 basement:
   name: Basement
-  control: hidden
   entities:
     - light.basement_main
     - light.basement_front

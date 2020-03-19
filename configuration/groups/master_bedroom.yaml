@@ -1,7 +1,6 @@
 ---
 master_bedroom:
   name: Master Bedroom
-  control: hidden
   entities:
     - light.bedroom
     - switch.ensuite_fan

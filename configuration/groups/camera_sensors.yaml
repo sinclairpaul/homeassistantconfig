@@ -1,7 +1,6 @@
 ---
 camera_sensors:
   name: Camera Sensors
-  control: hidden
   entities:
     - switch.dafang_h264_rtsp_server
     - switch.dafang_mjpeg_rtsp_server

@@ -107,6 +107,7 @@ cards:
       - sensor.ha_switch_current
       - sensor.ha_switch_power
       - sensor.ha_switch_voltage
+      - binary_sensor.basement_water_sensor
   - title: Garage
     show_header_toggle: false
     type: entities

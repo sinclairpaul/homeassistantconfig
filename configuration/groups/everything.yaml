@@ -1,6 +1,5 @@
 ---
 everything:
-  view: true
   entities:
     - group.all_devices
     - group.all_switches

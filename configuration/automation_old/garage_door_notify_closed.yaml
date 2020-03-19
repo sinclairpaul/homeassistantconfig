@@ -1,5 +1,5 @@
 ---
-alias: Notify Garage Door
+alias: Notify Garage Door Closed
 initial_state: true
 trigger:
   - entity_id: cover.garage_door

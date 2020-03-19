@@ -1,0 +1,10 @@
+---
+alias: Front Door - Cancel Timer
+initial_state: true
+trigger:
+  - entity_id: lock.front_door_lock
+    platform: state
+    to: locked
+action:
+  service: timer.cancel
+  entity_id: timer.lockdoor

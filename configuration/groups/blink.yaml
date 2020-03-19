@@ -1,6 +1,5 @@
 ---
 Blink:
-  view: true
   entities:
     - camera.blink_front
     - camera.blink_back

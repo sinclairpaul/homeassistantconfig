@@ -1,6 +1,5 @@
 ---
 default_view:
-  view: true
   icon: mdi:home
   entities:
     - climate.nest

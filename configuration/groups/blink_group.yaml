@@ -1,7 +1,6 @@
 ---
 Blink_Group:
   name: Blink Sensors
-  control: hidden
   entities:
     - sensor.blink_front_battery
     # - sensor.blink_front_notifications

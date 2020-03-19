@@ -1,6 +1,5 @@
 ---
 Entertainment:
-  control: hidden
   entities:
     - remote.harmony
     - sensor.harmony

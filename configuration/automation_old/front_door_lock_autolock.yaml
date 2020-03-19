@@ -1,0 +1,14 @@
+---
+alias: Front Door - Auto Lock
+trigger:
+  - platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.door_lock
+condition:
+  condition: state
+  entity_id: binary_sensor.front_door_sensor_contact
+  state: closed
+action:
+  - service: lock.lock
+    entity_id: lock.front_door_lock

@@ -1,7 +1,6 @@
 ---
 living_room:
   name: Living Room
-  control: hidden
   entities:
     - light.living_room
     - light.front_door

@@ -1,0 +1,10 @@
+---
+alias: Front Door - Pause Timer
+initial_state: true
+trigger:
+  - platform: state
+    entity_id: binary_sensor.front_door_sensor_contact
+    to: open
+action: 
+  service: timer.pause
+  entity_id: timer.lockdoor

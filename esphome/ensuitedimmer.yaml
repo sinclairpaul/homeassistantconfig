@@ -7,7 +7,7 @@ substitutions:
   no_delay: 0s   # transition when changing dimmer_lvl & relay delay
   transition_length: .5s   # transition when turning on/off
   long_press_min: .4s   # minimum time to activate long-press action
-  long_press_max: 2s   # maximum time to activate long-press action
+  long_press_max: 3s   # maximum time to activate long-press action
   long_press_up: 100%   # long press brightness
   long_press_down: 33%   # long press brightness
   long_press_main: 50%   # long press brightness
@@ -34,6 +34,11 @@ api:
 ota:
   password: !secret otapass
 
+status_led:
+  # https://esphome.io/components/status_led
+  pin:
+    number: GPIO4   # Red LED
+    inverted: True
 output:
   - platform: gpio
     pin: GPIO3
@@ -85,7 +90,7 @@ binary_sensor:
     name: ${friendly_name} Up Button
     id: up_button
     internal: true
-    on_press:
+    on_release:
       then:
         - lambda: |-
             if (id(dimmer_lvl) > .91) {
@@ -110,7 +115,7 @@ binary_sensor:
       mode: INPUT_PULLUP
     name: ${friendly_name} Down Button
     internal: true
-    on_press:
+    on_release:
       then:
         - lambda: !lambda |-
             if (id(dimmer_lvl) < .10) {
@@ -134,7 +139,7 @@ binary_sensor:
       mode: INPUT_PULLUP
     name: ${friendly_name} Main Button
     internal: true
-    on_press:
+    on_release:
       - light.toggle: dimmer
     on_click:
       min_length: ${long_press_min}
@@ -165,19 +170,19 @@ interval:
   - interval: 250ms
     then:
       - lambda: |-
-          auto dimmer_vals = id(dimmer).get_current_values();
+          auto dimmer_vals =  id(dimmer).current_values;
           if (dimmer_vals.is_on()) {
             id(dimmer_lvl) = dimmer_vals.get_brightness();
-          }
-          if (id(dimmer_lvl) > .19) { id(led2).turn_on(); }
-          if (id(dimmer_lvl) < .20) { id(led2).turn_off(); }
-          if (id(dimmer_lvl) > .39) { id(led3).turn_on(); }
-          if (id(dimmer_lvl) < .40) { id(led3).turn_off(); }
-          if (id(dimmer_lvl) > .59) { id(led4).turn_on(); }
-          if (id(dimmer_lvl) < .60) { id(led4).turn_off(); }
-          if (id(dimmer_lvl) > .79) { id(led5).turn_on(); }
-          if (id(dimmer_lvl) < .80) { id(led5).turn_off(); }
-          if (!dimmer_vals.is_on()) {
+          
+            if (id(dimmer_lvl) > .19) { id(led2).turn_on(); }
+            if (id(dimmer_lvl) < .20) { id(led2).turn_off(); }
+            if (id(dimmer_lvl) > .39) { id(led3).turn_on(); }
+            if (id(dimmer_lvl) < .40) { id(led3).turn_off(); }
+            if (id(dimmer_lvl) > .59) { id(led4).turn_on(); }
+            if (id(dimmer_lvl) < .60) { id(led4).turn_off(); }
+            if (id(dimmer_lvl) > .79) { id(led5).turn_on(); }
+            if (id(dimmer_lvl) < .80) { id(led5).turn_off(); }
+          } else {
             id(led2).turn_off();
             id(led3).turn_off();
             id(led4).turn_off();
