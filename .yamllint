@@ -68,7 +68,7 @@ rules:
       custom_components/hacs/services.yaml
   new-lines:
     level: warning
-    type: unix
+    type: dos
   trailing-spaces:
     level: error
   truthy:
