@@ -67,7 +67,7 @@ rules:
     ignore: |
       custom_components/hacs/services.yaml
   new-lines:
-    level: error
+    level: warning
     type: unix
   trailing-spaces:
     level: error
