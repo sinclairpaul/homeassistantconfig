@@ -19,6 +19,9 @@ api:
 ota:
   password: !secret otapass
 
+web_server:
+  port: 80
+
 binary_sensor:
   - platform: gpio
     pin:
