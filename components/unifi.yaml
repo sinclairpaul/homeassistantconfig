@@ -1,7 +1,0 @@
----
-unifi:
-  controllers:
-    - host: !secret mqtt_broker
-      site: Home
-      ssid_filter:
-        - !secret ubwifi
