@@ -14,7 +14,6 @@ action:
         - a0d7b954_wireguard
         - a0d7b954_chrony
         - a0d7b954_nodered
-        - a0d7b954_adb
         - a0d7b954_ssh
         - a0d7b954_motioneye
         - a0d7b954_adguard

@@ -2,7 +2,6 @@
 http:
   ip_ban_enabled: true
   login_attempts_threshold: 3
-  base_url: !secret http_url
   use_x_forwarded_for: true
   trusted_proxies: !secret proxy_ip
   cors_allowed_origins:

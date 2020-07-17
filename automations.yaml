@@ -2,7 +2,7 @@
   alias: Notify Front Door Unlocked
   description: ''
   trigger:
-  - device_id: 9d2e9090350a419a9a336eadd8c2d8ae
+  - device_id: 12eb1d576e5a45dd9e13bf437ebc938b
     domain: lock
     entity_id: lock.front_door_lock
     platform: device
@@ -12,31 +12,225 @@
   - data:
       message: Front Door Unlocked
     service: notify.mobile_app_sm_g935w8
-- id: '1583173003301'
-  alias: Turn On Basement Lights
+- id: '1593211931138'
+  alias: Switch Off Basement Lights
   description: ''
   trigger:
-  - device_id: 7ce77f65a61245fb8aaa67215d496e77
-    domain: zha
-    platform: device
-    subtype: turn_on
-    type: remote_button_short_press
-  condition: []
-  action:
-  - data: {}
-    entity_id: light.basement
-    service: light.turn_on
-- id: '1583173075443'
-  alias: Turn Off Basement Lights
-  description: ''
-  trigger:
-  - device_id: 7ce77f65a61245fb8aaa67215d496e77
+  - device_id: d1f142cd37d04c7a82c90db51f51cd9f
     domain: zha
     platform: device
     subtype: turn_off
     type: remote_button_short_press
   condition: []
   action:
-  - data: {}
-    entity_id: light.basement
-    service: light.turn_off
+  - device_id: c5a4f978ed0c4df0af580a4435084bfc
+    domain: light
+    entity_id: light.basement_back
+    type: turn_off
+  - device_id: 5f1e679a37f24f31ae04ec34229f951c
+    domain: light
+    entity_id: light.basement_front
+    type: turn_off
+  - device_id: 3698f992a754458b812ec1e300ac3c57
+    domain: light
+    entity_id: light.basement_main
+    type: turn_off
+  - device_id: ed68f890e4c74d7ca4a21e654715ae22
+    domain: light
+    entity_id: light.basement_furnace
+    type: turn_off
+- id: '1594394164539'
+  alias: Switch On Basement Lights
+  description: ''
+  trigger:
+  - device_id: d1f142cd37d04c7a82c90db51f51cd9f
+    domain: zha
+    platform: device
+    subtype: turn_on
+    type: remote_button_short_press
+  condition: []
+  action:
+  - brightness_pct: 100
+    device_id: c5a4f978ed0c4df0af580a4435084bfc
+    domain: light
+    entity_id: light.basement_back
+    type: turn_on
+  - brightness_pct: 100
+    device_id: 5f1e679a37f24f31ae04ec34229f951c
+    domain: light
+    entity_id: light.basement_front
+    type: turn_on
+  - brightness_pct: 100
+    device_id: 3698f992a754458b812ec1e300ac3c57
+    domain: light
+    entity_id: light.basement_main
+    type: turn_on
+  - brightness_pct: 100
+    device_id: ed68f890e4c74d7ca4a21e654715ae22
+    domain: light
+    entity_id: light.basement_furnace
+    type: turn_on
+- id: '1594572858340'
+  alias: Closet Light On
+  description: ''
+  trigger:
+  - device_id: 7a97b23a1193497cb294c172794f6410
+    domain: binary_sensor
+    entity_id: binary_sensor.closet_door_sensor_on_off
+    platform: device
+    type: opened
+  condition: []
+  action:
+  - brightness_pct: 100
+    device_id: 42efaf2040b749498b4ff1c9c78e1f9a
+    domain: light
+    entity_id: light.closet_light
+    type: turn_on
+- id: '1594572885114'
+  alias: Closet Light Off
+  description: ''
+  trigger:
+  - device_id: 7a97b23a1193497cb294c172794f6410
+    domain: binary_sensor
+    entity_id: binary_sensor.closet_door_sensor_on_off
+    platform: device
+    type: not_opened
+  condition: []
+  action:
+  - device_id: 42efaf2040b749498b4ff1c9c78e1f9a
+    domain: light
+    entity_id: light.closet_light
+    type: turn_off
+- id: '1594573155884'
+  alias: Guest Room Closet On
+  description: ''
+  trigger:
+  - device_id: e3bf968e001d4d5086dab31df383de93
+    domain: binary_sensor
+    entity_id: binary_sensor.guest_room_closet_door_sensor_on_off
+    platform: device
+    type: opened
+  condition: []
+  action:
+  - brightness_pct: 100
+    device_id: bf2c1799cab04d378ad6122d66c5a60d
+    domain: light
+    entity_id: light.guest_room_closet
+    type: turn_on
+- id: '1594573178601'
+  alias: Guest Room Closet Off
+  description: ''
+  trigger:
+  - device_id: e3bf968e001d4d5086dab31df383de93
+    domain: binary_sensor
+    entity_id: binary_sensor.guest_room_closet_door_sensor_on_off
+    platform: device
+    type: not_opened
+  condition: []
+  action:
+  - device_id: bf2c1799cab04d378ad6122d66c5a60d
+    domain: light
+    entity_id: light.guest_room_closet
+    type: turn_off
+- id: '1594573272178'
+  alias: Basement Lights Motion
+  description: ''
+  trigger:
+  - device_id: e45e5f41715a4d0691877e0428426079
+    domain: binary_sensor
+    entity_id: binary_sensor.basement_motion_ias_zone
+    platform: device
+    type: motion
+  condition: []
+  action:
+  - brightness_pct: 100
+    device_id: 3698f992a754458b812ec1e300ac3c57
+    domain: light
+    entity_id: light.basement_main
+    type: turn_on
+  - brightness_pct: 100
+    device_id: 5f1e679a37f24f31ae04ec34229f951c
+    domain: light
+    entity_id: light.basement_front
+    type: turn_on
+  - brightness_pct: 100
+    device_id: ed68f890e4c74d7ca4a21e654715ae22
+    domain: light
+    entity_id: light.basement_furnace
+    type: turn_on
+  - brightness_pct: 100
+    device_id: c5a4f978ed0c4df0af580a4435084bfc
+    domain: light
+    entity_id: light.basement_back
+    type: turn_on
+- id: '1594573300105'
+  alias: Basement Motion Off
+  description: ''
+  trigger:
+  - device_id: e45e5f41715a4d0691877e0428426079
+    domain: binary_sensor
+    entity_id: binary_sensor.basement_motion_ias_zone
+    for:
+      hours: 0
+      minutes: 10
+      seconds: 0
+    platform: device
+    type: no_motion
+  condition: []
+  action:
+  - device_id: 3698f992a754458b812ec1e300ac3c57
+    domain: light
+    entity_id: light.basement_main
+    type: turn_off
+  - device_id: 5f1e679a37f24f31ae04ec34229f951c
+    domain: light
+    entity_id: light.basement_front
+    type: turn_off
+  - device_id: ed68f890e4c74d7ca4a21e654715ae22
+    domain: light
+    entity_id: light.basement_furnace
+    type: turn_off
+  - device_id: c5a4f978ed0c4df0af580a4435084bfc
+    domain: light
+    entity_id: light.basement_back
+    type: turn_off
+- id: '1595012566673'
+  alias: Switch on Moai after Washing Machine Stopped
+  description: ''
+  trigger:
+  - device_id: 3f0bab5094de4b7b94d51f9cb88b0ace
+    domain: binary_sensor
+    entity_id: binary_sensor.multipurpose_sensor_acceleration
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+    platform: device
+    type: not_moving
+  condition:
+  - condition: device
+    device_id: 3f0bab5094de4b7b94d51f9cb88b0ace
+    domain: binary_sensor
+    entity_id: binary_sensor.multipurpose_sensor_contact
+    type: is_not_open
+  action:
+  - brightness_pct: 100
+    device_id: 673d4fb7deb044e89848dda2cf4e5ba1
+    domain: light
+    entity_id: light.moai_bulb_rgb
+    type: turn_on
+- id: '1595012617007'
+  alias: Reset Moai Light
+  description: ''
+  trigger:
+  - device_id: 3f0bab5094de4b7b94d51f9cb88b0ace
+    domain: binary_sensor
+    entity_id: binary_sensor.multipurpose_sensor_contact
+    platform: device
+    type: opened
+  condition: []
+  action:
+  - device_id: 673d4fb7deb044e89848dda2cf4e5ba1
+    domain: light
+    entity_id: light.moai_bulb_rgb
+    type: turn_off

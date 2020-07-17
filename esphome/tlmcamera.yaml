@@ -1,14 +1,21 @@
 ---
+substitutions:
+  device_name: tlmcamera  # hostname & entity_id
+  friendly_name: TLM Camera   # Displayed in HA frontend
+
 esphome:
-  name: teckinpow
+  name: ${device_name}
   platform: ESP8266
   board: esp01_1m
   board_flash_mode: dout
 
 wifi:
   domain: !secret dnsdomain
-  ssid: !secret wifi
+  ssid: !secret wifi2
   password: !secret wifipass
+  
+web_server:
+  port: 80
 
 # Enable logging
 logger:
@@ -26,23 +33,24 @@ binary_sensor:
       number: GPIO13
       mode: INPUT_PULLUP
       inverted: true
-    name: "Teckin Pow  Button"
+    name: ${friendly_name} Button
     on_press:
       then:
         - switch.toggle: switch_main
     internal: true
   - platform: status
-    name: "Teckin Pow  Status"
+    name: ${friendly_name} Status
+
 switch:
   - platform: gpio
     id: relay
     name: "Internal Relay"
-    pin: GPIO4
+    pin: GPIO15
     restore_mode: always off
     internal: true
   - platform: template
     id: switch_main
-    name: "Teckin Pow Switch"
+    name: ${friendly_name} Switch
     lambda: return id(relay).state;
     turn_on_action:
       then:
@@ -67,30 +75,14 @@ output:
 
 light:
   - platform: monochromatic
-    name: "Teckin Pow Blue LED"
+    name: ${friendly_name} Blue LED
     output: blue_led
     id: blueled
     internal: true
   - platform: monochromatic
-    name: "Teckin Pow Red LED"
+    name: ${friendly_name} Red LED
     output: red_led
 
 sensor:
   - platform: uptime
-    name: "Teckin Pow Uptime Sensor"
-  - platform: hlw8012
-    sel_pin:
-      number: GPIO12
-      inverted: true
-    cf_pin: GPIO05
-    cf1_pin: GPIO14
-    current_resistor: 0.00221
-    voltage_divider: 871
-    current:
-      name: "Teckin Pow Current"
-      accuracy_decimals: 2
-    voltage:
-      name: "Teckin Pow voltage"
-    power:
-      name: "Teckin Pow power"
-    update_interval: 15s
+    name: ${friendly_name} Uptime Sensor
