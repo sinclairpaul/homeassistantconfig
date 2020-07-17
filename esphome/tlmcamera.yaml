@@ -13,7 +13,7 @@ wifi:
   domain: !secret dnsdomain
   ssid: !secret wifi2
   password: !secret wifipass
-  
+
 web_server:
   port: 80
 
