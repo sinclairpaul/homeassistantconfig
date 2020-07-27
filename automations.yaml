@@ -234,3 +234,81 @@
     domain: light
     entity_id: light.moai_bulb_rgb
     type: turn_off
+- id: '1595343696454'
+  alias: Switch On Dining Room Lights
+  description: ''
+  trigger:
+  - device_id: 93ff2dbf355b4abda43c92e9b8cd2548
+    domain: zha
+    platform: device
+    subtype: turn_on
+    type: remote_button_short_press
+  condition: []
+  action:
+  - brightness_pct: 100
+    device_id: ec0cb35e85ac4583beca9aad13b15e11
+    domain: light
+    entity_id: light.dining_room_1
+    type: turn_on
+  - brightness_pct: 100
+    device_id: 46d3463c66204ba3b1d79d80ff6a6af7
+    domain: light
+    entity_id: light.dining_room_2
+    type: turn_on
+- id: '1595343786072'
+  alias: Turn Off Dining Room Lights
+  description: ''
+  trigger:
+  - device_id: 93ff2dbf355b4abda43c92e9b8cd2548
+    domain: zha
+    platform: device
+    subtype: turn_on
+    type: remote_button_double_press
+  condition: []
+  action:
+  - device_id: ec0cb35e85ac4583beca9aad13b15e11
+    domain: light
+    entity_id: light.dining_room_1
+    type: turn_off
+  - device_id: 46d3463c66204ba3b1d79d80ff6a6af7
+    domain: light
+    entity_id: light.dining_room_2
+    type: turn_off
+- id: '1595343842875'
+  alias: Dining Room Dimmer Up
+  description: ''
+  trigger:
+  - device_id: 93ff2dbf355b4abda43c92e9b8cd2548
+    domain: zha
+    platform: device
+    subtype: right
+    type: device_rotated
+  condition: []
+  action:
+  - device_id: ec0cb35e85ac4583beca9aad13b15e11
+    domain: light
+    entity_id: light.dining_room_1
+    type: brightness_increase
+  - device_id: 46d3463c66204ba3b1d79d80ff6a6af7
+    domain: light
+    entity_id: light.dining_room_2
+    type: brightness_increase
+- id: '1595343883613'
+  alias: Dining Room Dimmer Down
+  description: ''
+  trigger:
+  - device_id: 93ff2dbf355b4abda43c92e9b8cd2548
+    domain: zha
+    platform: device
+    subtype: left
+    type: device_rotated
+  condition: []
+  action:
+  - device_id: ec0cb35e85ac4583beca9aad13b15e11
+    domain: light
+    entity_id: light.dining_room_1
+    type: brightness_decrease
+  - device_id: 46d3463c66204ba3b1d79d80ff6a6af7
+    domain: light
+    entity_id: light.dining_room_2
+    type: brightness_decrease

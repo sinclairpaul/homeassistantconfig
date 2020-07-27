@@ -1,0 +1,28 @@
+---
+id: 2e9fdc06-6dbe-4946-8491-77a52cb9a5df
+alias: Cube TV Control
+initial_state: true
+trigger:
+  - device_id: a35536a62641405abe599c3e5300d956
+    domain: zha
+    platform: device
+    subtype: turn_on
+    type: device_shaken
+action:
+  - choose:
+    - conditions:
+        - condition: state
+          entity_id: remote.harmony
+          state: "on"
+      sequence:
+        - service: remote.turn_off
+          entity_id: remote.harmony
+    - conditions:
+        - condition: state
+          entity_id: remote.harmony
+          state: "off"
+      sequence:
+        - service: remote.turn_on
+          entity_id: remote.harmony
+          data:
+            activity: "Watch TV"

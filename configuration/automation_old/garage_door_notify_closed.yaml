@@ -1,4 +1,5 @@
 ---
+id: faba8c8c-a03f-476a-a07d-d24b5863fb52
 alias: Notify Garage Door Closed
 initial_state: true
 trigger:

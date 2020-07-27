@@ -1,4 +1,5 @@
 ---
+id: 198e5029-9f83-4613-a54a-28f2bb944186
 alias: Daily Partial Backup
 initial_state: true
 trigger:

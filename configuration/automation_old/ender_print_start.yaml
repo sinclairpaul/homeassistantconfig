@@ -1,4 +1,5 @@
 ---
+id: fe001829-5721-4a4b-a40c-a6850d773879
 alias: Ender Print - Switch on Lights
 initial_state: true
 trigger:

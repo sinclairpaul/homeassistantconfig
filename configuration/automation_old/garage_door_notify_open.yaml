@@ -1,4 +1,5 @@
 ---
+id: b2297e6d-e327-430e-a854-e4d7e8a32d9b
 alias: Notify Garage Door Open
 initial_state: true
 trigger:

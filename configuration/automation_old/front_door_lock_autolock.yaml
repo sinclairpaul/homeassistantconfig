@@ -1,4 +1,5 @@
 ---
+id: 25b5cdd4-6b97-4d7b-bddf-f7d87d147760
 alias: Front Door - Auto Lock
 trigger:
   - platform: event

@@ -1,4 +1,5 @@
 ---
+id: ec5c63e8-7aaa-43e8-934b-f18a4311ecbc
 alias: HC Print - Switch on Lights
 initial_state: true
 trigger:

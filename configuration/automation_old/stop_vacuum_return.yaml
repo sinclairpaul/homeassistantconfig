@@ -1,4 +1,5 @@
 ---
+id: ee668abe-7e48-4168-84dd-40f54beaec5b
 alias: dori_return_stop_vacuum
 trigger:
   platform: state

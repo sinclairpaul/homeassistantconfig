@@ -1,4 +1,5 @@
 ---
+id: ae1e2a66-c33c-4cb6-9165-ff1a257c7a4b
 alias: Front Door - Pause Timer
 initial_state: true
 trigger:
