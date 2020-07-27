@@ -11,11 +11,6 @@ jobs:
     steps:
       - name: Checkout Config
         uses: actions/checkout@v1.0.0
-      - name: Running yamllint version
-        uses: ./.github/actions/linting/yamllint
-        with:
-          entrypoint: yamllint
-          args: --version
       - name: Running yamllint
         uses: ./.github/actions/linting/yamllint
         with:
@@ -26,11 +21,6 @@ jobs:
     steps:
       - name: Checkout Config
         uses: actions/checkout@v1.0.0
-      - name: Running mdl version
-        uses: ./.github/actions/linting/markdown
-        with:
-          entrypoint: mdl
-          args: --version
       - name: Running mdl
         uses: ./.github/actions/linting/markdown
         with:

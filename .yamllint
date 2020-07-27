@@ -47,11 +47,7 @@ rules:
   hyphens:
     level: error
     max-spaces-after: 1
-  indentation:
-    level: error
-    spaces: 2
-    indent-sequences: true
-    check-multi-line-strings: false
+  indentation: disable
   key-duplicates:
     level: error
   line-length:
