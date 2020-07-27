@@ -66,9 +66,7 @@ rules:
     level: error
     ignore: |
       custom_components/hacs/services.yaml
-  new-lines:
-    level: disable
-    type: dos
+  new-lines: disable
   trailing-spaces:
     level: error
   truthy:
